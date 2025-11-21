@@ -1,4 +1,5 @@
-﻿using MyChatDB;
+﻿using CobolStudio.src.parser;
+using MyChatDB;
 using System;
 using System.IO;
 
@@ -16,8 +17,7 @@ namespace CobolStudio.src.api
             if (!exists)
                 return $"File not found: {fullPath}";
             var code = File.ReadAllText(fullPath);
-            PrintLn($"Read {code.Length} characters from {fileName}");
-            return $"Parsed COBOL file: {fileName}";
+            return Parser.ParseSource(code);
         }
 
         void PrintLn(string message)

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Antlr4.Runtime;
 
 namespace CobolStudio.src.parser
 {
@@ -20,8 +16,12 @@ namespace CobolStudio.src.parser
 
         public static string ParseSource(string source)
         {
-            // Placeholder for actual COBOL parsing logic
-            return $"Parsed COBOL source of length {source.Length}";
+            AntlrInputStream antlrInput = new AntlrInputStream(source);
+            Cobol85Lexer lexer = new Cobol85Lexer(antlrInput);
+            CommonTokenStream tokenStream = new CommonTokenStream(lexer);
+            tokenStream.Fill();
+            var tokens = tokenStream.GetTokens();
+            return $"There are {tokens.Count} tokens from {source.Length} characters";
         }
     }
 
