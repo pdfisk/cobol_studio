@@ -129,10 +129,11 @@
     <Compile Include="src\api\ParserApi.cs" />
     <Compile Include="src\chatgpt\LmStudioClient.cs" />
     <Compile Include="src\constants\SharedConstants.cs" />
-    <Compile Include="src\parser\Cobol85BaseVisitor.cs" />
-    <Compile Include="src\parser\Cobol85Lexer.cs" />
-    <Compile Include="src\parser\Cobol85Parser.cs" />
-    <Compile Include="src\parser\Cobol85Visitor.cs" />
+    <Compile Include="src\parser\antlr\Cobol85BaseVisitor.cs" />
+    <Compile Include="src\parser\antlr\Cobol85Lexer.cs" />
+    <Compile Include="src\parser\antlr\Cobol85Parser.cs" />
+    <Compile Include="src\parser\antlr\Cobol85Visitor.cs" />
+    <Compile Include="src\parser\Parser.cs" />
     <Compile Include="src\python\engine\Engine.cs" />
     <Compile Include="src\python\engine\IResultHandler.cs" />
     <Compile Include="src\python\engine\GlobalAccessor.cs" />
@@ -323,10 +324,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="src\parser\Cobol85.interp" />
-    <None Include="src\parser\Cobol85.tokens" />
-    <None Include="src\parser\Cobol85Lexer.interp" />
-    <None Include="src\parser\Cobol85Lexer.tokens" />
+    <None Include="src\parser\antlr\Cobol85.interp" />
+    <None Include="src\parser\antlr\Cobol85.tokens" />
+    <None Include="src\parser\antlr\Cobol85Lexer.interp" />
+    <None Include="src\parser\antlr\Cobol85Lexer.tokens" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
