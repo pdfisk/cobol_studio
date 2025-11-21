@@ -396,11 +396,11 @@ public partial class Cobol85Lexer : Lexer {
 
 	public override string[] RuleNames { get { return ruleNames; } }
 
-	public override string[] ChannelNames { get { return channelNames; } }
+	//public override string[] ChannelNames { get { return channelNames; } }
 
 	public override string[] ModeNames { get { return modeNames; } }
 
-	public override int[] SerializedAtn { get { return _serializedATN; } }
+	//public override int[] SerializedAtn { get { return _serializedATN; } }
 
 	static Cobol85Lexer() {
 		decisionToDFA = new DFA[_ATN.NumberOfDecisions];

@@ -1,19 +1,26 @@
-﻿using CobolParser.api;
+﻿using CobolStudio.src.api;
+using static MyChatDB.src.constants.SharedConstants;
+
 
 namespace MyChatDB.src.services
 {
     internal class ParserService
     {
-        ParserApi _parserApi;
         static ParserService _instance;
+        ParserApi _parserApi;
+
         public static ParserService getInstance()
         {
             if (_instance == null)
             {
                 _instance = new ParserService();
-                _instance._parserApi = new ParserApi();
             }
             return _instance;
+        }
+
+        ParserService()
+        {
+            _parserApi = new ParserApi();
         }
 
         public static string Perform(string command, string jsonArg)
@@ -21,7 +28,7 @@ namespace MyChatDB.src.services
             var value = Newtonsoft.Json.JsonConvert.DeserializeObject<object>(jsonArg);
             switch (command.ToLower())
             {
-                case "parse_cobol":
+                case PARSE_COBOL:
                     return getInstance().ParseCobol(value.ToString());
                 default:
                     return @"UNKNOWN COMMAND ${command}";

@@ -1,9 +1,7 @@
 ﻿using MyChatDB.iron_python.engine;
 using MyChatDB.src.util;
-using MyChatDB.src.windows.inspectors;
 using Newtonsoft.Json.Linq;
-using System.Collections.Generic;
-using System.Threading.Tasks;
+using static MyChatDB.src.constants.SharedConstants;
 
 namespace MyChatDB.src.services
 {
@@ -31,7 +29,7 @@ namespace MyChatDB.src.services
             var value = Newtonsoft.Json.JsonConvert.DeserializeObject<object>(jsonArg);
             switch (command.ToLower())
             {
-                case "inspect":
+                case INSPECT_CMD:
                     getInstance().Inspect(value);
                     return "OK";
                 default:

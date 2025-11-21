@@ -7,7 +7,7 @@ using System.Collections.Generic;
 namespace MyChatDB.api
 {
 
-    public class OpenAIChatService
+    public class LlmApi
     {
 
         async public void sendMessage(string text)

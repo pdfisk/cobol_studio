@@ -13,6 +13,8 @@
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -34,8 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
-      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    <Reference Include="Antlr4.Runtime.Standard, Version=4.13.1.0, Culture=neutral, PublicKeyToken=e78b2c5abd1fcb3f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr4.Runtime.Standard.4.13.1\lib\net45\Antlr4.Runtime.Standard.dll</HintPath>
     </Reference>
     <Reference Include="IronPython, Version=3.4.2.0, Culture=neutral, PublicKeyToken=7f709c5b713576e1, processorArchitecture=MSIL">
       <HintPath>packages\IronPython.3.4.2\lib\net462\IronPython.dll</HintPath>
@@ -123,9 +125,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="src\api\OpanAIChatService.cs" />
+    <Compile Include="src\api\LlmApi.cs" />
+    <Compile Include="src\api\ParserApi.cs" />
     <Compile Include="src\chatgpt\LmStudioClient.cs" />
     <Compile Include="src\constants\SharedConstants.cs" />
+    <Compile Include="src\parser\Cobol85BaseVisitor.cs" />
+    <Compile Include="src\parser\Cobol85Lexer.cs" />
+    <Compile Include="src\parser\Cobol85Parser.cs" />
+    <Compile Include="src\parser\Cobol85Visitor.cs" />
     <Compile Include="src\python\engine\Engine.cs" />
     <Compile Include="src\python\engine\IResultHandler.cs" />
     <Compile Include="src\python\engine\GlobalAccessor.cs" />
@@ -217,32 +224,32 @@
     <EmbeddedResource Include="src\windows\transcript\TranscriptWindow.resx">
       <DependentUpon>TranscriptWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="cobol\cbl\ADDAMT.cobol" />
-    <None Include="cobol\cbl\CBL0001.cobol" />
-    <None Include="cobol\cbl\CBL0002.cobol" />
-    <None Include="cobol\cbl\CBL0004.cobol" />
-    <None Include="cobol\cbl\CBL0005.cobol" />
-    <None Include="cobol\cbl\CBL0006.cobol" />
-    <None Include="cobol\cbl\CBL0007.cobol" />
-    <None Include="cobol\cbl\CBL0008.cobol" />
-    <None Include="cobol\cbl\CBL0009.cobol" />
-    <None Include="cobol\cbl\CBL0010.cobol" />
-    <None Include="cobol\cbl\CBL0011.cobol" />
-    <None Include="cobol\cbl\CBL0012.cobol" />
-    <None Include="cobol\cbl\CBL0013.cobol" />
-    <None Include="cobol\cbl\CBL0014.cobol" />
-    <None Include="cobol\cbl\CBL0033.cobol" />
-    <None Include="cobol\cbl\CBL006A.cobol" />
-    <None Include="cobol\cbl\CBLC1.cobol" />
-    <None Include="cobol\cbl\COBOL.cobol" />
-    <None Include="cobol\cbl\HELLOWORLD.cobol" />
-    <None Include="cobol\cbl\HELLO.cobol" />
-    <None Include="cobol\cbl\PAYROL00.cobol" />
-    <None Include="cobol\cbl\PAYROL0X.cobol" />
-    <None Include="cobol\cbl\SRCHBIN.cobol" />
-    <None Include="cobol\cbl\SRCHSER.cobol" />
-    <None Include="cobol\data\data" />
-    <None Include="cobol\data\xdata" />
+    <None Include="files\cbl\ADDAMT.cobol" />
+    <None Include="files\cbl\CBL0001.cobol" />
+    <None Include="files\cbl\CBL0002.cobol" />
+    <None Include="files\cbl\CBL0004.cobol" />
+    <None Include="files\cbl\CBL0005.cobol" />
+    <None Include="files\cbl\CBL0006.cobol" />
+    <None Include="files\cbl\CBL0007.cobol" />
+    <None Include="files\cbl\CBL0008.cobol" />
+    <None Include="files\cbl\CBL0009.cobol" />
+    <None Include="files\cbl\CBL0010.cobol" />
+    <None Include="files\cbl\CBL0011.cobol" />
+    <None Include="files\cbl\CBL0012.cobol" />
+    <None Include="files\cbl\CBL0013.cobol" />
+    <None Include="files\cbl\CBL0014.cobol" />
+    <None Include="files\cbl\CBL0033.cobol" />
+    <None Include="files\cbl\CBL006A.cobol" />
+    <None Include="files\cbl\CBLC1.cobol" />
+    <None Include="files\cbl\COBOL.cobol" />
+    <None Include="files\cbl\HELLOWORLD.cobol" />
+    <None Include="files\cbl\HELLO.cobol" />
+    <None Include="files\cbl\PAYROL00.cobol" />
+    <None Include="files\cbl\PAYROL0X.cobol" />
+    <None Include="files\cbl\SRCHBIN.cobol" />
+    <None Include="files\cbl\SRCHSER.cobol" />
+    <None Include="files\data\data" />
+    <None Include="files\data\xdata" />
     <None Include="lib\ctypes\macholib\fetch_macholib" />
     <None Include="lib\ctypes\macholib\fetch_macholib.bat" />
     <None Include="lib\ctypes\macholib\README.ctypes" />
@@ -268,6 +275,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="src\parser\Cobol85.interp" />
+    <None Include="src\parser\Cobol85.tokens" />
+    <None Include="src\parser\Cobol85Lexer.interp" />
+    <None Include="src\parser\Cobol85Lexer.tokens" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -902,8 +913,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="src\parser\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
