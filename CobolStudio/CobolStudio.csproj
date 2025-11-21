@@ -224,30 +224,78 @@
     <EmbeddedResource Include="src\windows\transcript\TranscriptWindow.resx">
       <DependentUpon>TranscriptWindow.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="files\cbl\ADDAMT.cobol" />
-    <None Include="files\cbl\CBL0001.cobol" />
-    <None Include="files\cbl\CBL0002.cobol" />
-    <None Include="files\cbl\CBL0004.cobol" />
-    <None Include="files\cbl\CBL0005.cobol" />
-    <None Include="files\cbl\CBL0006.cobol" />
-    <None Include="files\cbl\CBL0007.cobol" />
-    <None Include="files\cbl\CBL0008.cobol" />
-    <None Include="files\cbl\CBL0009.cobol" />
-    <None Include="files\cbl\CBL0010.cobol" />
-    <None Include="files\cbl\CBL0011.cobol" />
-    <None Include="files\cbl\CBL0012.cobol" />
-    <None Include="files\cbl\CBL0013.cobol" />
-    <None Include="files\cbl\CBL0014.cobol" />
-    <None Include="files\cbl\CBL0033.cobol" />
-    <None Include="files\cbl\CBL006A.cobol" />
-    <None Include="files\cbl\CBLC1.cobol" />
-    <None Include="files\cbl\COBOL.cobol" />
-    <None Include="files\cbl\HELLOWORLD.cobol" />
-    <None Include="files\cbl\HELLO.cobol" />
-    <None Include="files\cbl\PAYROL00.cobol" />
-    <None Include="files\cbl\PAYROL0X.cobol" />
-    <None Include="files\cbl\SRCHBIN.cobol" />
-    <None Include="files\cbl\SRCHSER.cobol" />
+    <Content Include="files\cbl\ADDAMT.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0001.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0002.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0004.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0005.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0006.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0007.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0008.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0009.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0010.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0011.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0012.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0013.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0014.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL0033.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBL006A.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\CBLC1.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\COBOL.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\HELLOWORLD.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\HELLO.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\PAYROL00.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\PAYROL0X.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\SRCHBIN.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="files\cbl\SRCHSER.cobol">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="files\data\data" />
     <None Include="files\data\xdata" />
     <None Include="lib\ctypes\macholib\fetch_macholib" />

@@ -13,9 +13,10 @@ namespace CobolStudio.src.api
             var scriptsPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "files/cbl");
             var fullPath = Path.Combine(scriptsPath, fileName);
             var exists = File.Exists(fullPath);
-            PrintLn($"Reading cobol source from: {fileName} {exists}");
-            if (File.Exists(fullPath))
-                PrintLn($"File content: {File.ReadAllText(fullPath).Length} characters");
+            if (!exists)
+                return $"File not found: {fullPath}";
+            var code = File.ReadAllText(fullPath);
+            PrintLn($"Read {code.Length} characters from {fileName}");
             return $"Parsed COBOL file: {fileName}";
         }
 
