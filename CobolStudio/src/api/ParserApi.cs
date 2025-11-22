@@ -17,7 +17,8 @@ namespace CobolStudio.src.api
             if (!exists)
                 return $"File not found: {fullPath}";
             var code = File.ReadAllText(fullPath);
-            return Parser.ParseSource(code);
+            Parser parser = Parser.GetInstance();
+            return parser.ParseSource(code);
         }
 
         void PrintLn(string message)

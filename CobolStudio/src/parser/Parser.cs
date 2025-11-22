@@ -1,4 +1,5 @@
 ﻿using Antlr4.Runtime;
+using static Cobol85Parser;
 
 namespace CobolStudio.src.parser
 {
@@ -14,14 +15,17 @@ namespace CobolStudio.src.parser
             return instance;
         }
 
-        public static string ParseSource(string source)
+        public string ParseSource(string source)
         {
             AntlrInputStream antlrInput = new AntlrInputStream(source);
             Cobol85Lexer lexer = new Cobol85Lexer(antlrInput);
             CommonTokenStream tokenStream = new CommonTokenStream(lexer);
-            tokenStream.Fill();
-            var tokens = tokenStream.GetTokens();
-            return $"There are {tokens.Count} tokens from {source.Length} characters";
+            Cobol85Parser parser = new Cobol85Parser(tokenStream);
+            StartRuleContext startRuleContext = parser.startRule();
+            return startRuleContext.ToStringTree(parser);
+            //tokenStream.Fill();
+            //var tokens = tokenStream.GetTokens();
+            //return $"There are {tokens.Count} tokens from {source.Length} characters";
         }
     }
 
