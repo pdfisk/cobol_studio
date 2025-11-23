@@ -18,7 +18,7 @@ namespace CobolStudio.src.api
                 return $"File not found: {fullPath}";
             var code = File.ReadAllText(fullPath);
             Parser parser = Parser.GetInstance();
-            return parser.ParseSource(code);
+            return parser.ParseSource(code).ToString();
         }
 
         void PrintLn(string message)

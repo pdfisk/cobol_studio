@@ -134,6 +134,7 @@
     <Compile Include="src\parser\antlr\Cobol85Parser.cs" />
     <Compile Include="src\parser\antlr\Cobol85Visitor.cs" />
     <Compile Include="src\parser\Parser.cs" />
+    <Compile Include="src\parser\Visitor.cs" />
     <Compile Include="src\python\engine\Engine.cs" />
     <Compile Include="src\python\engine\IResultHandler.cs" />
     <Compile Include="src\python\engine\GlobalAccessor.cs" />
