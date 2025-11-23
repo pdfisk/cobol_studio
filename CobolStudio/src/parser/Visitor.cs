@@ -1,6 +1,9 @@
 ﻿using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
 using CobolStudio.src.parser.ast;
+using IronPython.Compiler.Ast;
+using MyChatDB;
+using System.Collections.Generic;
 using static Cobol85Parser;
 
 namespace CobolStudio.src.parser
@@ -11,9 +14,38 @@ namespace CobolStudio.src.parser
         {
         }
 
+        void PrintLn(string msg)
+        {
+            TranscriptWindow.GetInstance().PrintLn(msg);
+        }
+
         public AstNode Visit(IParseTree tree)
         {
-            return VisitStartRule(tree as StartRuleContext);
+            AstNode astNode = null;
+            List<AstNode> children = VisitChildren(tree);
+            if (tree is StartRuleContext)
+                astNode = VisitStartRule(tree as StartRuleContext);
+            if (astNode == null)
+            {
+                PrintLn("No match visiting: " + tree.GetType().Name);
+                return new AstNode();
+            }
+            foreach (var child in children)
+            {
+                astNode.AddChild(child);
+            }
+            return astNode;
+        }
+
+
+        List<AstNode> VisitChildren(IParseTree tree)
+        {
+            var children = new List<AstNode>();
+            for (int i = 0; i < tree.ChildCount; i++)
+            {
+                children.Add(Visit(tree.GetChild(i)));
+            }
+            return children;
         }
 
         public AstNode VisitAbbreviation([NotNull] AbbreviationContext context)

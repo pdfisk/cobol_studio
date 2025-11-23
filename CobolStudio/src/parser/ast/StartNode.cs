@@ -4,10 +4,11 @@ namespace CobolStudio.src.parser.ast
 {
     internal class StartNode:AstNode
     {
+        StartRuleContext _context;
 
         public StartNode(StartRuleContext context)
         {
-            ctx = context;
+            _ctx = _context = context;
         }
 
     }
