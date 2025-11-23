@@ -2695,7 +2695,7 @@ namespace CobolStudio.src.parser
 
         public object VisitStartRule([NotNull] Cobol85Parser.StartRuleContext context)
         {
-            return string.Format("Visiting StartRule");
+            return $"Visiting StartRule: {context.ChildCount}";
             //context.compilationUnit().Accept(this);
         }
 
