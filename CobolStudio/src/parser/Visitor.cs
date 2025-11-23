@@ -1,3008 +1,3011 @@
 ﻿using Antlr4.Runtime.Misc;
 using Antlr4.Runtime.Tree;
+using CobolStudio.src.parser.ast;
+using static Cobol85Parser;
+
 namespace CobolStudio.src.parser
 {
-    internal class Visitor : ICobol85Visitor<object>
+    internal class Visitor : ICobol85Visitor<AstNode>
     {
         public Visitor()
         {
         }
 
-        public object Visit(IParseTree tree)
+        public AstNode Visit(IParseTree tree)
         {
-            return VisitStartRule(tree as Cobol85Parser.StartRuleContext);
+            return VisitStartRule(tree as StartRuleContext);
         }
 
-        public object VisitAbbreviation([NotNull] Cobol85Parser.AbbreviationContext context)
+        public AstNode VisitAbbreviation([NotNull] AbbreviationContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAcceptFromDateStatement([NotNull] Cobol85Parser.AcceptFromDateStatementContext context)
+        public AstNode VisitAcceptFromDateStatement([NotNull] AcceptFromDateStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAcceptFromEscapeKeyStatement([NotNull] Cobol85Parser.AcceptFromEscapeKeyStatementContext context)
+        public AstNode VisitAcceptFromEscapeKeyStatement([NotNull] AcceptFromEscapeKeyStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAcceptFromMnemonicStatement([NotNull] Cobol85Parser.AcceptFromMnemonicStatementContext context)
+        public AstNode VisitAcceptFromMnemonicStatement([NotNull] AcceptFromMnemonicStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAcceptMessageCountStatement([NotNull] Cobol85Parser.AcceptMessageCountStatementContext context)
+        public AstNode VisitAcceptMessageCountStatement([NotNull] AcceptMessageCountStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAcceptStatement([NotNull] Cobol85Parser.AcceptStatementContext context)
+        public AstNode VisitAcceptStatement([NotNull] AcceptStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAccessModeClause([NotNull] Cobol85Parser.AccessModeClauseContext context)
+        public AstNode VisitAccessModeClause([NotNull] AccessModeClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAddCorrespondingStatement([NotNull] Cobol85Parser.AddCorrespondingStatementContext context)
+        public AstNode VisitAddCorrespondingStatement([NotNull] AddCorrespondingStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAddFrom([NotNull] Cobol85Parser.AddFromContext context)
+        public AstNode VisitAddFrom([NotNull] AddFromContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAddGiving([NotNull] Cobol85Parser.AddGivingContext context)
+        public AstNode VisitAddGiving([NotNull] AddGivingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAddStatement([NotNull] Cobol85Parser.AddStatementContext context)
+        public AstNode VisitAddStatement([NotNull] AddStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAddTo([NotNull] Cobol85Parser.AddToContext context)
+        public AstNode VisitAddTo([NotNull] AddToContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAddToGiving([NotNull] Cobol85Parser.AddToGivingContext context)
+        public AstNode VisitAddToGiving([NotNull] AddToGivingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAddToGivingStatement([NotNull] Cobol85Parser.AddToGivingStatementContext context)
+        public AstNode VisitAddToGivingStatement([NotNull] AddToGivingStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAddToStatement([NotNull] Cobol85Parser.AddToStatementContext context)
+        public AstNode VisitAddToStatement([NotNull] AddToStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlphabetAlso([NotNull] Cobol85Parser.AlphabetAlsoContext context)
+        public AstNode VisitAlphabetAlso([NotNull] AlphabetAlsoContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlphabetClause([NotNull] Cobol85Parser.AlphabetClauseContext context)
+        public AstNode VisitAlphabetClause([NotNull] AlphabetClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlphabetClauseFormat1([NotNull] Cobol85Parser.AlphabetClauseFormat1Context context)
+        public AstNode VisitAlphabetClauseFormat1([NotNull] AlphabetClauseFormat1Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlphabetClauseFormat2([NotNull] Cobol85Parser.AlphabetClauseFormat2Context context)
+        public AstNode VisitAlphabetClauseFormat2([NotNull] AlphabetClauseFormat2Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlphabetLiterals([NotNull] Cobol85Parser.AlphabetLiteralsContext context)
+        public AstNode VisitAlphabetLiterals([NotNull] AlphabetLiteralsContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlphabetName([NotNull] Cobol85Parser.AlphabetNameContext context)
+        public AstNode VisitAlphabetName([NotNull] AlphabetNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlphabetThrough([NotNull] Cobol85Parser.AlphabetThroughContext context)
+        public AstNode VisitAlphabetThrough([NotNull] AlphabetThroughContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlteredGoTo([NotNull] Cobol85Parser.AlteredGoToContext context)
+        public AstNode VisitAlteredGoTo([NotNull] AlteredGoToContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlternateRecordKeyClause([NotNull] Cobol85Parser.AlternateRecordKeyClauseContext context)
+        public AstNode VisitAlternateRecordKeyClause([NotNull] AlternateRecordKeyClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlterProceedTo([NotNull] Cobol85Parser.AlterProceedToContext context)
+        public AstNode VisitAlterProceedTo([NotNull] AlterProceedToContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAlterStatement([NotNull] Cobol85Parser.AlterStatementContext context)
+        public AstNode VisitAlterStatement([NotNull] AlterStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAndOrCondition([NotNull] Cobol85Parser.AndOrConditionContext context)
+        public AstNode VisitAndOrCondition([NotNull] AndOrConditionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitArgument([NotNull] Cobol85Parser.ArgumentContext context)
+        public AstNode VisitArgument([NotNull] ArgumentContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitArithmeticExpression([NotNull] Cobol85Parser.ArithmeticExpressionContext context)
+        public AstNode VisitArithmeticExpression([NotNull] ArithmeticExpressionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAssignClause([NotNull] Cobol85Parser.AssignClauseContext context)
+        public AstNode VisitAssignClause([NotNull] AssignClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAssignmentName([NotNull] Cobol85Parser.AssignmentNameContext context)
+        public AstNode VisitAssignmentName([NotNull] AssignmentNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAtEndPhrase([NotNull] Cobol85Parser.AtEndPhraseContext context)
+        public AstNode VisitAtEndPhrase([NotNull] AtEndPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitAuthorParagraph([NotNull] Cobol85Parser.AuthorParagraphContext context)
+        public AstNode VisitAuthorParagraph([NotNull] AuthorParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitBasis([NotNull] Cobol85Parser.BasisContext context)
+        public AstNode VisitBasis([NotNull] BasisContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitBasisName([NotNull] Cobol85Parser.BasisNameContext context)
+        public AstNode VisitBasisName([NotNull] BasisNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitBlockContainsClause([NotNull] Cobol85Parser.BlockContainsClauseContext context)
+        public AstNode VisitBlockContainsClause([NotNull] BlockContainsClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitBlockContainsTo([NotNull] Cobol85Parser.BlockContainsToContext context)
+        public AstNode VisitBlockContainsTo([NotNull] BlockContainsToContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitBooleanLiteral([NotNull] Cobol85Parser.BooleanLiteralContext context)
+        public AstNode VisitBooleanLiteral([NotNull] BooleanLiteralContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCallByContent([NotNull] Cobol85Parser.CallByContentContext context)
+        public AstNode VisitCallByContent([NotNull] CallByContentContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCallByContentPhrase([NotNull] Cobol85Parser.CallByContentPhraseContext context)
+        public AstNode VisitCallByContentPhrase([NotNull] CallByContentPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCallByReference([NotNull] Cobol85Parser.CallByReferenceContext context)
+        public AstNode VisitCallByReference([NotNull] CallByReferenceContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCallByReferencePhrase([NotNull] Cobol85Parser.CallByReferencePhraseContext context)
+        public AstNode VisitCallByReferencePhrase([NotNull] CallByReferencePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCallByValue([NotNull] Cobol85Parser.CallByValueContext context)
+        public AstNode VisitCallByValue([NotNull] CallByValueContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCallByValuePhrase([NotNull] Cobol85Parser.CallByValuePhraseContext context)
+        public AstNode VisitCallByValuePhrase([NotNull] CallByValuePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCallGivingPhrase([NotNull] Cobol85Parser.CallGivingPhraseContext context)
+        public AstNode VisitCallGivingPhrase([NotNull] CallGivingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCallStatement([NotNull] Cobol85Parser.CallStatementContext context)
+        public AstNode VisitCallStatement([NotNull] CallStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCallUsingParameter([NotNull] Cobol85Parser.CallUsingParameterContext context)
+        public AstNode VisitCallUsingParameter([NotNull] CallUsingParameterContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCallUsingPhrase([NotNull] Cobol85Parser.CallUsingPhraseContext context)
+        public AstNode VisitCallUsingPhrase([NotNull] CallUsingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCancelCall([NotNull] Cobol85Parser.CancelCallContext context)
+        public AstNode VisitCancelCall([NotNull] CancelCallContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCancelStatement([NotNull] Cobol85Parser.CancelStatementContext context)
+        public AstNode VisitCancelStatement([NotNull] CancelStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCdName([NotNull] Cobol85Parser.CdNameContext context)
+        public AstNode VisitCdName([NotNull] CdNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitChannelClause([NotNull] Cobol85Parser.ChannelClauseContext context)
+        public AstNode VisitChannelClause([NotNull] ChannelClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCharacterPosition([NotNull] Cobol85Parser.CharacterPositionContext context)
+        public AstNode VisitCharacterPosition([NotNull] CharacterPositionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCharacterSetClause([NotNull] Cobol85Parser.CharacterSetClauseContext context)
+        public AstNode VisitCharacterSetClause([NotNull] CharacterSetClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitChildren(IRuleNode node)
+        public AstNode VisitChildren(IRuleNode node)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCicsDfhRespLiteral([NotNull] Cobol85Parser.CicsDfhRespLiteralContext context)
+        public AstNode VisitCicsDfhRespLiteral([NotNull] CicsDfhRespLiteralContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCicsDfhValueLiteral([NotNull] Cobol85Parser.CicsDfhValueLiteralContext context)
+        public AstNode VisitCicsDfhValueLiteral([NotNull] CicsDfhValueLiteralContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClassClause([NotNull] Cobol85Parser.ClassClauseContext context)
+        public AstNode VisitClassClause([NotNull] ClassClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClassClauseFrom([NotNull] Cobol85Parser.ClassClauseFromContext context)
+        public AstNode VisitClassClauseFrom([NotNull] ClassClauseFromContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClassClauseThrough([NotNull] Cobol85Parser.ClassClauseThroughContext context)
+        public AstNode VisitClassClauseThrough([NotNull] ClassClauseThroughContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClassClauseTo([NotNull] Cobol85Parser.ClassClauseToContext context)
+        public AstNode VisitClassClauseTo([NotNull] ClassClauseToContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClassCondition([NotNull] Cobol85Parser.ClassConditionContext context)
+        public AstNode VisitClassCondition([NotNull] ClassConditionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClassName([NotNull] Cobol85Parser.ClassNameContext context)
+        public AstNode VisitClassName([NotNull] ClassNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCloseFile([NotNull] Cobol85Parser.CloseFileContext context)
+        public AstNode VisitCloseFile([NotNull] CloseFileContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClosePortFileIOStatement([NotNull] Cobol85Parser.ClosePortFileIOStatementContext context)
+        public AstNode VisitClosePortFileIOStatement([NotNull] ClosePortFileIOStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClosePortFileIOUsing([NotNull] Cobol85Parser.ClosePortFileIOUsingContext context)
+        public AstNode VisitClosePortFileIOUsing([NotNull] ClosePortFileIOUsingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClosePortFileIOUsingAssociatedData([NotNull] Cobol85Parser.ClosePortFileIOUsingAssociatedDataContext context)
+        public AstNode VisitClosePortFileIOUsingAssociatedData([NotNull] ClosePortFileIOUsingAssociatedDataContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClosePortFileIOUsingAssociatedDataLength([NotNull] Cobol85Parser.ClosePortFileIOUsingAssociatedDataLengthContext context)
+        public AstNode VisitClosePortFileIOUsingAssociatedDataLength([NotNull] ClosePortFileIOUsingAssociatedDataLengthContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitClosePortFileIOUsingCloseDisposition([NotNull] Cobol85Parser.ClosePortFileIOUsingCloseDispositionContext context)
+        public AstNode VisitClosePortFileIOUsingCloseDisposition([NotNull] ClosePortFileIOUsingCloseDispositionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCloseReelUnitStatement([NotNull] Cobol85Parser.CloseReelUnitStatementContext context)
+        public AstNode VisitCloseReelUnitStatement([NotNull] CloseReelUnitStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCloseRelativeStatement([NotNull] Cobol85Parser.CloseRelativeStatementContext context)
+        public AstNode VisitCloseRelativeStatement([NotNull] CloseRelativeStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCloseStatement([NotNull] Cobol85Parser.CloseStatementContext context)
+        public AstNode VisitCloseStatement([NotNull] CloseStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCobolWord([NotNull] Cobol85Parser.CobolWordContext context)
+        public AstNode VisitCobolWord([NotNull] CobolWordContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCodeSetClause([NotNull] Cobol85Parser.CodeSetClauseContext context)
+        public AstNode VisitCodeSetClause([NotNull] CodeSetClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCollatingSequenceClause([NotNull] Cobol85Parser.CollatingSequenceClauseContext context)
+        public AstNode VisitCollatingSequenceClause([NotNull] CollatingSequenceClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCollatingSequenceClauseAlphanumeric([NotNull] Cobol85Parser.CollatingSequenceClauseAlphanumericContext context)
+        public AstNode VisitCollatingSequenceClauseAlphanumeric([NotNull] CollatingSequenceClauseAlphanumericContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCollatingSequenceClauseNational([NotNull] Cobol85Parser.CollatingSequenceClauseNationalContext context)
+        public AstNode VisitCollatingSequenceClauseNational([NotNull] CollatingSequenceClauseNationalContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCombinableCondition([NotNull] Cobol85Parser.CombinableConditionContext context)
+        public AstNode VisitCombinableCondition([NotNull] CombinableConditionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCommentEntry([NotNull] Cobol85Parser.CommentEntryContext context)
+        public AstNode VisitCommentEntry([NotNull] CommentEntryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCommitmentControlClause([NotNull] Cobol85Parser.CommitmentControlClauseContext context)
+        public AstNode VisitCommitmentControlClause([NotNull] CommitmentControlClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCommunicationDescriptionEntry([NotNull] Cobol85Parser.CommunicationDescriptionEntryContext context)
+        public AstNode VisitCommunicationDescriptionEntry([NotNull] CommunicationDescriptionEntryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCommunicationDescriptionEntryFormat1([NotNull] Cobol85Parser.CommunicationDescriptionEntryFormat1Context context)
+        public AstNode VisitCommunicationDescriptionEntryFormat1([NotNull] CommunicationDescriptionEntryFormat1Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCommunicationDescriptionEntryFormat2([NotNull] Cobol85Parser.CommunicationDescriptionEntryFormat2Context context)
+        public AstNode VisitCommunicationDescriptionEntryFormat2([NotNull] CommunicationDescriptionEntryFormat2Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCommunicationDescriptionEntryFormat3([NotNull] Cobol85Parser.CommunicationDescriptionEntryFormat3Context context)
+        public AstNode VisitCommunicationDescriptionEntryFormat3([NotNull] CommunicationDescriptionEntryFormat3Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCommunicationSection([NotNull] Cobol85Parser.CommunicationSectionContext context)
+        public AstNode VisitCommunicationSection([NotNull] CommunicationSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCompilationUnit([NotNull] Cobol85Parser.CompilationUnitContext context)
+        public AstNode VisitCompilationUnit([NotNull] CompilationUnitContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitComputerName([NotNull] Cobol85Parser.ComputerNameContext context)
+        public AstNode VisitComputerName([NotNull] ComputerNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitComputeStatement([NotNull] Cobol85Parser.ComputeStatementContext context)
+        public AstNode VisitComputeStatement([NotNull] ComputeStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitComputeStore([NotNull] Cobol85Parser.ComputeStoreContext context)
+        public AstNode VisitComputeStore([NotNull] ComputeStoreContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCondition([NotNull] Cobol85Parser.ConditionContext context)
+        public AstNode VisitCondition([NotNull] ConditionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitConditionName([NotNull] Cobol85Parser.ConditionNameContext context)
+        public AstNode VisitConditionName([NotNull] ConditionNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitConditionNameReference([NotNull] Cobol85Parser.ConditionNameReferenceContext context)
+        public AstNode VisitConditionNameReference([NotNull] ConditionNameReferenceContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitConditionNameSubscriptReference([NotNull] Cobol85Parser.ConditionNameSubscriptReferenceContext context)
+        public AstNode VisitConditionNameSubscriptReference([NotNull] ConditionNameSubscriptReferenceContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitConfigurationSection([NotNull] Cobol85Parser.ConfigurationSectionContext context)
+        public AstNode VisitConfigurationSection([NotNull] ConfigurationSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitConfigurationSectionParagraph([NotNull] Cobol85Parser.ConfigurationSectionParagraphContext context)
+        public AstNode VisitConfigurationSectionParagraph([NotNull] ConfigurationSectionParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitContinueStatement([NotNull] Cobol85Parser.ContinueStatementContext context)
+        public AstNode VisitContinueStatement([NotNull] ContinueStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitCurrencySignClause([NotNull] Cobol85Parser.CurrencySignClauseContext context)
+        public AstNode VisitCurrencySignClause([NotNull] CurrencySignClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataAlignedClause([NotNull] Cobol85Parser.DataAlignedClauseContext context)
+        public AstNode VisitDataAlignedClause([NotNull] DataAlignedClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataBaseSection([NotNull] Cobol85Parser.DataBaseSectionContext context)
+        public AstNode VisitDataBaseSection([NotNull] DataBaseSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataBaseSectionEntry([NotNull] Cobol85Parser.DataBaseSectionEntryContext context)
+        public AstNode VisitDataBaseSectionEntry([NotNull] DataBaseSectionEntryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataBlankWhenZeroClause([NotNull] Cobol85Parser.DataBlankWhenZeroClauseContext context)
+        public AstNode VisitDataBlankWhenZeroClause([NotNull] DataBlankWhenZeroClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataCommonOwnLocalClause([NotNull] Cobol85Parser.DataCommonOwnLocalClauseContext context)
+        public AstNode VisitDataCommonOwnLocalClause([NotNull] DataCommonOwnLocalClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataDescName([NotNull] Cobol85Parser.DataDescNameContext context)
+        public AstNode VisitDataDescName([NotNull] DataDescNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataDescriptionEntry([NotNull] Cobol85Parser.DataDescriptionEntryContext context)
+        public AstNode VisitDataDescriptionEntry([NotNull] DataDescriptionEntryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataDescriptionEntryExecSql([NotNull] Cobol85Parser.DataDescriptionEntryExecSqlContext context)
+        public AstNode VisitDataDescriptionEntryExecSql([NotNull] DataDescriptionEntryExecSqlContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataDescriptionEntryFormat1([NotNull] Cobol85Parser.DataDescriptionEntryFormat1Context context)
+        public AstNode VisitDataDescriptionEntryFormat1([NotNull] DataDescriptionEntryFormat1Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataDescriptionEntryFormat2([NotNull] Cobol85Parser.DataDescriptionEntryFormat2Context context)
+        public AstNode VisitDataDescriptionEntryFormat2([NotNull] DataDescriptionEntryFormat2Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataDescriptionEntryFormat3([NotNull] Cobol85Parser.DataDescriptionEntryFormat3Context context)
+        public AstNode VisitDataDescriptionEntryFormat3([NotNull] DataDescriptionEntryFormat3Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataDivision([NotNull] Cobol85Parser.DataDivisionContext context)
+        public AstNode VisitDataDivision([NotNull] DataDivisionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataDivisionSection([NotNull] Cobol85Parser.DataDivisionSectionContext context)
+        public AstNode VisitDataDivisionSection([NotNull] DataDivisionSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataExternalClause([NotNull] Cobol85Parser.DataExternalClauseContext context)
+        public AstNode VisitDataExternalClause([NotNull] DataExternalClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataGlobalClause([NotNull] Cobol85Parser.DataGlobalClauseContext context)
+        public AstNode VisitDataGlobalClause([NotNull] DataGlobalClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataIntegerStringClause([NotNull] Cobol85Parser.DataIntegerStringClauseContext context)
+        public AstNode VisitDataIntegerStringClause([NotNull] DataIntegerStringClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataJustifiedClause([NotNull] Cobol85Parser.DataJustifiedClauseContext context)
+        public AstNode VisitDataJustifiedClause([NotNull] DataJustifiedClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataName([NotNull] Cobol85Parser.DataNameContext context)
+        public AstNode VisitDataName([NotNull] DataNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataOccursClause([NotNull] Cobol85Parser.DataOccursClauseContext context)
+        public AstNode VisitDataOccursClause([NotNull] DataOccursClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataOccursSort([NotNull] Cobol85Parser.DataOccursSortContext context)
+        public AstNode VisitDataOccursSort([NotNull] DataOccursSortContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataOccursTo([NotNull] Cobol85Parser.DataOccursToContext context)
+        public AstNode VisitDataOccursTo([NotNull] DataOccursToContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataPictureClause([NotNull] Cobol85Parser.DataPictureClauseContext context)
+        public AstNode VisitDataPictureClause([NotNull] DataPictureClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataReceivedByClause([NotNull] Cobol85Parser.DataReceivedByClauseContext context)
+        public AstNode VisitDataReceivedByClause([NotNull] DataReceivedByClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataRecordAreaClause([NotNull] Cobol85Parser.DataRecordAreaClauseContext context)
+        public AstNode VisitDataRecordAreaClause([NotNull] DataRecordAreaClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataRecordsClause([NotNull] Cobol85Parser.DataRecordsClauseContext context)
+        public AstNode VisitDataRecordsClause([NotNull] DataRecordsClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataRedefinesClause([NotNull] Cobol85Parser.DataRedefinesClauseContext context)
+        public AstNode VisitDataRedefinesClause([NotNull] DataRedefinesClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataRenamesClause([NotNull] Cobol85Parser.DataRenamesClauseContext context)
+        public AstNode VisitDataRenamesClause([NotNull] DataRenamesClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataSignClause([NotNull] Cobol85Parser.DataSignClauseContext context)
+        public AstNode VisitDataSignClause([NotNull] DataSignClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataSynchronizedClause([NotNull] Cobol85Parser.DataSynchronizedClauseContext context)
+        public AstNode VisitDataSynchronizedClause([NotNull] DataSynchronizedClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataThreadLocalClause([NotNull] Cobol85Parser.DataThreadLocalClauseContext context)
+        public AstNode VisitDataThreadLocalClause([NotNull] DataThreadLocalClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataTypeClause([NotNull] Cobol85Parser.DataTypeClauseContext context)
+        public AstNode VisitDataTypeClause([NotNull] DataTypeClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataTypeDefClause([NotNull] Cobol85Parser.DataTypeDefClauseContext context)
+        public AstNode VisitDataTypeDefClause([NotNull] DataTypeDefClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataUsageClause([NotNull] Cobol85Parser.DataUsageClauseContext context)
+        public AstNode VisitDataUsageClause([NotNull] DataUsageClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataUsingClause([NotNull] Cobol85Parser.DataUsingClauseContext context)
+        public AstNode VisitDataUsingClause([NotNull] DataUsingClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataValueClause([NotNull] Cobol85Parser.DataValueClauseContext context)
+        public AstNode VisitDataValueClause([NotNull] DataValueClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataValueInterval([NotNull] Cobol85Parser.DataValueIntervalContext context)
+        public AstNode VisitDataValueInterval([NotNull] DataValueIntervalContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataValueIntervalFrom([NotNull] Cobol85Parser.DataValueIntervalFromContext context)
+        public AstNode VisitDataValueIntervalFrom([NotNull] DataValueIntervalFromContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataValueIntervalTo([NotNull] Cobol85Parser.DataValueIntervalToContext context)
+        public AstNode VisitDataValueIntervalTo([NotNull] DataValueIntervalToContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDataWithLowerBoundsClause([NotNull] Cobol85Parser.DataWithLowerBoundsClauseContext context)
+        public AstNode VisitDataWithLowerBoundsClause([NotNull] DataWithLowerBoundsClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDateCompiledParagraph([NotNull] Cobol85Parser.DateCompiledParagraphContext context)
+        public AstNode VisitDateCompiledParagraph([NotNull] DateCompiledParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDateWrittenParagraph([NotNull] Cobol85Parser.DateWrittenParagraphContext context)
+        public AstNode VisitDateWrittenParagraph([NotNull] DateWrittenParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDecimalPointClause([NotNull] Cobol85Parser.DecimalPointClauseContext context)
+        public AstNode VisitDecimalPointClause([NotNull] DecimalPointClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDefaultComputationalSignClause([NotNull] Cobol85Parser.DefaultComputationalSignClauseContext context)
+        public AstNode VisitDefaultComputationalSignClause([NotNull] DefaultComputationalSignClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDefaultDisplaySignClause([NotNull] Cobol85Parser.DefaultDisplaySignClauseContext context)
+        public AstNode VisitDefaultDisplaySignClause([NotNull] DefaultDisplaySignClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDeleteStatement([NotNull] Cobol85Parser.DeleteStatementContext context)
+        public AstNode VisitDeleteStatement([NotNull] DeleteStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDestinationCountClause([NotNull] Cobol85Parser.DestinationCountClauseContext context)
+        public AstNode VisitDestinationCountClause([NotNull] DestinationCountClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDestinationTableClause([NotNull] Cobol85Parser.DestinationTableClauseContext context)
+        public AstNode VisitDestinationTableClause([NotNull] DestinationTableClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDisableStatement([NotNull] Cobol85Parser.DisableStatementContext context)
+        public AstNode VisitDisableStatement([NotNull] DisableStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDiskSizeClause([NotNull] Cobol85Parser.DiskSizeClauseContext context)
+        public AstNode VisitDiskSizeClause([NotNull] DiskSizeClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDisplayAt([NotNull] Cobol85Parser.DisplayAtContext context)
+        public AstNode VisitDisplayAt([NotNull] DisplayAtContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDisplayOperand([NotNull] Cobol85Parser.DisplayOperandContext context)
+        public AstNode VisitDisplayOperand([NotNull] DisplayOperandContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDisplayStatement([NotNull] Cobol85Parser.DisplayStatementContext context)
+        public AstNode VisitDisplayStatement([NotNull] DisplayStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDisplayUpon([NotNull] Cobol85Parser.DisplayUponContext context)
+        public AstNode VisitDisplayUpon([NotNull] DisplayUponContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDisplayWith([NotNull] Cobol85Parser.DisplayWithContext context)
+        public AstNode VisitDisplayWith([NotNull] DisplayWithContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDivideByGivingStatement([NotNull] Cobol85Parser.DivideByGivingStatementContext context)
+        public AstNode VisitDivideByGivingStatement([NotNull] DivideByGivingStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDivideGiving([NotNull] Cobol85Parser.DivideGivingContext context)
+        public AstNode VisitDivideGiving([NotNull] DivideGivingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDivideGivingPhrase([NotNull] Cobol85Parser.DivideGivingPhraseContext context)
+        public AstNode VisitDivideGivingPhrase([NotNull] DivideGivingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDivideInto([NotNull] Cobol85Parser.DivideIntoContext context)
+        public AstNode VisitDivideInto([NotNull] DivideIntoContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDivideIntoGivingStatement([NotNull] Cobol85Parser.DivideIntoGivingStatementContext context)
+        public AstNode VisitDivideIntoGivingStatement([NotNull] DivideIntoGivingStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDivideIntoStatement([NotNull] Cobol85Parser.DivideIntoStatementContext context)
+        public AstNode VisitDivideIntoStatement([NotNull] DivideIntoStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDivideRemainder([NotNull] Cobol85Parser.DivideRemainderContext context)
+        public AstNode VisitDivideRemainder([NotNull] DivideRemainderContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitDivideStatement([NotNull] Cobol85Parser.DivideStatementContext context)
+        public AstNode VisitDivideStatement([NotNull] DivideStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEnableStatement([NotNull] Cobol85Parser.EnableStatementContext context)
+        public AstNode VisitEnableStatement([NotNull] EnableStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEndKeyClause([NotNull] Cobol85Parser.EndKeyClauseContext context)
+        public AstNode VisitEndKeyClause([NotNull] EndKeyClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEndProgramStatement([NotNull] Cobol85Parser.EndProgramStatementContext context)
+        public AstNode VisitEndProgramStatement([NotNull] EndProgramStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEntryStatement([NotNull] Cobol85Parser.EntryStatementContext context)
+        public AstNode VisitEntryStatement([NotNull] EntryStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEnvironmentDivision([NotNull] Cobol85Parser.EnvironmentDivisionContext context)
+        public AstNode VisitEnvironmentDivision([NotNull] EnvironmentDivisionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEnvironmentDivisionBody([NotNull] Cobol85Parser.EnvironmentDivisionBodyContext context)
+        public AstNode VisitEnvironmentDivisionBody([NotNull] EnvironmentDivisionBodyContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEnvironmentName([NotNull] Cobol85Parser.EnvironmentNameContext context)
+        public AstNode VisitEnvironmentName([NotNull] EnvironmentNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEnvironmentSwitchNameClause([NotNull] Cobol85Parser.EnvironmentSwitchNameClauseContext context)
+        public AstNode VisitEnvironmentSwitchNameClause([NotNull] EnvironmentSwitchNameClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEnvironmentSwitchNameSpecialNamesStatusPhrase([NotNull] Cobol85Parser.EnvironmentSwitchNameSpecialNamesStatusPhraseContext context)
+        public AstNode VisitEnvironmentSwitchNameSpecialNamesStatusPhrase([NotNull] EnvironmentSwitchNameSpecialNamesStatusPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitErrorKeyClause([NotNull] Cobol85Parser.ErrorKeyClauseContext context)
+        public AstNode VisitErrorKeyClause([NotNull] ErrorKeyClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitErrorNode(IErrorNode node)
+        public AstNode VisitErrorNode(IErrorNode node)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEvaluateAlsoCondition([NotNull] Cobol85Parser.EvaluateAlsoConditionContext context)
+        public AstNode VisitEvaluateAlsoCondition([NotNull] EvaluateAlsoConditionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEvaluateAlsoSelect([NotNull] Cobol85Parser.EvaluateAlsoSelectContext context)
+        public AstNode VisitEvaluateAlsoSelect([NotNull] EvaluateAlsoSelectContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEvaluateCondition([NotNull] Cobol85Parser.EvaluateConditionContext context)
+        public AstNode VisitEvaluateCondition([NotNull] EvaluateConditionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEvaluateSelect([NotNull] Cobol85Parser.EvaluateSelectContext context)
+        public AstNode VisitEvaluateSelect([NotNull] EvaluateSelectContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEvaluateStatement([NotNull] Cobol85Parser.EvaluateStatementContext context)
+        public AstNode VisitEvaluateStatement([NotNull] EvaluateStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEvaluateThrough([NotNull] Cobol85Parser.EvaluateThroughContext context)
+        public AstNode VisitEvaluateThrough([NotNull] EvaluateThroughContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEvaluateValue([NotNull] Cobol85Parser.EvaluateValueContext context)
+        public AstNode VisitEvaluateValue([NotNull] EvaluateValueContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEvaluateWhen([NotNull] Cobol85Parser.EvaluateWhenContext context)
+        public AstNode VisitEvaluateWhen([NotNull] EvaluateWhenContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEvaluateWhenOther([NotNull] Cobol85Parser.EvaluateWhenOtherContext context)
+        public AstNode VisitEvaluateWhenOther([NotNull] EvaluateWhenOtherContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitEvaluateWhenPhrase([NotNull] Cobol85Parser.EvaluateWhenPhraseContext context)
+        public AstNode VisitEvaluateWhenPhrase([NotNull] EvaluateWhenPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitExecCicsStatement([NotNull] Cobol85Parser.ExecCicsStatementContext context)
+        public AstNode VisitExecCicsStatement([NotNull] ExecCicsStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitExecSqlImsStatement([NotNull] Cobol85Parser.ExecSqlImsStatementContext context)
+        public AstNode VisitExecSqlImsStatement([NotNull] ExecSqlImsStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitExecSqlStatement([NotNull] Cobol85Parser.ExecSqlStatementContext context)
+        public AstNode VisitExecSqlStatement([NotNull] ExecSqlStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitExhibitOperand([NotNull] Cobol85Parser.ExhibitOperandContext context)
+        public AstNode VisitExhibitOperand([NotNull] ExhibitOperandContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitExhibitStatement([NotNull] Cobol85Parser.ExhibitStatementContext context)
+        public AstNode VisitExhibitStatement([NotNull] ExhibitStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitExitStatement([NotNull] Cobol85Parser.ExitStatementContext context)
+        public AstNode VisitExitStatement([NotNull] ExitStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitExternalClause([NotNull] Cobol85Parser.ExternalClauseContext context)
+        public AstNode VisitExternalClause([NotNull] ExternalClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFigurativeConstant([NotNull] Cobol85Parser.FigurativeConstantContext context)
+        public AstNode VisitFigurativeConstant([NotNull] FigurativeConstantContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFileControlClause([NotNull] Cobol85Parser.FileControlClauseContext context)
+        public AstNode VisitFileControlClause([NotNull] FileControlClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFileControlEntry([NotNull] Cobol85Parser.FileControlEntryContext context)
+        public AstNode VisitFileControlEntry([NotNull] FileControlEntryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFileControlParagraph([NotNull] Cobol85Parser.FileControlParagraphContext context)
+        public AstNode VisitFileControlParagraph([NotNull] FileControlParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFileDescriptionEntry([NotNull] Cobol85Parser.FileDescriptionEntryContext context)
+        public AstNode VisitFileDescriptionEntry([NotNull] FileDescriptionEntryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFileDescriptionEntryClause([NotNull] Cobol85Parser.FileDescriptionEntryClauseContext context)
+        public AstNode VisitFileDescriptionEntryClause([NotNull] FileDescriptionEntryClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFileName([NotNull] Cobol85Parser.FileNameContext context)
+        public AstNode VisitFileName([NotNull] FileNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFileSection([NotNull] Cobol85Parser.FileSectionContext context)
+        public AstNode VisitFileSection([NotNull] FileSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFileStatusClause([NotNull] Cobol85Parser.FileStatusClauseContext context)
+        public AstNode VisitFileStatusClause([NotNull] FileStatusClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFunctionCall([NotNull] Cobol85Parser.FunctionCallContext context)
+        public AstNode VisitFunctionCall([NotNull] FunctionCallContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitFunctionName([NotNull] Cobol85Parser.FunctionNameContext context)
+        public AstNode VisitFunctionName([NotNull] FunctionNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitGenerateStatement([NotNull] Cobol85Parser.GenerateStatementContext context)
+        public AstNode VisitGenerateStatement([NotNull] GenerateStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitGlobalClause([NotNull] Cobol85Parser.GlobalClauseContext context)
+        public AstNode VisitGlobalClause([NotNull] GlobalClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitGobackStatement([NotNull] Cobol85Parser.GobackStatementContext context)
+        public AstNode VisitGobackStatement([NotNull] GobackStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitGoToDependingOnStatement([NotNull] Cobol85Parser.GoToDependingOnStatementContext context)
+        public AstNode VisitGoToDependingOnStatement([NotNull] GoToDependingOnStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitGoToStatement([NotNull] Cobol85Parser.GoToStatementContext context)
+        public AstNode VisitGoToStatement([NotNull] GoToStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitGoToStatementSimple([NotNull] Cobol85Parser.GoToStatementSimpleContext context)
+        public AstNode VisitGoToStatementSimple([NotNull] GoToStatementSimpleContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitIdentificationDivision([NotNull] Cobol85Parser.IdentificationDivisionContext context)
+        public AstNode VisitIdentificationDivision([NotNull] IdentificationDivisionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitIdentificationDivisionBody([NotNull] Cobol85Parser.IdentificationDivisionBodyContext context)
+        public AstNode VisitIdentificationDivisionBody([NotNull] IdentificationDivisionBodyContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitIdentifier([NotNull] Cobol85Parser.IdentifierContext context)
+        public AstNode VisitIdentifier([NotNull] IdentifierContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitIfElse([NotNull] Cobol85Parser.IfElseContext context)
+        public AstNode VisitIfElse([NotNull] IfElseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitIfStatement([NotNull] Cobol85Parser.IfStatementContext context)
+        public AstNode VisitIfStatement([NotNull] IfStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitIfThen([NotNull] Cobol85Parser.IfThenContext context)
+        public AstNode VisitIfThen([NotNull] IfThenContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInData([NotNull] Cobol85Parser.InDataContext context)
+        public AstNode VisitInData([NotNull] InDataContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitIndexName([NotNull] Cobol85Parser.IndexNameContext context)
+        public AstNode VisitIndexName([NotNull] IndexNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInFile([NotNull] Cobol85Parser.InFileContext context)
+        public AstNode VisitInFile([NotNull] InFileContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInitializeReplacingBy([NotNull] Cobol85Parser.InitializeReplacingByContext context)
+        public AstNode VisitInitializeReplacingBy([NotNull] InitializeReplacingByContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInitializeReplacingPhrase([NotNull] Cobol85Parser.InitializeReplacingPhraseContext context)
+        public AstNode VisitInitializeReplacingPhrase([NotNull] InitializeReplacingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInitializeStatement([NotNull] Cobol85Parser.InitializeStatementContext context)
+        public AstNode VisitInitializeStatement([NotNull] InitializeStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInitiateStatement([NotNull] Cobol85Parser.InitiateStatementContext context)
+        public AstNode VisitInitiateStatement([NotNull] InitiateStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInLibrary([NotNull] Cobol85Parser.InLibraryContext context)
+        public AstNode VisitInLibrary([NotNull] InLibraryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInMnemonic([NotNull] Cobol85Parser.InMnemonicContext context)
+        public AstNode VisitInMnemonic([NotNull] InMnemonicContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInputOutputSection([NotNull] Cobol85Parser.InputOutputSectionContext context)
+        public AstNode VisitInputOutputSection([NotNull] InputOutputSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInputOutputSectionParagraph([NotNull] Cobol85Parser.InputOutputSectionParagraphContext context)
+        public AstNode VisitInputOutputSectionParagraph([NotNull] InputOutputSectionParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInSection([NotNull] Cobol85Parser.InSectionContext context)
+        public AstNode VisitInSection([NotNull] InSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectAllLeading([NotNull] Cobol85Parser.InspectAllLeadingContext context)
+        public AstNode VisitInspectAllLeading([NotNull] InspectAllLeadingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectAllLeadings([NotNull] Cobol85Parser.InspectAllLeadingsContext context)
+        public AstNode VisitInspectAllLeadings([NotNull] InspectAllLeadingsContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectBeforeAfter([NotNull] Cobol85Parser.InspectBeforeAfterContext context)
+        public AstNode VisitInspectBeforeAfter([NotNull] InspectBeforeAfterContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectBy([NotNull] Cobol85Parser.InspectByContext context)
+        public AstNode VisitInspectBy([NotNull] InspectByContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectCharacters([NotNull] Cobol85Parser.InspectCharactersContext context)
+        public AstNode VisitInspectCharacters([NotNull] InspectCharactersContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectConvertingPhrase([NotNull] Cobol85Parser.InspectConvertingPhraseContext context)
+        public AstNode VisitInspectConvertingPhrase([NotNull] InspectConvertingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectFor([NotNull] Cobol85Parser.InspectForContext context)
+        public AstNode VisitInspectFor([NotNull] InspectForContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectReplacingAllLeading([NotNull] Cobol85Parser.InspectReplacingAllLeadingContext context)
+        public AstNode VisitInspectReplacingAllLeading([NotNull] InspectReplacingAllLeadingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectReplacingAllLeadings([NotNull] Cobol85Parser.InspectReplacingAllLeadingsContext context)
+        public AstNode VisitInspectReplacingAllLeadings([NotNull] InspectReplacingAllLeadingsContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectReplacingCharacters([NotNull] Cobol85Parser.InspectReplacingCharactersContext context)
+        public AstNode VisitInspectReplacingCharacters([NotNull] InspectReplacingCharactersContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectReplacingPhrase([NotNull] Cobol85Parser.InspectReplacingPhraseContext context)
+        public AstNode VisitInspectReplacingPhrase([NotNull] InspectReplacingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectStatement([NotNull] Cobol85Parser.InspectStatementContext context)
+        public AstNode VisitInspectStatement([NotNull] InspectStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectTallyingPhrase([NotNull] Cobol85Parser.InspectTallyingPhraseContext context)
+        public AstNode VisitInspectTallyingPhrase([NotNull] InspectTallyingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectTallyingReplacingPhrase([NotNull] Cobol85Parser.InspectTallyingReplacingPhraseContext context)
+        public AstNode VisitInspectTallyingReplacingPhrase([NotNull] InspectTallyingReplacingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInspectTo([NotNull] Cobol85Parser.InspectToContext context)
+        public AstNode VisitInspectTo([NotNull] InspectToContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInstallationParagraph([NotNull] Cobol85Parser.InstallationParagraphContext context)
+        public AstNode VisitInstallationParagraph([NotNull] InstallationParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInTable([NotNull] Cobol85Parser.InTableContext context)
+        public AstNode VisitInTable([NotNull] InTableContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitIntegerLiteral([NotNull] Cobol85Parser.IntegerLiteralContext context)
+        public AstNode VisitIntegerLiteral([NotNull] IntegerLiteralContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitInvalidKeyPhrase([NotNull] Cobol85Parser.InvalidKeyPhraseContext context)
+        public AstNode VisitInvalidKeyPhrase([NotNull] InvalidKeyPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitIoControlClause([NotNull] Cobol85Parser.IoControlClauseContext context)
+        public AstNode VisitIoControlClause([NotNull] IoControlClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitIoControlParagraph([NotNull] Cobol85Parser.IoControlParagraphContext context)
+        public AstNode VisitIoControlParagraph([NotNull] IoControlParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLabelRecordsClause([NotNull] Cobol85Parser.LabelRecordsClauseContext context)
+        public AstNode VisitLabelRecordsClause([NotNull] LabelRecordsClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLanguageName([NotNull] Cobol85Parser.LanguageNameContext context)
+        public AstNode VisitLanguageName([NotNull] LanguageNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLength([NotNull] Cobol85Parser.LengthContext context)
+        public AstNode VisitLength([NotNull] LengthContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryAttributeClauseFormat1([NotNull] Cobol85Parser.LibraryAttributeClauseFormat1Context context)
+        public AstNode VisitLibraryAttributeClauseFormat1([NotNull] LibraryAttributeClauseFormat1Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryAttributeClauseFormat2([NotNull] Cobol85Parser.LibraryAttributeClauseFormat2Context context)
+        public AstNode VisitLibraryAttributeClauseFormat2([NotNull] LibraryAttributeClauseFormat2Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryAttributeFunction([NotNull] Cobol85Parser.LibraryAttributeFunctionContext context)
+        public AstNode VisitLibraryAttributeFunction([NotNull] LibraryAttributeFunctionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryAttributeParameter([NotNull] Cobol85Parser.LibraryAttributeParameterContext context)
+        public AstNode VisitLibraryAttributeParameter([NotNull] LibraryAttributeParameterContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryAttributeTitle([NotNull] Cobol85Parser.LibraryAttributeTitleContext context)
+        public AstNode VisitLibraryAttributeTitle([NotNull] LibraryAttributeTitleContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryDescriptionEntry([NotNull] Cobol85Parser.LibraryDescriptionEntryContext context)
+        public AstNode VisitLibraryDescriptionEntry([NotNull] LibraryDescriptionEntryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryDescriptionEntryFormat1([NotNull] Cobol85Parser.LibraryDescriptionEntryFormat1Context context)
+        public AstNode VisitLibraryDescriptionEntryFormat1([NotNull] LibraryDescriptionEntryFormat1Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryDescriptionEntryFormat2([NotNull] Cobol85Parser.LibraryDescriptionEntryFormat2Context context)
+        public AstNode VisitLibraryDescriptionEntryFormat2([NotNull] LibraryDescriptionEntryFormat2Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryEntryProcedureClauseFormat1([NotNull] Cobol85Parser.LibraryEntryProcedureClauseFormat1Context context)
+        public AstNode VisitLibraryEntryProcedureClauseFormat1([NotNull] LibraryEntryProcedureClauseFormat1Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryEntryProcedureClauseFormat2([NotNull] Cobol85Parser.LibraryEntryProcedureClauseFormat2Context context)
+        public AstNode VisitLibraryEntryProcedureClauseFormat2([NotNull] LibraryEntryProcedureClauseFormat2Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryEntryProcedureForClause([NotNull] Cobol85Parser.LibraryEntryProcedureForClauseContext context)
+        public AstNode VisitLibraryEntryProcedureForClause([NotNull] LibraryEntryProcedureForClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryEntryProcedureGivingClause([NotNull] Cobol85Parser.LibraryEntryProcedureGivingClauseContext context)
+        public AstNode VisitLibraryEntryProcedureGivingClause([NotNull] LibraryEntryProcedureGivingClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryEntryProcedureUsingClause([NotNull] Cobol85Parser.LibraryEntryProcedureUsingClauseContext context)
+        public AstNode VisitLibraryEntryProcedureUsingClause([NotNull] LibraryEntryProcedureUsingClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryEntryProcedureUsingName([NotNull] Cobol85Parser.LibraryEntryProcedureUsingNameContext context)
+        public AstNode VisitLibraryEntryProcedureUsingName([NotNull] LibraryEntryProcedureUsingNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryEntryProcedureWithClause([NotNull] Cobol85Parser.LibraryEntryProcedureWithClauseContext context)
+        public AstNode VisitLibraryEntryProcedureWithClause([NotNull] LibraryEntryProcedureWithClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryEntryProcedureWithName([NotNull] Cobol85Parser.LibraryEntryProcedureWithNameContext context)
+        public AstNode VisitLibraryEntryProcedureWithName([NotNull] LibraryEntryProcedureWithNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryIsCommonClause([NotNull] Cobol85Parser.LibraryIsCommonClauseContext context)
+        public AstNode VisitLibraryIsCommonClause([NotNull] LibraryIsCommonClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryIsGlobalClause([NotNull] Cobol85Parser.LibraryIsGlobalClauseContext context)
+        public AstNode VisitLibraryIsGlobalClause([NotNull] LibraryIsGlobalClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLibraryName([NotNull] Cobol85Parser.LibraryNameContext context)
+        public AstNode VisitLibraryName([NotNull] LibraryNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLinageAt([NotNull] Cobol85Parser.LinageAtContext context)
+        public AstNode VisitLinageAt([NotNull] LinageAtContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLinageClause([NotNull] Cobol85Parser.LinageClauseContext context)
+        public AstNode VisitLinageClause([NotNull] LinageClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLinageFootingAt([NotNull] Cobol85Parser.LinageFootingAtContext context)
+        public AstNode VisitLinageFootingAt([NotNull] LinageFootingAtContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLinageLinesAtBottom([NotNull] Cobol85Parser.LinageLinesAtBottomContext context)
+        public AstNode VisitLinageLinesAtBottom([NotNull] LinageLinesAtBottomContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLinageLinesAtTop([NotNull] Cobol85Parser.LinageLinesAtTopContext context)
+        public AstNode VisitLinageLinesAtTop([NotNull] LinageLinesAtTopContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLinkageSection([NotNull] Cobol85Parser.LinkageSectionContext context)
+        public AstNode VisitLinkageSection([NotNull] LinkageSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLiteral([NotNull] Cobol85Parser.LiteralContext context)
+        public AstNode VisitLiteral([NotNull] LiteralContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLocalName([NotNull] Cobol85Parser.LocalNameContext context)
+        public AstNode VisitLocalName([NotNull] LocalNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitLocalStorageSection([NotNull] Cobol85Parser.LocalStorageSectionContext context)
+        public AstNode VisitLocalStorageSection([NotNull] LocalStorageSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMemorySizeClause([NotNull] Cobol85Parser.MemorySizeClauseContext context)
+        public AstNode VisitMemorySizeClause([NotNull] MemorySizeClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMergeCollatingAlphanumeric([NotNull] Cobol85Parser.MergeCollatingAlphanumericContext context)
+        public AstNode VisitMergeCollatingAlphanumeric([NotNull] MergeCollatingAlphanumericContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMergeCollatingNational([NotNull] Cobol85Parser.MergeCollatingNationalContext context)
+        public AstNode VisitMergeCollatingNational([NotNull] MergeCollatingNationalContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMergeCollatingSequencePhrase([NotNull] Cobol85Parser.MergeCollatingSequencePhraseContext context)
+        public AstNode VisitMergeCollatingSequencePhrase([NotNull] MergeCollatingSequencePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMergeGiving([NotNull] Cobol85Parser.MergeGivingContext context)
+        public AstNode VisitMergeGiving([NotNull] MergeGivingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMergeGivingPhrase([NotNull] Cobol85Parser.MergeGivingPhraseContext context)
+        public AstNode VisitMergeGivingPhrase([NotNull] MergeGivingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMergeOnKeyClause([NotNull] Cobol85Parser.MergeOnKeyClauseContext context)
+        public AstNode VisitMergeOnKeyClause([NotNull] MergeOnKeyClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMergeOutputProcedurePhrase([NotNull] Cobol85Parser.MergeOutputProcedurePhraseContext context)
+        public AstNode VisitMergeOutputProcedurePhrase([NotNull] MergeOutputProcedurePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMergeOutputThrough([NotNull] Cobol85Parser.MergeOutputThroughContext context)
+        public AstNode VisitMergeOutputThrough([NotNull] MergeOutputThroughContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMergeStatement([NotNull] Cobol85Parser.MergeStatementContext context)
+        public AstNode VisitMergeStatement([NotNull] MergeStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMergeUsing([NotNull] Cobol85Parser.MergeUsingContext context)
+        public AstNode VisitMergeUsing([NotNull] MergeUsingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMessageCountClause([NotNull] Cobol85Parser.MessageCountClauseContext context)
+        public AstNode VisitMessageCountClause([NotNull] MessageCountClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMessageDateClause([NotNull] Cobol85Parser.MessageDateClauseContext context)
+        public AstNode VisitMessageDateClause([NotNull] MessageDateClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMessageTimeClause([NotNull] Cobol85Parser.MessageTimeClauseContext context)
+        public AstNode VisitMessageTimeClause([NotNull] MessageTimeClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMnemonicName([NotNull] Cobol85Parser.MnemonicNameContext context)
+        public AstNode VisitMnemonicName([NotNull] MnemonicNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitModeStatement([NotNull] Cobol85Parser.ModeStatementContext context)
+        public AstNode VisitModeStatement([NotNull] ModeStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMoveCorrespondingToSendingArea([NotNull] Cobol85Parser.MoveCorrespondingToSendingAreaContext context)
+        public AstNode VisitMoveCorrespondingToSendingArea([NotNull] MoveCorrespondingToSendingAreaContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMoveCorrespondingToStatement([NotNull] Cobol85Parser.MoveCorrespondingToStatementContext context)
+        public AstNode VisitMoveCorrespondingToStatement([NotNull] MoveCorrespondingToStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMoveStatement([NotNull] Cobol85Parser.MoveStatementContext context)
+        public AstNode VisitMoveStatement([NotNull] MoveStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMoveToSendingArea([NotNull] Cobol85Parser.MoveToSendingAreaContext context)
+        public AstNode VisitMoveToSendingArea([NotNull] MoveToSendingAreaContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMoveToStatement([NotNull] Cobol85Parser.MoveToStatementContext context)
+        public AstNode VisitMoveToStatement([NotNull] MoveToStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMultDiv([NotNull] Cobol85Parser.MultDivContext context)
+        public AstNode VisitMultDiv([NotNull] MultDivContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMultDivs([NotNull] Cobol85Parser.MultDivsContext context)
+        public AstNode VisitMultDivs([NotNull] MultDivsContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMultipleFileClause([NotNull] Cobol85Parser.MultipleFileClauseContext context)
+        public AstNode VisitMultipleFileClause([NotNull] MultipleFileClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMultipleFilePosition([NotNull] Cobol85Parser.MultipleFilePositionContext context)
+        public AstNode VisitMultipleFilePosition([NotNull] MultipleFilePositionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMultiplyGiving([NotNull] Cobol85Parser.MultiplyGivingContext context)
+        public AstNode VisitMultiplyGiving([NotNull] MultiplyGivingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMultiplyGivingOperand([NotNull] Cobol85Parser.MultiplyGivingOperandContext context)
+        public AstNode VisitMultiplyGivingOperand([NotNull] MultiplyGivingOperandContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMultiplyGivingResult([NotNull] Cobol85Parser.MultiplyGivingResultContext context)
+        public AstNode VisitMultiplyGivingResult([NotNull] MultiplyGivingResultContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMultiplyRegular([NotNull] Cobol85Parser.MultiplyRegularContext context)
+        public AstNode VisitMultiplyRegular([NotNull] MultiplyRegularContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMultiplyRegularOperand([NotNull] Cobol85Parser.MultiplyRegularOperandContext context)
+        public AstNode VisitMultiplyRegularOperand([NotNull] MultiplyRegularOperandContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitMultiplyStatement([NotNull] Cobol85Parser.MultiplyStatementContext context)
+        public AstNode VisitMultiplyStatement([NotNull] MultiplyStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitNotAtEndPhrase([NotNull] Cobol85Parser.NotAtEndPhraseContext context)
+        public AstNode VisitNotAtEndPhrase([NotNull] NotAtEndPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitNotInvalidKeyPhrase([NotNull] Cobol85Parser.NotInvalidKeyPhraseContext context)
+        public AstNode VisitNotInvalidKeyPhrase([NotNull] NotInvalidKeyPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitNotOnExceptionClause([NotNull] Cobol85Parser.NotOnExceptionClauseContext context)
+        public AstNode VisitNotOnExceptionClause([NotNull] NotOnExceptionClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitNotOnOverflowPhrase([NotNull] Cobol85Parser.NotOnOverflowPhraseContext context)
+        public AstNode VisitNotOnOverflowPhrase([NotNull] NotOnOverflowPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitNotOnSizeErrorPhrase([NotNull] Cobol85Parser.NotOnSizeErrorPhraseContext context)
+        public AstNode VisitNotOnSizeErrorPhrase([NotNull] NotOnSizeErrorPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitNumericLiteral([NotNull] Cobol85Parser.NumericLiteralContext context)
+        public AstNode VisitNumericLiteral([NotNull] NumericLiteralContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitObjectComputerClause([NotNull] Cobol85Parser.ObjectComputerClauseContext context)
+        public AstNode VisitObjectComputerClause([NotNull] ObjectComputerClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitObjectComputerParagraph([NotNull] Cobol85Parser.ObjectComputerParagraphContext context)
+        public AstNode VisitObjectComputerParagraph([NotNull] ObjectComputerParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOdtClause([NotNull] Cobol85Parser.OdtClauseContext context)
+        public AstNode VisitOdtClause([NotNull] OdtClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOnExceptionClause([NotNull] Cobol85Parser.OnExceptionClauseContext context)
+        public AstNode VisitOnExceptionClause([NotNull] OnExceptionClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOnOverflowPhrase([NotNull] Cobol85Parser.OnOverflowPhraseContext context)
+        public AstNode VisitOnOverflowPhrase([NotNull] OnOverflowPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOnSizeErrorPhrase([NotNull] Cobol85Parser.OnSizeErrorPhraseContext context)
+        public AstNode VisitOnSizeErrorPhrase([NotNull] OnSizeErrorPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOpenExtendStatement([NotNull] Cobol85Parser.OpenExtendStatementContext context)
+        public AstNode VisitOpenExtendStatement([NotNull] OpenExtendStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOpenInput([NotNull] Cobol85Parser.OpenInputContext context)
+        public AstNode VisitOpenInput([NotNull] OpenInputContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOpenInputStatement([NotNull] Cobol85Parser.OpenInputStatementContext context)
+        public AstNode VisitOpenInputStatement([NotNull] OpenInputStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOpenIOStatement([NotNull] Cobol85Parser.OpenIOStatementContext context)
+        public AstNode VisitOpenIOStatement([NotNull] OpenIOStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOpenOutput([NotNull] Cobol85Parser.OpenOutputContext context)
+        public AstNode VisitOpenOutput([NotNull] OpenOutputContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOpenOutputStatement([NotNull] Cobol85Parser.OpenOutputStatementContext context)
+        public AstNode VisitOpenOutputStatement([NotNull] OpenOutputStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOpenStatement([NotNull] Cobol85Parser.OpenStatementContext context)
+        public AstNode VisitOpenStatement([NotNull] OpenStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitOrganizationClause([NotNull] Cobol85Parser.OrganizationClauseContext context)
+        public AstNode VisitOrganizationClause([NotNull] OrganizationClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPaddingCharacterClause([NotNull] Cobol85Parser.PaddingCharacterClauseContext context)
+        public AstNode VisitPaddingCharacterClause([NotNull] PaddingCharacterClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitParagraph([NotNull] Cobol85Parser.ParagraphContext context)
+        public AstNode VisitParagraph([NotNull] ParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitParagraphName([NotNull] Cobol85Parser.ParagraphNameContext context)
+        public AstNode VisitParagraphName([NotNull] ParagraphNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitParagraphs([NotNull] Cobol85Parser.ParagraphsContext context)
+        public AstNode VisitParagraphs([NotNull] ParagraphsContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPasswordClause([NotNull] Cobol85Parser.PasswordClauseContext context)
+        public AstNode VisitPasswordClause([NotNull] PasswordClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformAfter([NotNull] Cobol85Parser.PerformAfterContext context)
+        public AstNode VisitPerformAfter([NotNull] PerformAfterContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformBy([NotNull] Cobol85Parser.PerformByContext context)
+        public AstNode VisitPerformBy([NotNull] PerformByContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformFrom([NotNull] Cobol85Parser.PerformFromContext context)
+        public AstNode VisitPerformFrom([NotNull] PerformFromContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformInlineStatement([NotNull] Cobol85Parser.PerformInlineStatementContext context)
+        public AstNode VisitPerformInlineStatement([NotNull] PerformInlineStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformProcedureStatement([NotNull] Cobol85Parser.PerformProcedureStatementContext context)
+        public AstNode VisitPerformProcedureStatement([NotNull] PerformProcedureStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformStatement([NotNull] Cobol85Parser.PerformStatementContext context)
+        public AstNode VisitPerformStatement([NotNull] PerformStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformTestClause([NotNull] Cobol85Parser.PerformTestClauseContext context)
+        public AstNode VisitPerformTestClause([NotNull] PerformTestClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformTimes([NotNull] Cobol85Parser.PerformTimesContext context)
+        public AstNode VisitPerformTimes([NotNull] PerformTimesContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformType([NotNull] Cobol85Parser.PerformTypeContext context)
+        public AstNode VisitPerformType([NotNull] PerformTypeContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformUntil([NotNull] Cobol85Parser.PerformUntilContext context)
+        public AstNode VisitPerformUntil([NotNull] PerformUntilContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformVarying([NotNull] Cobol85Parser.PerformVaryingContext context)
+        public AstNode VisitPerformVarying([NotNull] PerformVaryingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformVaryingClause([NotNull] Cobol85Parser.PerformVaryingClauseContext context)
+        public AstNode VisitPerformVaryingClause([NotNull] PerformVaryingClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPerformVaryingPhrase([NotNull] Cobol85Parser.PerformVaryingPhraseContext context)
+        public AstNode VisitPerformVaryingPhrase([NotNull] PerformVaryingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPictureCardinality([NotNull] Cobol85Parser.PictureCardinalityContext context)
+        public AstNode VisitPictureCardinality([NotNull] PictureCardinalityContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPictureChars([NotNull] Cobol85Parser.PictureCharsContext context)
+        public AstNode VisitPictureChars([NotNull] PictureCharsContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPictureString([NotNull] Cobol85Parser.PictureStringContext context)
+        public AstNode VisitPictureString([NotNull] PictureStringContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPlusMinus([NotNull] Cobol85Parser.PlusMinusContext context)
+        public AstNode VisitPlusMinus([NotNull] PlusMinusContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPower([NotNull] Cobol85Parser.PowerContext context)
+        public AstNode VisitPower([NotNull] PowerContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPowers([NotNull] Cobol85Parser.PowersContext context)
+        public AstNode VisitPowers([NotNull] PowersContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDeclarative([NotNull] Cobol85Parser.ProcedureDeclarativeContext context)
+        public AstNode VisitProcedureDeclarative([NotNull] ProcedureDeclarativeContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDeclaratives([NotNull] Cobol85Parser.ProcedureDeclarativesContext context)
+        public AstNode VisitProcedureDeclaratives([NotNull] ProcedureDeclarativesContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDivision([NotNull] Cobol85Parser.ProcedureDivisionContext context)
+        public AstNode VisitProcedureDivision([NotNull] ProcedureDivisionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDivisionBody([NotNull] Cobol85Parser.ProcedureDivisionBodyContext context)
+        public AstNode VisitProcedureDivisionBody([NotNull] ProcedureDivisionBodyContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDivisionByReference([NotNull] Cobol85Parser.ProcedureDivisionByReferenceContext context)
+        public AstNode VisitProcedureDivisionByReference([NotNull] ProcedureDivisionByReferenceContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDivisionByReferencePhrase([NotNull] Cobol85Parser.ProcedureDivisionByReferencePhraseContext context)
+        public AstNode VisitProcedureDivisionByReferencePhrase([NotNull] ProcedureDivisionByReferencePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDivisionByValue([NotNull] Cobol85Parser.ProcedureDivisionByValueContext context)
+        public AstNode VisitProcedureDivisionByValue([NotNull] ProcedureDivisionByValueContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDivisionByValuePhrase([NotNull] Cobol85Parser.ProcedureDivisionByValuePhraseContext context)
+        public AstNode VisitProcedureDivisionByValuePhrase([NotNull] ProcedureDivisionByValuePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDivisionGivingClause([NotNull] Cobol85Parser.ProcedureDivisionGivingClauseContext context)
+        public AstNode VisitProcedureDivisionGivingClause([NotNull] ProcedureDivisionGivingClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDivisionUsingClause([NotNull] Cobol85Parser.ProcedureDivisionUsingClauseContext context)
+        public AstNode VisitProcedureDivisionUsingClause([NotNull] ProcedureDivisionUsingClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureDivisionUsingParameter([NotNull] Cobol85Parser.ProcedureDivisionUsingParameterContext context)
+        public AstNode VisitProcedureDivisionUsingParameter([NotNull] ProcedureDivisionUsingParameterContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureName([NotNull] Cobol85Parser.ProcedureNameContext context)
+        public AstNode VisitProcedureName([NotNull] ProcedureNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureSection([NotNull] Cobol85Parser.ProcedureSectionContext context)
+        public AstNode VisitProcedureSection([NotNull] ProcedureSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProcedureSectionHeader([NotNull] Cobol85Parser.ProcedureSectionHeaderContext context)
+        public AstNode VisitProcedureSectionHeader([NotNull] ProcedureSectionHeaderContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProgramIdParagraph([NotNull] Cobol85Parser.ProgramIdParagraphContext context)
+        public AstNode VisitProgramIdParagraph([NotNull] ProgramIdParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProgramLibrarySection([NotNull] Cobol85Parser.ProgramLibrarySectionContext context)
+        public AstNode VisitProgramLibrarySection([NotNull] ProgramLibrarySectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProgramName([NotNull] Cobol85Parser.ProgramNameContext context)
+        public AstNode VisitProgramName([NotNull] ProgramNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitProgramUnit([NotNull] Cobol85Parser.ProgramUnitContext context)
+        public AstNode VisitProgramUnit([NotNull] ProgramUnitContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitPurgeStatement([NotNull] Cobol85Parser.PurgeStatementContext context)
+        public AstNode VisitPurgeStatement([NotNull] PurgeStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitQualifiedDataName([NotNull] Cobol85Parser.QualifiedDataNameContext context)
+        public AstNode VisitQualifiedDataName([NotNull] QualifiedDataNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitQualifiedDataNameFormat1([NotNull] Cobol85Parser.QualifiedDataNameFormat1Context context)
+        public AstNode VisitQualifiedDataNameFormat1([NotNull] QualifiedDataNameFormat1Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitQualifiedDataNameFormat2([NotNull] Cobol85Parser.QualifiedDataNameFormat2Context context)
+        public AstNode VisitQualifiedDataNameFormat2([NotNull] QualifiedDataNameFormat2Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitQualifiedDataNameFormat3([NotNull] Cobol85Parser.QualifiedDataNameFormat3Context context)
+        public AstNode VisitQualifiedDataNameFormat3([NotNull] QualifiedDataNameFormat3Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitQualifiedDataNameFormat4([NotNull] Cobol85Parser.QualifiedDataNameFormat4Context context)
+        public AstNode VisitQualifiedDataNameFormat4([NotNull] QualifiedDataNameFormat4Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitQualifiedInData([NotNull] Cobol85Parser.QualifiedInDataContext context)
+        public AstNode VisitQualifiedInData([NotNull] QualifiedInDataContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReadInto([NotNull] Cobol85Parser.ReadIntoContext context)
+        public AstNode VisitReadInto([NotNull] ReadIntoContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReadKey([NotNull] Cobol85Parser.ReadKeyContext context)
+        public AstNode VisitReadKey([NotNull] ReadKeyContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReadStatement([NotNull] Cobol85Parser.ReadStatementContext context)
+        public AstNode VisitReadStatement([NotNull] ReadStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReadWith([NotNull] Cobol85Parser.ReadWithContext context)
+        public AstNode VisitReadWith([NotNull] ReadWithContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveBefore([NotNull] Cobol85Parser.ReceiveBeforeContext context)
+        public AstNode VisitReceiveBefore([NotNull] ReceiveBeforeContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveFrom([NotNull] Cobol85Parser.ReceiveFromContext context)
+        public AstNode VisitReceiveFrom([NotNull] ReceiveFromContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveFromStatement([NotNull] Cobol85Parser.ReceiveFromStatementContext context)
+        public AstNode VisitReceiveFromStatement([NotNull] ReceiveFromStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveIntoStatement([NotNull] Cobol85Parser.ReceiveIntoStatementContext context)
+        public AstNode VisitReceiveIntoStatement([NotNull] ReceiveIntoStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveNoData([NotNull] Cobol85Parser.ReceiveNoDataContext context)
+        public AstNode VisitReceiveNoData([NotNull] ReceiveNoDataContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveSize([NotNull] Cobol85Parser.ReceiveSizeContext context)
+        public AstNode VisitReceiveSize([NotNull] ReceiveSizeContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveStatement([NotNull] Cobol85Parser.ReceiveStatementContext context)
+        public AstNode VisitReceiveStatement([NotNull] ReceiveStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveStatus([NotNull] Cobol85Parser.ReceiveStatusContext context)
+        public AstNode VisitReceiveStatus([NotNull] ReceiveStatusContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveThread([NotNull] Cobol85Parser.ReceiveThreadContext context)
+        public AstNode VisitReceiveThread([NotNull] ReceiveThreadContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveWith([NotNull] Cobol85Parser.ReceiveWithContext context)
+        public AstNode VisitReceiveWith([NotNull] ReceiveWithContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReceiveWithData([NotNull] Cobol85Parser.ReceiveWithDataContext context)
+        public AstNode VisitReceiveWithData([NotNull] ReceiveWithDataContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRecordContainsClause([NotNull] Cobol85Parser.RecordContainsClauseContext context)
+        public AstNode VisitRecordContainsClause([NotNull] RecordContainsClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRecordContainsClauseFormat1([NotNull] Cobol85Parser.RecordContainsClauseFormat1Context context)
+        public AstNode VisitRecordContainsClauseFormat1([NotNull] RecordContainsClauseFormat1Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRecordContainsClauseFormat2([NotNull] Cobol85Parser.RecordContainsClauseFormat2Context context)
+        public AstNode VisitRecordContainsClauseFormat2([NotNull] RecordContainsClauseFormat2Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRecordContainsClauseFormat3([NotNull] Cobol85Parser.RecordContainsClauseFormat3Context context)
+        public AstNode VisitRecordContainsClauseFormat3([NotNull] RecordContainsClauseFormat3Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRecordContainsTo([NotNull] Cobol85Parser.RecordContainsToContext context)
+        public AstNode VisitRecordContainsTo([NotNull] RecordContainsToContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRecordDelimiterClause([NotNull] Cobol85Parser.RecordDelimiterClauseContext context)
+        public AstNode VisitRecordDelimiterClause([NotNull] RecordDelimiterClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRecordingModeClause([NotNull] Cobol85Parser.RecordingModeClauseContext context)
+        public AstNode VisitRecordingModeClause([NotNull] RecordingModeClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRecordKeyClause([NotNull] Cobol85Parser.RecordKeyClauseContext context)
+        public AstNode VisitRecordKeyClause([NotNull] RecordKeyClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRecordName([NotNull] Cobol85Parser.RecordNameContext context)
+        public AstNode VisitRecordName([NotNull] RecordNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReferenceModifier([NotNull] Cobol85Parser.ReferenceModifierContext context)
+        public AstNode VisitReferenceModifier([NotNull] ReferenceModifierContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRelationalOperator([NotNull] Cobol85Parser.RelationalOperatorContext context)
+        public AstNode VisitRelationalOperator([NotNull] RelationalOperatorContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRelationArithmeticComparison([NotNull] Cobol85Parser.RelationArithmeticComparisonContext context)
+        public AstNode VisitRelationArithmeticComparison([NotNull] RelationArithmeticComparisonContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRelationCombinedComparison([NotNull] Cobol85Parser.RelationCombinedComparisonContext context)
+        public AstNode VisitRelationCombinedComparison([NotNull] RelationCombinedComparisonContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRelationCombinedCondition([NotNull] Cobol85Parser.RelationCombinedConditionContext context)
+        public AstNode VisitRelationCombinedCondition([NotNull] RelationCombinedConditionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRelationCondition([NotNull] Cobol85Parser.RelationConditionContext context)
+        public AstNode VisitRelationCondition([NotNull] RelationConditionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRelationSignCondition([NotNull] Cobol85Parser.RelationSignConditionContext context)
+        public AstNode VisitRelationSignCondition([NotNull] RelationSignConditionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRelativeKeyClause([NotNull] Cobol85Parser.RelativeKeyClauseContext context)
+        public AstNode VisitRelativeKeyClause([NotNull] RelativeKeyClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReleaseStatement([NotNull] Cobol85Parser.ReleaseStatementContext context)
+        public AstNode VisitReleaseStatement([NotNull] ReleaseStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRemarksParagraph([NotNull] Cobol85Parser.RemarksParagraphContext context)
+        public AstNode VisitRemarksParagraph([NotNull] RemarksParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportClause([NotNull] Cobol85Parser.ReportClauseContext context)
+        public AstNode VisitReportClause([NotNull] ReportClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportDescription([NotNull] Cobol85Parser.ReportDescriptionContext context)
+        public AstNode VisitReportDescription([NotNull] ReportDescriptionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportDescriptionEntry([NotNull] Cobol85Parser.ReportDescriptionEntryContext context)
+        public AstNode VisitReportDescriptionEntry([NotNull] ReportDescriptionEntryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportDescriptionFirstDetailClause([NotNull] Cobol85Parser.ReportDescriptionFirstDetailClauseContext context)
+        public AstNode VisitReportDescriptionFirstDetailClause([NotNull] ReportDescriptionFirstDetailClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportDescriptionFootingClause([NotNull] Cobol85Parser.ReportDescriptionFootingClauseContext context)
+        public AstNode VisitReportDescriptionFootingClause([NotNull] ReportDescriptionFootingClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportDescriptionGlobalClause([NotNull] Cobol85Parser.ReportDescriptionGlobalClauseContext context)
+        public AstNode VisitReportDescriptionGlobalClause([NotNull] ReportDescriptionGlobalClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportDescriptionHeadingClause([NotNull] Cobol85Parser.ReportDescriptionHeadingClauseContext context)
+        public AstNode VisitReportDescriptionHeadingClause([NotNull] ReportDescriptionHeadingClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportDescriptionLastDetailClause([NotNull] Cobol85Parser.ReportDescriptionLastDetailClauseContext context)
+        public AstNode VisitReportDescriptionLastDetailClause([NotNull] ReportDescriptionLastDetailClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportDescriptionPageLimitClause([NotNull] Cobol85Parser.ReportDescriptionPageLimitClauseContext context)
+        public AstNode VisitReportDescriptionPageLimitClause([NotNull] ReportDescriptionPageLimitClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupBlankWhenZeroClause([NotNull] Cobol85Parser.ReportGroupBlankWhenZeroClauseContext context)
+        public AstNode VisitReportGroupBlankWhenZeroClause([NotNull] ReportGroupBlankWhenZeroClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupColumnNumberClause([NotNull] Cobol85Parser.ReportGroupColumnNumberClauseContext context)
+        public AstNode VisitReportGroupColumnNumberClause([NotNull] ReportGroupColumnNumberClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupDescriptionEntry([NotNull] Cobol85Parser.ReportGroupDescriptionEntryContext context)
+        public AstNode VisitReportGroupDescriptionEntry([NotNull] ReportGroupDescriptionEntryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupDescriptionEntryFormat1([NotNull] Cobol85Parser.ReportGroupDescriptionEntryFormat1Context context)
+        public AstNode VisitReportGroupDescriptionEntryFormat1([NotNull] ReportGroupDescriptionEntryFormat1Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupDescriptionEntryFormat2([NotNull] Cobol85Parser.ReportGroupDescriptionEntryFormat2Context context)
+        public AstNode VisitReportGroupDescriptionEntryFormat2([NotNull] ReportGroupDescriptionEntryFormat2Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupDescriptionEntryFormat3([NotNull] Cobol85Parser.ReportGroupDescriptionEntryFormat3Context context)
+        public AstNode VisitReportGroupDescriptionEntryFormat3([NotNull] ReportGroupDescriptionEntryFormat3Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupIndicateClause([NotNull] Cobol85Parser.ReportGroupIndicateClauseContext context)
+        public AstNode VisitReportGroupIndicateClause([NotNull] ReportGroupIndicateClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupJustifiedClause([NotNull] Cobol85Parser.ReportGroupJustifiedClauseContext context)
+        public AstNode VisitReportGroupJustifiedClause([NotNull] ReportGroupJustifiedClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupLineNumberClause([NotNull] Cobol85Parser.ReportGroupLineNumberClauseContext context)
+        public AstNode VisitReportGroupLineNumberClause([NotNull] ReportGroupLineNumberClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupLineNumberNextPage([NotNull] Cobol85Parser.ReportGroupLineNumberNextPageContext context)
+        public AstNode VisitReportGroupLineNumberNextPage([NotNull] ReportGroupLineNumberNextPageContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupLineNumberPlus([NotNull] Cobol85Parser.ReportGroupLineNumberPlusContext context)
+        public AstNode VisitReportGroupLineNumberPlus([NotNull] ReportGroupLineNumberPlusContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupNextGroupClause([NotNull] Cobol85Parser.ReportGroupNextGroupClauseContext context)
+        public AstNode VisitReportGroupNextGroupClause([NotNull] ReportGroupNextGroupClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupNextGroupNextPage([NotNull] Cobol85Parser.ReportGroupNextGroupNextPageContext context)
+        public AstNode VisitReportGroupNextGroupNextPage([NotNull] ReportGroupNextGroupNextPageContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupNextGroupPlus([NotNull] Cobol85Parser.ReportGroupNextGroupPlusContext context)
+        public AstNode VisitReportGroupNextGroupPlus([NotNull] ReportGroupNextGroupPlusContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupPictureClause([NotNull] Cobol85Parser.ReportGroupPictureClauseContext context)
+        public AstNode VisitReportGroupPictureClause([NotNull] ReportGroupPictureClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupResetClause([NotNull] Cobol85Parser.ReportGroupResetClauseContext context)
+        public AstNode VisitReportGroupResetClause([NotNull] ReportGroupResetClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupSignClause([NotNull] Cobol85Parser.ReportGroupSignClauseContext context)
+        public AstNode VisitReportGroupSignClause([NotNull] ReportGroupSignClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupSourceClause([NotNull] Cobol85Parser.ReportGroupSourceClauseContext context)
+        public AstNode VisitReportGroupSourceClause([NotNull] ReportGroupSourceClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupSumClause([NotNull] Cobol85Parser.ReportGroupSumClauseContext context)
+        public AstNode VisitReportGroupSumClause([NotNull] ReportGroupSumClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupTypeClause([NotNull] Cobol85Parser.ReportGroupTypeClauseContext context)
+        public AstNode VisitReportGroupTypeClause([NotNull] ReportGroupTypeClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupTypeControlFooting([NotNull] Cobol85Parser.ReportGroupTypeControlFootingContext context)
+        public AstNode VisitReportGroupTypeControlFooting([NotNull] ReportGroupTypeControlFootingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupTypeControlHeading([NotNull] Cobol85Parser.ReportGroupTypeControlHeadingContext context)
+        public AstNode VisitReportGroupTypeControlHeading([NotNull] ReportGroupTypeControlHeadingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupTypeDetail([NotNull] Cobol85Parser.ReportGroupTypeDetailContext context)
+        public AstNode VisitReportGroupTypeDetail([NotNull] ReportGroupTypeDetailContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupTypePageFooting([NotNull] Cobol85Parser.ReportGroupTypePageFootingContext context)
+        public AstNode VisitReportGroupTypePageFooting([NotNull] ReportGroupTypePageFootingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupTypePageHeading([NotNull] Cobol85Parser.ReportGroupTypePageHeadingContext context)
+        public AstNode VisitReportGroupTypePageHeading([NotNull] ReportGroupTypePageHeadingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupTypeReportFooting([NotNull] Cobol85Parser.ReportGroupTypeReportFootingContext context)
+        public AstNode VisitReportGroupTypeReportFooting([NotNull] ReportGroupTypeReportFootingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupTypeReportHeading([NotNull] Cobol85Parser.ReportGroupTypeReportHeadingContext context)
+        public AstNode VisitReportGroupTypeReportHeading([NotNull] ReportGroupTypeReportHeadingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupUsageClause([NotNull] Cobol85Parser.ReportGroupUsageClauseContext context)
+        public AstNode VisitReportGroupUsageClause([NotNull] ReportGroupUsageClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportGroupValueClause([NotNull] Cobol85Parser.ReportGroupValueClauseContext context)
+        public AstNode VisitReportGroupValueClause([NotNull] ReportGroupValueClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportName([NotNull] Cobol85Parser.ReportNameContext context)
+        public AstNode VisitReportName([NotNull] ReportNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReportSection([NotNull] Cobol85Parser.ReportSectionContext context)
+        public AstNode VisitReportSection([NotNull] ReportSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRerunClause([NotNull] Cobol85Parser.RerunClauseContext context)
+        public AstNode VisitRerunClause([NotNull] RerunClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRerunEveryClock([NotNull] Cobol85Parser.RerunEveryClockContext context)
+        public AstNode VisitRerunEveryClock([NotNull] RerunEveryClockContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRerunEveryOf([NotNull] Cobol85Parser.RerunEveryOfContext context)
+        public AstNode VisitRerunEveryOf([NotNull] RerunEveryOfContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRerunEveryRecords([NotNull] Cobol85Parser.RerunEveryRecordsContext context)
+        public AstNode VisitRerunEveryRecords([NotNull] RerunEveryRecordsContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReserveClause([NotNull] Cobol85Parser.ReserveClauseContext context)
+        public AstNode VisitReserveClause([NotNull] ReserveClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReserveNetworkClause([NotNull] Cobol85Parser.ReserveNetworkClauseContext context)
+        public AstNode VisitReserveNetworkClause([NotNull] ReserveNetworkClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReturnInto([NotNull] Cobol85Parser.ReturnIntoContext context)
+        public AstNode VisitReturnInto([NotNull] ReturnIntoContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitReturnStatement([NotNull] Cobol85Parser.ReturnStatementContext context)
+        public AstNode VisitReturnStatement([NotNull] ReturnStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRewriteFrom([NotNull] Cobol85Parser.RewriteFromContext context)
+        public AstNode VisitRewriteFrom([NotNull] RewriteFromContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRewriteStatement([NotNull] Cobol85Parser.RewriteStatementContext context)
+        public AstNode VisitRewriteStatement([NotNull] RewriteStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitRoutineName([NotNull] Cobol85Parser.RoutineNameContext context)
+        public AstNode VisitRoutineName([NotNull] RoutineNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSameClause([NotNull] Cobol85Parser.SameClauseContext context)
+        public AstNode VisitSameClause([NotNull] SameClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionAutoClause([NotNull] Cobol85Parser.ScreenDescriptionAutoClauseContext context)
+        public AstNode VisitScreenDescriptionAutoClause([NotNull] ScreenDescriptionAutoClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionBackgroundColorClause([NotNull] Cobol85Parser.ScreenDescriptionBackgroundColorClauseContext context)
+        public AstNode VisitScreenDescriptionBackgroundColorClause([NotNull] ScreenDescriptionBackgroundColorClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionBellClause([NotNull] Cobol85Parser.ScreenDescriptionBellClauseContext context)
+        public AstNode VisitScreenDescriptionBellClause([NotNull] ScreenDescriptionBellClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionBlankClause([NotNull] Cobol85Parser.ScreenDescriptionBlankClauseContext context)
+        public AstNode VisitScreenDescriptionBlankClause([NotNull] ScreenDescriptionBlankClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionBlankWhenZeroClause([NotNull] Cobol85Parser.ScreenDescriptionBlankWhenZeroClauseContext context)
+        public AstNode VisitScreenDescriptionBlankWhenZeroClause([NotNull] ScreenDescriptionBlankWhenZeroClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionBlinkClause([NotNull] Cobol85Parser.ScreenDescriptionBlinkClauseContext context)
+        public AstNode VisitScreenDescriptionBlinkClause([NotNull] ScreenDescriptionBlinkClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionColumnClause([NotNull] Cobol85Parser.ScreenDescriptionColumnClauseContext context)
+        public AstNode VisitScreenDescriptionColumnClause([NotNull] ScreenDescriptionColumnClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionControlClause([NotNull] Cobol85Parser.ScreenDescriptionControlClauseContext context)
+        public AstNode VisitScreenDescriptionControlClause([NotNull] ScreenDescriptionControlClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionEntry([NotNull] Cobol85Parser.ScreenDescriptionEntryContext context)
+        public AstNode VisitScreenDescriptionEntry([NotNull] ScreenDescriptionEntryContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionEraseClause([NotNull] Cobol85Parser.ScreenDescriptionEraseClauseContext context)
+        public AstNode VisitScreenDescriptionEraseClause([NotNull] ScreenDescriptionEraseClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionForegroundColorClause([NotNull] Cobol85Parser.ScreenDescriptionForegroundColorClauseContext context)
+        public AstNode VisitScreenDescriptionForegroundColorClause([NotNull] ScreenDescriptionForegroundColorClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionFromClause([NotNull] Cobol85Parser.ScreenDescriptionFromClauseContext context)
+        public AstNode VisitScreenDescriptionFromClause([NotNull] ScreenDescriptionFromClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionFullClause([NotNull] Cobol85Parser.ScreenDescriptionFullClauseContext context)
+        public AstNode VisitScreenDescriptionFullClause([NotNull] ScreenDescriptionFullClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionGridClause([NotNull] Cobol85Parser.ScreenDescriptionGridClauseContext context)
+        public AstNode VisitScreenDescriptionGridClause([NotNull] ScreenDescriptionGridClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionJustifiedClause([NotNull] Cobol85Parser.ScreenDescriptionJustifiedClauseContext context)
+        public AstNode VisitScreenDescriptionJustifiedClause([NotNull] ScreenDescriptionJustifiedClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionLightClause([NotNull] Cobol85Parser.ScreenDescriptionLightClauseContext context)
+        public AstNode VisitScreenDescriptionLightClause([NotNull] ScreenDescriptionLightClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionLineClause([NotNull] Cobol85Parser.ScreenDescriptionLineClauseContext context)
+        public AstNode VisitScreenDescriptionLineClause([NotNull] ScreenDescriptionLineClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionPictureClause([NotNull] Cobol85Parser.ScreenDescriptionPictureClauseContext context)
+        public AstNode VisitScreenDescriptionPictureClause([NotNull] ScreenDescriptionPictureClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionPromptClause([NotNull] Cobol85Parser.ScreenDescriptionPromptClauseContext context)
+        public AstNode VisitScreenDescriptionPromptClause([NotNull] ScreenDescriptionPromptClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionPromptOccursClause([NotNull] Cobol85Parser.ScreenDescriptionPromptOccursClauseContext context)
+        public AstNode VisitScreenDescriptionPromptOccursClause([NotNull] ScreenDescriptionPromptOccursClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionRequiredClause([NotNull] Cobol85Parser.ScreenDescriptionRequiredClauseContext context)
+        public AstNode VisitScreenDescriptionRequiredClause([NotNull] ScreenDescriptionRequiredClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionReverseVideoClause([NotNull] Cobol85Parser.ScreenDescriptionReverseVideoClauseContext context)
+        public AstNode VisitScreenDescriptionReverseVideoClause([NotNull] ScreenDescriptionReverseVideoClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionSecureClause([NotNull] Cobol85Parser.ScreenDescriptionSecureClauseContext context)
+        public AstNode VisitScreenDescriptionSecureClause([NotNull] ScreenDescriptionSecureClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionSignClause([NotNull] Cobol85Parser.ScreenDescriptionSignClauseContext context)
+        public AstNode VisitScreenDescriptionSignClause([NotNull] ScreenDescriptionSignClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionSizeClause([NotNull] Cobol85Parser.ScreenDescriptionSizeClauseContext context)
+        public AstNode VisitScreenDescriptionSizeClause([NotNull] ScreenDescriptionSizeClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionToClause([NotNull] Cobol85Parser.ScreenDescriptionToClauseContext context)
+        public AstNode VisitScreenDescriptionToClause([NotNull] ScreenDescriptionToClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionUnderlineClause([NotNull] Cobol85Parser.ScreenDescriptionUnderlineClauseContext context)
+        public AstNode VisitScreenDescriptionUnderlineClause([NotNull] ScreenDescriptionUnderlineClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionUsageClause([NotNull] Cobol85Parser.ScreenDescriptionUsageClauseContext context)
+        public AstNode VisitScreenDescriptionUsageClause([NotNull] ScreenDescriptionUsageClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionUsingClause([NotNull] Cobol85Parser.ScreenDescriptionUsingClauseContext context)
+        public AstNode VisitScreenDescriptionUsingClause([NotNull] ScreenDescriptionUsingClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionValueClause([NotNull] Cobol85Parser.ScreenDescriptionValueClauseContext context)
+        public AstNode VisitScreenDescriptionValueClause([NotNull] ScreenDescriptionValueClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenDescriptionZeroFillClause([NotNull] Cobol85Parser.ScreenDescriptionZeroFillClauseContext context)
+        public AstNode VisitScreenDescriptionZeroFillClause([NotNull] ScreenDescriptionZeroFillClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenName([NotNull] Cobol85Parser.ScreenNameContext context)
+        public AstNode VisitScreenName([NotNull] ScreenNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitScreenSection([NotNull] Cobol85Parser.ScreenSectionContext context)
+        public AstNode VisitScreenSection([NotNull] ScreenSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSearchStatement([NotNull] Cobol85Parser.SearchStatementContext context)
+        public AstNode VisitSearchStatement([NotNull] SearchStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSearchVarying([NotNull] Cobol85Parser.SearchVaryingContext context)
+        public AstNode VisitSearchVarying([NotNull] SearchVaryingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSearchWhen([NotNull] Cobol85Parser.SearchWhenContext context)
+        public AstNode VisitSearchWhen([NotNull] SearchWhenContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSectionName([NotNull] Cobol85Parser.SectionNameContext context)
+        public AstNode VisitSectionName([NotNull] SectionNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSecurityParagraph([NotNull] Cobol85Parser.SecurityParagraphContext context)
+        public AstNode VisitSecurityParagraph([NotNull] SecurityParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSegmentLimitClause([NotNull] Cobol85Parser.SegmentLimitClauseContext context)
+        public AstNode VisitSegmentLimitClause([NotNull] SegmentLimitClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSelectClause([NotNull] Cobol85Parser.SelectClauseContext context)
+        public AstNode VisitSelectClause([NotNull] SelectClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSendAdvancingLines([NotNull] Cobol85Parser.SendAdvancingLinesContext context)
+        public AstNode VisitSendAdvancingLines([NotNull] SendAdvancingLinesContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSendAdvancingMnemonic([NotNull] Cobol85Parser.SendAdvancingMnemonicContext context)
+        public AstNode VisitSendAdvancingMnemonic([NotNull] SendAdvancingMnemonicContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSendAdvancingPage([NotNull] Cobol85Parser.SendAdvancingPageContext context)
+        public AstNode VisitSendAdvancingPage([NotNull] SendAdvancingPageContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSendAdvancingPhrase([NotNull] Cobol85Parser.SendAdvancingPhraseContext context)
+        public AstNode VisitSendAdvancingPhrase([NotNull] SendAdvancingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSendFromPhrase([NotNull] Cobol85Parser.SendFromPhraseContext context)
+        public AstNode VisitSendFromPhrase([NotNull] SendFromPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSendReplacingPhrase([NotNull] Cobol85Parser.SendReplacingPhraseContext context)
+        public AstNode VisitSendReplacingPhrase([NotNull] SendReplacingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSendStatement([NotNull] Cobol85Parser.SendStatementContext context)
+        public AstNode VisitSendStatement([NotNull] SendStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSendStatementAsync([NotNull] Cobol85Parser.SendStatementAsyncContext context)
+        public AstNode VisitSendStatementAsync([NotNull] SendStatementAsyncContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSendStatementSync([NotNull] Cobol85Parser.SendStatementSyncContext context)
+        public AstNode VisitSendStatementSync([NotNull] SendStatementSyncContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSendWithPhrase([NotNull] Cobol85Parser.SendWithPhraseContext context)
+        public AstNode VisitSendWithPhrase([NotNull] SendWithPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSentence([NotNull] Cobol85Parser.SentenceContext context)
+        public AstNode VisitSentence([NotNull] SentenceContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSetByValue([NotNull] Cobol85Parser.SetByValueContext context)
+        public AstNode VisitSetByValue([NotNull] SetByValueContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSetStatement([NotNull] Cobol85Parser.SetStatementContext context)
+        public AstNode VisitSetStatement([NotNull] SetStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSetTo([NotNull] Cobol85Parser.SetToContext context)
+        public AstNode VisitSetTo([NotNull] SetToContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSetToStatement([NotNull] Cobol85Parser.SetToStatementContext context)
+        public AstNode VisitSetToStatement([NotNull] SetToStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSetToValue([NotNull] Cobol85Parser.SetToValueContext context)
+        public AstNode VisitSetToValue([NotNull] SetToValueContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSetUpDownByStatement([NotNull] Cobol85Parser.SetUpDownByStatementContext context)
+        public AstNode VisitSetUpDownByStatement([NotNull] SetUpDownByStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSimpleCondition([NotNull] Cobol85Parser.SimpleConditionContext context)
+        public AstNode VisitSimpleCondition([NotNull] SimpleConditionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortCollatingAlphanumeric([NotNull] Cobol85Parser.SortCollatingAlphanumericContext context)
+        public AstNode VisitSortCollatingAlphanumeric([NotNull] SortCollatingAlphanumericContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortCollatingNational([NotNull] Cobol85Parser.SortCollatingNationalContext context)
+        public AstNode VisitSortCollatingNational([NotNull] SortCollatingNationalContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortCollatingSequencePhrase([NotNull] Cobol85Parser.SortCollatingSequencePhraseContext context)
+        public AstNode VisitSortCollatingSequencePhrase([NotNull] SortCollatingSequencePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortDuplicatesPhrase([NotNull] Cobol85Parser.SortDuplicatesPhraseContext context)
+        public AstNode VisitSortDuplicatesPhrase([NotNull] SortDuplicatesPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortGiving([NotNull] Cobol85Parser.SortGivingContext context)
+        public AstNode VisitSortGiving([NotNull] SortGivingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortGivingPhrase([NotNull] Cobol85Parser.SortGivingPhraseContext context)
+        public AstNode VisitSortGivingPhrase([NotNull] SortGivingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortInputProcedurePhrase([NotNull] Cobol85Parser.SortInputProcedurePhraseContext context)
+        public AstNode VisitSortInputProcedurePhrase([NotNull] SortInputProcedurePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortInputThrough([NotNull] Cobol85Parser.SortInputThroughContext context)
+        public AstNode VisitSortInputThrough([NotNull] SortInputThroughContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortOnKeyClause([NotNull] Cobol85Parser.SortOnKeyClauseContext context)
+        public AstNode VisitSortOnKeyClause([NotNull] SortOnKeyClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortOutputProcedurePhrase([NotNull] Cobol85Parser.SortOutputProcedurePhraseContext context)
+        public AstNode VisitSortOutputProcedurePhrase([NotNull] SortOutputProcedurePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortOutputThrough([NotNull] Cobol85Parser.SortOutputThroughContext context)
+        public AstNode VisitSortOutputThrough([NotNull] SortOutputThroughContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortStatement([NotNull] Cobol85Parser.SortStatementContext context)
+        public AstNode VisitSortStatement([NotNull] SortStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSortUsing([NotNull] Cobol85Parser.SortUsingContext context)
+        public AstNode VisitSortUsing([NotNull] SortUsingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSourceComputerParagraph([NotNull] Cobol85Parser.SourceComputerParagraphContext context)
+        public AstNode VisitSourceComputerParagraph([NotNull] SourceComputerParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSpecialNameClause([NotNull] Cobol85Parser.SpecialNameClauseContext context)
+        public AstNode VisitSpecialNameClause([NotNull] SpecialNameClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSpecialNamesParagraph([NotNull] Cobol85Parser.SpecialNamesParagraphContext context)
+        public AstNode VisitSpecialNamesParagraph([NotNull] SpecialNamesParagraphContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSpecialRegister([NotNull] Cobol85Parser.SpecialRegisterContext context)
+        public AstNode VisitSpecialRegister([NotNull] SpecialRegisterContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStartKey([NotNull] Cobol85Parser.StartKeyContext context)
+        public AstNode VisitStartKey([NotNull] StartKeyContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStartRule([NotNull] Cobol85Parser.StartRuleContext context)
+        public AstNode VisitStartRule([NotNull] StartRuleContext context)
         {
-            return $"Visiting StartRule: {context.ChildCount}";
-            //context.compilationUnit().Accept(this);
+            return new StartNode(context);
         }
 
-        public object VisitStartStatement([NotNull] Cobol85Parser.StartStatementContext context)
+        public AstNode VisitStartStatement([NotNull] StartStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStatement([NotNull] Cobol85Parser.StatementContext context)
+        public AstNode VisitStatement([NotNull] StatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStatusKeyClause([NotNull] Cobol85Parser.StatusKeyClauseContext context)
+        public AstNode VisitStatusKeyClause([NotNull] StatusKeyClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStopStatement([NotNull] Cobol85Parser.StopStatementContext context)
+        public AstNode VisitStopStatement([NotNull] StopStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStringDelimitedByPhrase([NotNull] Cobol85Parser.StringDelimitedByPhraseContext context)
+        public AstNode VisitStringDelimitedByPhrase([NotNull] StringDelimitedByPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStringForPhrase([NotNull] Cobol85Parser.StringForPhraseContext context)
+        public AstNode VisitStringForPhrase([NotNull] StringForPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStringIntoPhrase([NotNull] Cobol85Parser.StringIntoPhraseContext context)
+        public AstNode VisitStringIntoPhrase([NotNull] StringIntoPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStringSending([NotNull] Cobol85Parser.StringSendingContext context)
+        public AstNode VisitStringSending([NotNull] StringSendingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStringSendingPhrase([NotNull] Cobol85Parser.StringSendingPhraseContext context)
+        public AstNode VisitStringSendingPhrase([NotNull] StringSendingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStringStatement([NotNull] Cobol85Parser.StringStatementContext context)
+        public AstNode VisitStringStatement([NotNull] StringStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitStringWithPointerPhrase([NotNull] Cobol85Parser.StringWithPointerPhraseContext context)
+        public AstNode VisitStringWithPointerPhrase([NotNull] StringWithPointerPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSubscript_([NotNull] Cobol85Parser.Subscript_Context context)
+        public AstNode VisitSubscript_([NotNull] Subscript_Context context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSubtractCorrespondingStatement([NotNull] Cobol85Parser.SubtractCorrespondingStatementContext context)
+        public AstNode VisitSubtractCorrespondingStatement([NotNull] SubtractCorrespondingStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSubtractFromGivingStatement([NotNull] Cobol85Parser.SubtractFromGivingStatementContext context)
+        public AstNode VisitSubtractFromGivingStatement([NotNull] SubtractFromGivingStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSubtractFromStatement([NotNull] Cobol85Parser.SubtractFromStatementContext context)
+        public AstNode VisitSubtractFromStatement([NotNull] SubtractFromStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSubtractGiving([NotNull] Cobol85Parser.SubtractGivingContext context)
+        public AstNode VisitSubtractGiving([NotNull] SubtractGivingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSubtractMinuend([NotNull] Cobol85Parser.SubtractMinuendContext context)
+        public AstNode VisitSubtractMinuend([NotNull] SubtractMinuendContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSubtractMinuendCorresponding([NotNull] Cobol85Parser.SubtractMinuendCorrespondingContext context)
+        public AstNode VisitSubtractMinuendCorresponding([NotNull] SubtractMinuendCorrespondingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSubtractMinuendGiving([NotNull] Cobol85Parser.SubtractMinuendGivingContext context)
+        public AstNode VisitSubtractMinuendGiving([NotNull] SubtractMinuendGivingContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSubtractStatement([NotNull] Cobol85Parser.SubtractStatementContext context)
+        public AstNode VisitSubtractStatement([NotNull] SubtractStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSubtractSubtrahend([NotNull] Cobol85Parser.SubtractSubtrahendContext context)
+        public AstNode VisitSubtractSubtrahend([NotNull] SubtractSubtrahendContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSymbolicCharacter([NotNull] Cobol85Parser.SymbolicCharacterContext context)
+        public AstNode VisitSymbolicCharacter([NotNull] SymbolicCharacterContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSymbolicCharacters([NotNull] Cobol85Parser.SymbolicCharactersContext context)
+        public AstNode VisitSymbolicCharacters([NotNull] SymbolicCharactersContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSymbolicCharactersClause([NotNull] Cobol85Parser.SymbolicCharactersClauseContext context)
+        public AstNode VisitSymbolicCharactersClause([NotNull] SymbolicCharactersClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSymbolicDestinationClause([NotNull] Cobol85Parser.SymbolicDestinationClauseContext context)
+        public AstNode VisitSymbolicDestinationClause([NotNull] SymbolicDestinationClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSymbolicQueueClause([NotNull] Cobol85Parser.SymbolicQueueClauseContext context)
+        public AstNode VisitSymbolicQueueClause([NotNull] SymbolicQueueClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSymbolicSourceClause([NotNull] Cobol85Parser.SymbolicSourceClauseContext context)
+        public AstNode VisitSymbolicSourceClause([NotNull] SymbolicSourceClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSymbolicSubQueueClause([NotNull] Cobol85Parser.SymbolicSubQueueClauseContext context)
+        public AstNode VisitSymbolicSubQueueClause([NotNull] SymbolicSubQueueClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSymbolicTerminalClause([NotNull] Cobol85Parser.SymbolicTerminalClauseContext context)
+        public AstNode VisitSymbolicTerminalClause([NotNull] SymbolicTerminalClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitSystemName([NotNull] Cobol85Parser.SystemNameContext context)
+        public AstNode VisitSystemName([NotNull] SystemNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitTableCall([NotNull] Cobol85Parser.TableCallContext context)
+        public AstNode VisitTableCall([NotNull] TableCallContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitTerminal(ITerminalNode node)
+        public AstNode VisitTerminal(ITerminalNode node)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitTerminateStatement([NotNull] Cobol85Parser.TerminateStatementContext context)
+        public AstNode VisitTerminateStatement([NotNull] TerminateStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitTextLengthClause([NotNull] Cobol85Parser.TextLengthClauseContext context)
+        public AstNode VisitTextLengthClause([NotNull] TextLengthClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitTextName([NotNull] Cobol85Parser.TextNameContext context)
+        public AstNode VisitTextName([NotNull] TextNameContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUnstringCountIn([NotNull] Cobol85Parser.UnstringCountInContext context)
+        public AstNode VisitUnstringCountIn([NotNull] UnstringCountInContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUnstringDelimitedByPhrase([NotNull] Cobol85Parser.UnstringDelimitedByPhraseContext context)
+        public AstNode VisitUnstringDelimitedByPhrase([NotNull] UnstringDelimitedByPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUnstringDelimiterIn([NotNull] Cobol85Parser.UnstringDelimiterInContext context)
+        public AstNode VisitUnstringDelimiterIn([NotNull] UnstringDelimiterInContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUnstringInto([NotNull] Cobol85Parser.UnstringIntoContext context)
+        public AstNode VisitUnstringInto([NotNull] UnstringIntoContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUnstringIntoPhrase([NotNull] Cobol85Parser.UnstringIntoPhraseContext context)
+        public AstNode VisitUnstringIntoPhrase([NotNull] UnstringIntoPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUnstringOrAllPhrase([NotNull] Cobol85Parser.UnstringOrAllPhraseContext context)
+        public AstNode VisitUnstringOrAllPhrase([NotNull] UnstringOrAllPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUnstringSendingPhrase([NotNull] Cobol85Parser.UnstringSendingPhraseContext context)
+        public AstNode VisitUnstringSendingPhrase([NotNull] UnstringSendingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUnstringStatement([NotNull] Cobol85Parser.UnstringStatementContext context)
+        public AstNode VisitUnstringStatement([NotNull] UnstringStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUnstringTallyingPhrase([NotNull] Cobol85Parser.UnstringTallyingPhraseContext context)
+        public AstNode VisitUnstringTallyingPhrase([NotNull] UnstringTallyingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUnstringWithPointerPhrase([NotNull] Cobol85Parser.UnstringWithPointerPhraseContext context)
+        public AstNode VisitUnstringWithPointerPhrase([NotNull] UnstringWithPointerPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUseAfterClause([NotNull] Cobol85Parser.UseAfterClauseContext context)
+        public AstNode VisitUseAfterClause([NotNull] UseAfterClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUseAfterOn([NotNull] Cobol85Parser.UseAfterOnContext context)
+        public AstNode VisitUseAfterOn([NotNull] UseAfterOnContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUseDebugClause([NotNull] Cobol85Parser.UseDebugClauseContext context)
+        public AstNode VisitUseDebugClause([NotNull] UseDebugClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUseDebugOn([NotNull] Cobol85Parser.UseDebugOnContext context)
+        public AstNode VisitUseDebugOn([NotNull] UseDebugOnContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitUseStatement([NotNull] Cobol85Parser.UseStatementContext context)
+        public AstNode VisitUseStatement([NotNull] UseStatementContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitValueOfClause([NotNull] Cobol85Parser.ValueOfClauseContext context)
+        public AstNode VisitValueOfClause([NotNull] ValueOfClauseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitValuePair([NotNull] Cobol85Parser.ValuePairContext context)
+        public AstNode VisitValuePair([NotNull] ValuePairContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitWorkingStorageSection([NotNull] Cobol85Parser.WorkingStorageSectionContext context)
+        public AstNode VisitWorkingStorageSection([NotNull] WorkingStorageSectionContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitWriteAdvancingLines([NotNull] Cobol85Parser.WriteAdvancingLinesContext context)
+        public AstNode VisitWriteAdvancingLines([NotNull] WriteAdvancingLinesContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitWriteAdvancingMnemonic([NotNull] Cobol85Parser.WriteAdvancingMnemonicContext context)
+        public AstNode VisitWriteAdvancingMnemonic([NotNull] WriteAdvancingMnemonicContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitWriteAdvancingPage([NotNull] Cobol85Parser.WriteAdvancingPageContext context)
+        public AstNode VisitWriteAdvancingPage([NotNull] WriteAdvancingPageContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitWriteAdvancingPhrase([NotNull] Cobol85Parser.WriteAdvancingPhraseContext context)
+        public AstNode VisitWriteAdvancingPhrase([NotNull] WriteAdvancingPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitWriteAtEndOfPagePhrase([NotNull] Cobol85Parser.WriteAtEndOfPagePhraseContext context)
+        public AstNode VisitWriteAtEndOfPagePhrase([NotNull] WriteAtEndOfPagePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitWriteFromPhrase([NotNull] Cobol85Parser.WriteFromPhraseContext context)
+        public AstNode VisitWriteFromPhrase([NotNull] WriteFromPhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitWriteNotAtEndOfPagePhrase([NotNull] Cobol85Parser.WriteNotAtEndOfPagePhraseContext context)
+        public AstNode VisitWriteNotAtEndOfPagePhrase([NotNull] WriteNotAtEndOfPagePhraseContext context)
         {
             throw new System.NotImplementedException();
         }
 
-        public object VisitWriteStatement([NotNull] Cobol85Parser.WriteStatementContext context)
+        public AstNode VisitWriteStatement([NotNull] WriteStatementContext context)
         {
             throw new System.NotImplementedException();
         }
+
     }
 
 }
