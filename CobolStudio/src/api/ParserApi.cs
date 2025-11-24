@@ -1,4 +1,6 @@
-﻿using CobolStudio.src.parser;
+﻿using Antlr4.Runtime;
+using Antlr4.Runtime.Tree;
+using CobolStudio.src.parser;
 using MyChatDB;
 using System;
 using System.IO;
@@ -17,8 +19,14 @@ namespace CobolStudio.src.api
             if (!exists)
                 return $"File not found: {fullPath}";
             var code = File.ReadAllText(fullPath);
-            Parser parser = Parser.GetInstance();
-            return parser.ParseSource(code).ToString();
+            ICharStream inputStream = new AntlrInputStream(code);
+            Cobol85Lexer lexer = new Cobol85Lexer(inputStream);
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
+            Cobol85Parser parser = new Cobol85Parser(tokens);
+            IParseTree tree = parser.startRule();
+            Visitor visitor = new Visitor();
+            visitor.Visit(tree);
+            return "DONE";
         }
 
         void PrintLn(string message)

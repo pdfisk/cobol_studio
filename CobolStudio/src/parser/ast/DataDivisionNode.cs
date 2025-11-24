@@ -2,11 +2,11 @@
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class StartNode:AstNode
+    internal class DataDivisionNode : AstNode
     {
-        StartRuleContext _context;
+        DataDivisionContext _context;
 
-        public StartNode(StartRuleContext context)
+        public DataDivisionNode(DataDivisionContext context)
         {
             _ctx = _context = context;
         }

@@ -1,9 +1,16 @@
-      *-----------------------
-      * Copyright Contributors to the COBOL Programming Course
-      * SPDX-License-Identifier: CC-BY-4.0
-      *----------------------- 
-       IDENTIFICATION DIVISION.
-       PROGRAM-ID. HELLO.
-       PROCEDURE DIVISION.
-           DISPLAY 'HELLO WORLD!'.
-           GOBACK.
+IDENTIFICATION DIVISION. 
+PROGRAM-ID. HelloWorld. 
+
+
+ENVIRONMENT DIVISION. 
+CONFIGURATION SECTION. 
+INPUT-OUTPUT SECTION. 
+
+DATA DIVISION. 
+FILE SECTION. 
+WORKING-STORAGE SECTION. 
+LINKAGE SECTION. 
+
+PROCEDURE DIVISION. 
+DISPLAY "Hello World". 
+STOP RUN.
