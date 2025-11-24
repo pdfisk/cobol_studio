@@ -21,31 +21,31 @@ namespace CobolStudio.src.parser
 
         public AstNode Visit(IParseTree tree)
         {
+            PrintLn("Visiting: " + tree.GetType().Name);
             AstNode astNode = null;
-            List<AstNode> children = VisitChildren(tree);
-            if (tree is StartRuleContext)
+            if (tree is CompilationUnitContext)
+                astNode = VisitCompilationUnit(tree as CompilationUnitContext);
+            else if (tree is StartRuleContext)
                 astNode = VisitStartRule(tree as StartRuleContext);
             if (astNode == null)
             {
                 PrintLn("No match visiting: " + tree.GetType().Name);
                 return new AstNode();
             }
-            foreach (var child in children)
-            {
-                astNode.AddChild(child);
-            }
+            else
+                VisitChildren(astNode, tree);
             return astNode;
         }
 
 
-        List<AstNode> VisitChildren(IParseTree tree)
+        void VisitChildren(AstNode node, IParseTree tree)
         {
             var children = new List<AstNode>();
             for (int i = 0; i < tree.ChildCount; i++)
             {
-                children.Add(Visit(tree.GetChild(i)));
+                AstNode child = Visit(tree.GetChild(i));
+                node.AddChild(child);
             }
-            return children;
         }
 
         public AstNode VisitAbbreviation([NotNull] AbbreviationContext context)
@@ -475,7 +475,7 @@ namespace CobolStudio.src.parser
 
         public AstNode VisitCompilationUnit([NotNull] CompilationUnitContext context)
         {
-            throw new System.NotImplementedException();
+            return new CompilationUnitNode(context);
         }
 
         public AstNode VisitComputerName([NotNull] ComputerNameContext context)

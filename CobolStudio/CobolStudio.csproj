@@ -133,6 +133,7 @@
     <Compile Include="src\parser\antlr\Cobol85Lexer.cs" />
     <Compile Include="src\parser\antlr\Cobol85Parser.cs" />
     <Compile Include="src\parser\antlr\Cobol85Visitor.cs" />
+    <Compile Include="src\parser\ast\CompilationUnitNode.cs" />
     <Compile Include="src\parser\ast\StartNode.cs" />
     <Compile Include="src\parser\ast\AstNode.cs" />
     <Compile Include="src\parser\Parser.cs" />
