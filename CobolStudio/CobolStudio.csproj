@@ -129,6 +129,11 @@
     <Compile Include="src\api\ParserApi.cs" />
     <Compile Include="src\chatgpt\LmStudioClient.cs" />
     <Compile Include="src\constants\SharedConstants.cs" />
+    <Compile Include="src\models\divisions\ProcedureDivision.cs" />
+    <Compile Include="src\models\divisions\DataDivision.cs" />
+    <Compile Include="src\models\divisions\EnvironmentDivision.cs" />
+    <Compile Include="src\models\divisions\IdentificationDivision.cs" />
+    <Compile Include="src\models\Program.cs" />
     <Compile Include="src\parser\antlr\Cobol85BaseVisitor.cs" />
     <Compile Include="src\parser\antlr\Cobol85Lexer.cs" />
     <Compile Include="src\parser\antlr\Cobol85Parser.cs" />
