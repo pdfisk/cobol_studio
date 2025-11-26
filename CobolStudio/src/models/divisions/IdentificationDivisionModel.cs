@@ -1,6 +1,6 @@
 ﻿namespace CobolStudio.src.models.divisions
 {
-    internal class DataDivision
+    internal class IdentificationDivisionModel
     {
     }
 }

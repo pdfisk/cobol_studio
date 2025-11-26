@@ -24,7 +24,7 @@ namespace CobolStudio.src.api
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             Cobol85Parser parser = new Cobol85Parser(tokens);
             IParseTree tree = parser.startRule();
-            Visitor visitor = new Visitor();
+            ProgramUnitVisitor visitor = new ProgramUnitVisitor();
             visitor.Visit(tree);
             return "DONE";
         }

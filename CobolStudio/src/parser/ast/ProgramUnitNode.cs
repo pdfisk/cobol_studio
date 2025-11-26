@@ -1,4 +1,6 @@
-﻿namespace CobolStudio.src.parser.ast
+﻿using static Cobol85Parser;
+
+namespace CobolStudio.src.parser.ast
 {
     internal class ProgramUnitNode : AstNode
     {
@@ -7,16 +9,29 @@
         DataDivisionNode _dataDivision;
         ProcedureDivisionNode _procedureDivision;
 
-        public ProgramUnitNode(
-            IdentificationDivisionNode identificationDivision,
-            EnvironmentDivisionNode environmentDivision,
-            DataDivisionNode dataDivision,
-            ProcedureDivisionNode procedureDivision)
+        public ProgramUnitNode()
         {
-            _identificationDivision = identificationDivision;
-            _environmentDivision = environmentDivision;
-            _dataDivision = dataDivision;
-            _procedureDivision = procedureDivision;
         }
+
+        public void AddDataDivision(DataDivisionContext context)
+        {
+            _dataDivision = new DataDivisionNode(context);
+        }
+
+        public void AddEnvironmentDivision(EnvironmentDivisionContext context)
+        {
+            _environmentDivision = new EnvironmentDivisionNode(context);
+        }
+
+        public void AddIdentificationDivision(IdentificationDivisionContext context)
+        {
+            _identificationDivision = new IdentificationDivisionNode(context);
+        }
+
+        public void AddProcedureDivision(ProcedureDivisionContext context)
+        {
+            _procedureDivision = new ProcedureDivisionNode(context);
+        }
+
     }
 }
