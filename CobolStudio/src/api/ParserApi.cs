@@ -1,6 +1,7 @@
 ﻿using Antlr4.Runtime;
 using Antlr4.Runtime.Tree;
 using CobolStudio.src.parser;
+using CobolStudio.src.parser;
 using MyChatDB;
 using System;
 using System.IO;
@@ -22,7 +23,7 @@ namespace CobolStudio.src.api
             ICharStream inputStream = new AntlrInputStream(code);
             Cobol85Lexer lexer = new Cobol85Lexer(inputStream);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
-            Cobol85Parser parser = new Cobol85Parser(tokens);
+            Cobol85Parser parser = new CobolParser(tokens);
             IParseTree tree = parser.startRule();
             ProgramUnitVisitor visitor = new ProgramUnitVisitor();
             visitor.Visit(tree);
