@@ -144,6 +144,8 @@
     <Compile Include="src\parser\ast\ErrorNode.cs" />
     <Compile Include="src\parser\ast\IdentificationDivisionNode.cs" />
     <Compile Include="src\parser\ast\ProcedureDivisionNode.cs" />
+    <Compile Include="src\parser\ast\EndProgramStatementNode.cs" />
+    <Compile Include="src\parser\ast\StartRuleNode.cs" />
     <Compile Include="src\parser\ast\ProgramUnitNode.cs" />
     <Compile Include="src\parser\CobolParser.cs" />
     <Compile Include="src\parser\visitors\ProgramUnitVisitor.cs" />

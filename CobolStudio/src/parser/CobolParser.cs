@@ -1,5 +1,6 @@
 ﻿using Antlr4.Runtime;
 using CobolStudio.src.parser.ast;
+using MyChatDB;
 
 namespace CobolStudio.src.parser
 {
@@ -20,11 +21,41 @@ namespace CobolStudio.src.parser
 
         AstNode BuildAst(RuleContext context)
         {
+            AstNode node = null;
             if (context == null)
                 return null;
-            if (context is ProgramUnitContext)
-                return new ProgramUnitNode((ProgramUnitContext)context);
-            return new ErrorNode(context, input_stream.Index.ToString());
+            // start
+            if (context is StartRuleContext)
+                node = new StartRuleNode((StartRuleContext)context);
+            else if (context is ProgramUnitContext)
+                node = new ProgramUnitNode((ProgramUnitContext)context);
+            else if (context is EndProgramStatementContext)
+                node = new EndPrgramStatementNode((EndProgramStatementContext)context);
+            // identification division
+            else if (context is IdentificationDivisionContext)
+                node = new IdentificationDivisionNode((IdentificationDivisionContext)context);
+            if (node != null)
+            {
+                for (var i = 0; i < context.ChildCount; i++)
+                {
+                    var child = context.GetChild(i);
+                    if (child is RuleContext)
+                    {
+                        var childNode = BuildAst((RuleContext)child);
+                        if (childNode != null)
+                            node.AddChild(childNode);
+                    }
+                }
+                return node;
+            }
+            var message = context.GetType().ToString();
+            PrintLn(message);
+            return new ErrorNode(context, message);
+        }
+
+        void PrintLn(string message)
+        {
+            TranscriptWindow.GetInstance().PrintLn(message);
         }
     }
 }
