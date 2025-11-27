@@ -141,6 +141,7 @@
     <Compile Include="src\parser\ast\AstNode.cs" />
     <Compile Include="src\parser\ast\DataDivisionNode.cs" />
     <Compile Include="src\parser\ast\EnvironmentDivisionNode.cs" />
+    <Compile Include="src\parser\ast\ErrorNode.cs" />
     <Compile Include="src\parser\ast\IdentificationDivisionNode.cs" />
     <Compile Include="src\parser\ast\ProcedureDivisionNode.cs" />
     <Compile Include="src\parser\ast\ProgramUnitNode.cs" />

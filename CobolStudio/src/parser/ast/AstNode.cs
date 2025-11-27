@@ -17,5 +17,25 @@ namespace CobolStudio.src.parser.ast
         {
             return GetType().Name;
         }
+
+        public virtual string ToDetailedString(string indent = "")
+        {
+            string result = indent + ToString() + "\n";
+            foreach (var child in children)
+            {
+                result += child.ToDetailedString(indent + "  ");
+            }
+            return result;
+        }
+
+        public string ToTreeString()
+        {
+            return ToDetailedString();
+        }
+
+        public string ToStringTree(CobolParser parser)
+        {
+            return _ctx.ToStringTree(parser);
+        }
     }
 }

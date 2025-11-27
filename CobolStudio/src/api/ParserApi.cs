@@ -23,11 +23,9 @@ namespace CobolStudio.src.api
             ICharStream inputStream = new AntlrInputStream(code);
             Cobol85Lexer lexer = new Cobol85Lexer(inputStream);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
-            Cobol85Parser parser = new CobolParser(tokens);
-            IParseTree tree = parser.startRule();
-            ProgramUnitVisitor visitor = new ProgramUnitVisitor();
-            visitor.Visit(tree);
-            return "DONE";
+            var parser = new CobolParser(tokens);
+            var ast = parser.BuildAst();
+            return ast.ToStringTree(parser);
         }
 
         void PrintLn(string message)
