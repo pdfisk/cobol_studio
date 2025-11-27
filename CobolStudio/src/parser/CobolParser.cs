@@ -24,16 +24,28 @@ namespace CobolStudio.src.parser
             AstNode node = null;
             if (context == null)
                 return null;
+
+            var contextName = context.GetType().ToString();
+
             // start
-            if (context is StartRuleContext)
+            if (context is CompilationUnitContext)
+                node = new CompilationUnitNode((CompilationUnitContext)context);
+            else if (context is StartRuleContext)
                 node = new StartRuleNode((StartRuleContext)context);
             else if (context is ProgramUnitContext)
                 node = new ProgramUnitNode((ProgramUnitContext)context);
-            else if (context is EndProgramStatementContext)
-                node = new EndPrgramStatementNode((EndProgramStatementContext)context);
+
             // identification division
             else if (context is IdentificationDivisionContext)
                 node = new IdentificationDivisionNode((IdentificationDivisionContext)context);
+
+            // procedure division
+            else if (context is ProcedureDivisionContext)
+                node = new ProcedureDivisionNode((ProcedureDivisionContext)context);
+            else if (context is EndProgramStatementContext)
+                node = new EndPrgramStatementNode((EndProgramStatementContext)context);
+
+            // child nodes
             if (node != null)
             {
                 for (var i = 0; i < context.ChildCount; i++)
@@ -48,7 +60,9 @@ namespace CobolStudio.src.parser
                 }
                 return node;
             }
-            var message = context.GetType().ToString();
+
+            // error node
+            var message = $"[AST] Unhandled context type: {contextName}";
             PrintLn(message);
             return new ErrorNode(context, message);
         }
