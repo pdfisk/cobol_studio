@@ -142,6 +142,9 @@
     <Compile Include="src\parser\ast\CobolWordNode.cs" />
     <Compile Include="src\parser\ast\DataDivisionSectionNode.cs" />
     <Compile Include="src\parser\ast\DataDivisionNode.cs" />
+    <Compile Include="src\parser\ast\StopStatementNode.cs" />
+    <Compile Include="src\parser\ast\DisplayStatementNode.cs" />
+    <Compile Include="src\parser\ast\StatementNode.cs" />
     <Compile Include="src\parser\ast\SentenceNode.cs" />
     <Compile Include="src\parser\ast\LinkageSectionNode.cs" />
     <Compile Include="src\parser\ast\WorkingStorageSectionNode.cs" />
