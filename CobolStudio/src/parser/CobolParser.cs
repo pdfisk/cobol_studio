@@ -119,5 +119,3 @@ namespace CobolStudio.src.parser
         }
     }
 }
-
-//[AST] Unhandled context type: Cobol85Parser + LiteralContext
