@@ -1,6 +1,8 @@
-﻿namespace CobolStudio.src.models.divisions
+﻿using CobolStudio.src.models.core;
+
+namespace CobolStudio.src.models.divisions
 {
-    internal class DataDivisionModel
+    internal class DataDivisionModel : BaseModel
     {
     }
 }

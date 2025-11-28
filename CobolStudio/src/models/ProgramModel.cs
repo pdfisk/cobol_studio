@@ -1,8 +1,9 @@
-﻿using CobolStudio.src.models.divisions;
+﻿using CobolStudio.src.models.core;
+using CobolStudio.src.models.divisions;
 
 namespace CobolStudio.src.models
 {
-    internal class ProgramModel
+    internal class ProgramModel : BaseModel
     {
         public IdentificationDivisionModel identificationDivisionModel;
         public EnvironmentDivisionModel environmentDivisionModel;
