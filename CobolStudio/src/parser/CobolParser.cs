@@ -1,6 +1,8 @@
 ﻿using Antlr4.Runtime;
 using CobolStudio.src.parser.ast;
 using MyChatDB;
+using static Cobol85Parser;
+using static IronPython.Modules._ast;
 
 namespace CobolStudio.src.parser
 {
@@ -48,10 +50,18 @@ namespace CobolStudio.src.parser
                 node = new EnvironmentDivisionNode((EnvironmentDivisionContext)context);
             else if (context is EnvironmentDivisionBodyContext)
                 node = new EnvironmentDivisionBodyNode((EnvironmentDivisionBodyContext)context);
+            else if (context is CobolWordContext)
+                node = new CobolWordNode((CobolWordContext)context);
+            else if (context is ConfigurationSectionContext)
+                node = new ConfigurationSectionNode((ConfigurationSectionContext)context);
+            else if (context is InputOutputSectionContext)
+                node = new InputOutputSectionNode((InputOutputSectionContext)context);
 
             // data division
             else if (context is DataDivisionContext)
                 node = new DataDivisionNode((DataDivisionContext)context);
+            else if (context is DataDivisionSectionContext)
+                node = new DataDivisionSectionNode((DataDivisionSectionContext)context);
 
             // procedure division
             else if (context is ProcedureDivisionContext)
@@ -60,6 +70,8 @@ namespace CobolStudio.src.parser
                 node = new ProcedureDivisionBodyNode((ProcedureDivisionBodyContext)context);
             else if (context is EndProgramStatementContext)
                 node = new EndPrgramStatementNode((EndProgramStatementContext)context);
+            else if (context is ParagraphsContext)
+                node = new ParagraphsNode((ParagraphsContext)context);
 
             // child nodes
             if (node != null)
@@ -89,4 +101,3 @@ namespace CobolStudio.src.parser
         }
     }
 }
-

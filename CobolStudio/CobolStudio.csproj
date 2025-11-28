@@ -139,6 +139,7 @@
     <Compile Include="src\parser\antlr\Cobol85Parser.cs" />
     <Compile Include="src\parser\antlr\Cobol85Visitor.cs" />
     <Compile Include="src\parser\ast\AstNode.cs" />
+    <Compile Include="src\parser\ast\CobolWordNode.cs" />
     <Compile Include="src\parser\ast\DataDivisionSectionNode.cs" />
     <Compile Include="src\parser\ast\DataDivisionNode.cs" />
     <Compile Include="src\parser\ast\InputOutputSectionNode.cs" />
