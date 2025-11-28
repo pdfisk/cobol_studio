@@ -1,4 +1,5 @@
 ﻿using Antlr4.Runtime;
+using CobolStudio.src.compiler.core;
 using CobolStudio.src.parser;
 using System;
 using System.IO;
@@ -23,7 +24,8 @@ namespace CobolStudio.src.compiler
             var parser = new CobolParser(tokens);
             var ast = parser.BuildAst();
             parser.PrintLn("AST: " + ast.GetType().ToString());
-            return ast.ToTreeString();
+            CompilerUtil compilerUtil = new CompilerUtil();
+            return ast.Generate(compilerUtil).ToString();
         }
 
     }

@@ -17,9 +17,26 @@ namespace CobolStudio.src.parser.ast
             child._parent = this;
         }
 
-        public virtual BaseModel Generate(CompilerUtil compilerUtil) 
+        public int ChildCount()
+        {
+            return _children.Count;
+        }
+
+        public virtual BaseModel Generate(CompilerUtil compilerUtil)
         {
             return null;
+        }
+
+        public AstNode FirstChild()
+        {
+            if (_children.Count > 0)
+                return _children[0];
+            return null;
+        }
+
+        public AstNode GetChild(int index)
+        {
+            return _children[index];
         }
 
         public virtual string ToIndentedString(string indent = "")
