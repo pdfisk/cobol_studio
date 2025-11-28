@@ -74,10 +74,14 @@ namespace CobolStudio.src.parser
                 node = new ProcedureDivisionNode((ProcedureDivisionContext)context);
             else if (context is ProcedureDivisionBodyContext)
                 node = new ProcedureDivisionBodyNode((ProcedureDivisionBodyContext)context);
+            else if (context is DisplayOperandContext)
+                node = new DisplayOperandNode((DisplayOperandContext)context);
             else if (context is DisplayStatementContext)
                 node = new DisplayStatementNode((DisplayStatementContext)context);
             else if (context is EndProgramStatementContext)
                 node = new EndPrgramStatementNode((EndProgramStatementContext)context);
+            else if (context is LiteralContext)
+                node = new LiteralNode((LiteralContext)context);
             else if (context is ParagraphsContext)
                 node = new ParagraphsNode((ParagraphsContext)context);
             else if (context is SentenceContext)
@@ -116,5 +120,4 @@ namespace CobolStudio.src.parser
     }
 }
 
-//[AST] Unhandled context type: Cobol85Parser + DisplayStatementContext
-//[AST] Unhandled context type: Cobol85Parser + StopStatementContext
+//[AST] Unhandled context type: Cobol85Parser + LiteralContext
