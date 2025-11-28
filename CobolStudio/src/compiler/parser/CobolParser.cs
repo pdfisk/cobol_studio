@@ -1,8 +1,6 @@
 ﻿using Antlr4.Runtime;
 using CobolStudio.src.parser.ast;
 using MyChatDB;
-using static Cobol85Parser;
-using static IronPython.Modules._ast;
 
 namespace CobolStudio.src.parser
 {

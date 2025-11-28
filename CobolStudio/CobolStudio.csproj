@@ -168,7 +168,6 @@
     <Compile Include="src\compiler\parser\ast\StartRuleNode.cs" />
     <Compile Include="src\compiler\parser\ast\ProgramUnitNode.cs" />
     <Compile Include="src\compiler\parser\CobolParser.cs" />
-    <Compile Include="src\compiler\parser\visitors\ProgramUnitVisitor.cs" />
     <Compile Include="src\python\engine\Engine.cs" />
     <Compile Include="src\python\engine\IResultHandler.cs" />
     <Compile Include="src\python\engine\GlobalAccessor.cs" />
