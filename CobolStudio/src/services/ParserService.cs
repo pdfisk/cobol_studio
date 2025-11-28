@@ -1,4 +1,5 @@
 ﻿using CobolStudio.src.api;
+using CobolStudio.src.compiler;
 using static MyChatDB.src.constants.SharedConstants;
 
 
@@ -7,7 +8,7 @@ namespace MyChatDB.src.services
     internal class ParserService
     {
         static ParserService _instance;
-        ParserApi _parserApi;
+        CompilerApi _compilerApi;
 
         public static ParserService getInstance()
         {
@@ -20,7 +21,7 @@ namespace MyChatDB.src.services
 
         ParserService()
         {
-            _parserApi = new ParserApi();
+            _compilerApi = new CompilerApi();
         }
 
         public static string Perform(string command, string jsonArg)
@@ -37,7 +38,7 @@ namespace MyChatDB.src.services
 
         string ParseCobol(string fileName)
         {
-            return _parserApi.ParseFile(fileName);
+            return CobolCompiler.CompileFile(fileName);
         }
     }
 }

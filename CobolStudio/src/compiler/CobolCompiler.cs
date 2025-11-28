@@ -1,16 +1,13 @@
 ﻿using Antlr4.Runtime;
-using Antlr4.Runtime.Tree;
 using CobolStudio.src.parser;
-using CobolStudio.src.parser;
-using MyChatDB;
 using System;
 using System.IO;
 
-namespace CobolStudio.src.api
+namespace CobolStudio.src.compiler
 {
-    internal class ParserApi
+    internal class CobolCompiler
     {
-        public string ParseFile(string fileName)
+        public static string CompileFile(string fileName)
         {
             if (!fileName.EndsWith(".cobol"))
                 fileName += ".cobol";
@@ -28,9 +25,5 @@ namespace CobolStudio.src.api
             return ast.ToTreeString();
         }
 
-        void PrintLn(string message)
-        {
-            TranscriptWindow.GetInstance().PrintLn(message);
-        }
     }
 }

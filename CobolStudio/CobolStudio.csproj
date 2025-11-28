@@ -126,8 +126,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="src\api\LlmApi.cs" />
-    <Compile Include="src\api\ParserApi.cs" />
+    <Compile Include="src\api\CompilerApi.cs" />
     <Compile Include="src\chatgpt\LmStudioClient.cs" />
+    <Compile Include="src\compiler\CobolCompiler.cs" />
     <Compile Include="src\constants\SharedConstants.cs" />
     <Compile Include="src\models\core\BaseModel.cs" />
     <Compile Include="src\models\divisions\ProcedureDivisionModel.cs" />
