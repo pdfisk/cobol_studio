@@ -54,14 +54,20 @@ namespace CobolStudio.src.parser
                 node = new CobolWordNode((CobolWordContext)context);
             else if (context is ConfigurationSectionContext)
                 node = new ConfigurationSectionNode((ConfigurationSectionContext)context);
+            else if (context is FileSectionContext)
+                node = new FileSectionNode((FileSectionContext)context);
             else if (context is InputOutputSectionContext)
                 node = new InputOutputSectionNode((InputOutputSectionContext)context);
+            else if (context is LinkageSectionContext)
+                node = new LinkageSectionNode((LinkageSectionContext)context);
 
             // data division
             else if (context is DataDivisionContext)
                 node = new DataDivisionNode((DataDivisionContext)context);
             else if (context is DataDivisionSectionContext)
                 node = new DataDivisionSectionNode((DataDivisionSectionContext)context);
+            else if (context is WorkingStorageSectionContext)
+                node = new WorkingStorageSectionNode((WorkingStorageSectionContext)context);
 
             // procedure division
             else if (context is ProcedureDivisionContext)
@@ -72,6 +78,8 @@ namespace CobolStudio.src.parser
                 node = new EndPrgramStatementNode((EndProgramStatementContext)context);
             else if (context is ParagraphsContext)
                 node = new ParagraphsNode((ParagraphsContext)context);
+            else if (context is SentenceContext)
+                node = new SentenceNode((SentenceContext)context);
 
             // child nodes
             if (node != null)
@@ -101,3 +109,4 @@ namespace CobolStudio.src.parser
         }
     }
 }
+
