@@ -7,10 +7,12 @@ namespace CobolStudio.src.parser.ast
     {
         public List<AstNode> _children = new List<AstNode>();
         public RuleContext _ctx;
+        public AstNode _parent;
 
         public void AddChild(AstNode child)
         {
             _children.Add(child);
+            child._parent = this;
         }   
 
         public virtual string ToIndentedString(string indent = "")
