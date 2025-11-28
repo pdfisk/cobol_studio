@@ -5,32 +5,32 @@ namespace CobolStudio.src.parser.ast
 {
     internal class AstNode
     {
-        public List<AstNode> children = new List<AstNode>();
+        public List<AstNode> _children = new List<AstNode>();
         public RuleContext _ctx;
 
         public void AddChild(AstNode child)
         {
-            children.Add(child);
+            _children.Add(child);
         }   
+
+        public virtual string ToIndentedString(string indent = "")
+        {
+            string result = indent + ToString() + "\n";
+            foreach (var child in _children)
+            {
+                result += child.ToIndentedString(indent + "  ");
+            }
+            return result;
+        }
 
         public override string ToString()
         {
             return GetType().Name;
         }
 
-        public virtual string ToDetailedString(string indent = "")
-        {
-            string result = indent + ToString() + "\n";
-            foreach (var child in children)
-            {
-                result += child.ToDetailedString(indent + "  ");
-            }
-            return result;
-        }
-
         public string ToTreeString()
         {
-            return ToDetailedString();
+            return ToIndentedString();
         }
 
         public string ToStringTree(CobolParser parser)
