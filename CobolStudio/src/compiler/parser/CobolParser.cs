@@ -111,7 +111,7 @@ namespace CobolStudio.src.parser
             return new ErrorNode(context, message);
         }
 
-        void PrintLn(string message)
+        public void PrintLn(string message)
         {
             TranscriptWindow.GetInstance().PrintLn(message);
         }

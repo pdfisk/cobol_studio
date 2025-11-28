@@ -1,4 +1,6 @@
 ﻿using Antlr4.Runtime;
+using CobolStudio.src.compiler.core;
+using CobolStudio.src.models.core;
 using System.Collections.Generic;
 
 namespace CobolStudio.src.parser.ast
@@ -13,7 +15,12 @@ namespace CobolStudio.src.parser.ast
         {
             _children.Add(child);
             child._parent = this;
-        }   
+        }
+
+        public virtual BaseModel Generate(CompilerUtil compilerUtil) 
+        {
+            return null;
+        }
 
         public virtual string ToIndentedString(string indent = "")
         {
