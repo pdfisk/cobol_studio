@@ -1,6 +1,7 @@
 ﻿using Antlr4.Runtime;
 using CobolStudio.src.compiler.core;
 using CobolStudio.src.models.core;
+using IronPython.Runtime.Operations;
 using MyChatDB;
 using System.Collections.Generic;
 
@@ -24,6 +25,26 @@ namespace CobolStudio.src.parser.ast
         }
 
         public virtual BaseModel Generate(CompilerUtil compilerUtil)
+        {
+            var model = GenerateSelf(compilerUtil);
+            GenerateChildren(model, compilerUtil);
+            return model;
+        }
+
+        public virtual void GenerateChildren(BaseModel parent, CompilerUtil compilerUtil)
+        {
+            for (var i = 0; i < ChildCount(); i++)
+            {
+                var child = GetChild(i);
+                var childModel = child.Generate(compilerUtil: null);
+                if (childModel != null && parent != null)
+                {
+                    parent.AddChild(childModel);
+                }
+            }
+        }
+
+        public virtual BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
             return null;
         }

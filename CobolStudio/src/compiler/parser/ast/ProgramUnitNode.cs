@@ -1,6 +1,7 @@
 ﻿using CobolStudio.src.compiler.core;
 using CobolStudio.src.models;
 using CobolStudio.src.models.core;
+using CobolStudio.src.models.divisions;
 using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
@@ -16,8 +17,34 @@ namespace CobolStudio.src.parser.ast
 
         public override BaseModel Generate(CompilerUtil compilerUtil)
         {
-            PrintLn($"Generating ProgramModel: {ChildCount()}");
-            return new ProgramModel();
+            PrintLn($"Generating {GetType().Name}: {ChildCount()}");
+            var model = new ProgramModel();
+            for(var i = 0; i < ChildCount(); i++)
+            {
+                var child = GetChild(i);
+                var childModel = child.Generate(compilerUtil);
+                if (childModel is IdentificationDivisionModel)
+                {
+                    model.identificationDivisionModel = (IdentificationDivisionModel)childModel;
+                }
+                else if (childModel is EnvironmentDivisionModel)
+                {
+                    model.environmentDivisionModel = (EnvironmentDivisionModel)childModel;
+                }
+                else if (childModel is DataDivisionModel)
+                {
+                    model.dataDivisionModel = (DataDivisionModel)childModel;
+                }
+                else if (childModel is ProcedureDivisionModel)
+                {
+                    model.procedureDivisionModel = (ProcedureDivisionModel)childModel;
+                }
+                if (childModel != null)
+                {
+                    model.AddChild(childModel);
+                }
+            }
+            return model;
         }
 
 
