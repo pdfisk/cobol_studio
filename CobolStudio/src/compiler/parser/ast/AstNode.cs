@@ -49,7 +49,7 @@ namespace CobolStudio.src.parser.ast
 
         public virtual BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
-            PrintLn($"GenerateSelf {GetType().Name}: {ChildCount()}");
+            PrintLn($"Missing GenerateSelf {GetType().Name}: {ChildCount()}");
             return null;
         }
 
