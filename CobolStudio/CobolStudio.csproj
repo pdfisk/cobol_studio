@@ -132,11 +132,12 @@
     <Compile Include="src\compiler\core\CompilerUtil.cs" />
     <Compile Include="src\constants\SharedConstants.cs" />
     <Compile Include="src\models\core\BaseModel.cs" />
-    <Compile Include="src\models\divisions\ProcedureDivisionModel.cs" />
-    <Compile Include="src\models\divisions\DataDivisionModel.cs" />
-    <Compile Include="src\models\divisions\EnvironmentDivisionModel.cs" />
-    <Compile Include="src\models\divisions\IdentificationDivisionModel.cs" />
-    <Compile Include="src\models\ProgramModel.cs" />
+    <Compile Include="src\models\divisions\procedure_division\ProcedureDivisionModel.cs" />
+    <Compile Include="src\models\divisions\data_division\DataDivisionModel.cs" />
+    <Compile Include="src\models\divisions\environment_division\EnvironmentDivisionModel.cs" />
+    <Compile Include="src\models\divisions\identification_division\IdentificationDivisionModel.cs" />
+    <Compile Include="src\models\program\CompilationUnitModel.cs" />
+    <Compile Include="src\models\program\ProgramModel.cs" />
     <Compile Include="src\compiler\parser\antlr\Cobol85BaseVisitor.cs" />
     <Compile Include="src\compiler\parser\antlr\Cobol85Lexer.cs" />
     <Compile Include="src\compiler\parser\antlr\Cobol85Parser.cs" />

@@ -18,7 +18,7 @@ namespace CobolStudio.src.parser.ast
         public override BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
             var model = new ProgramModel();
-            for(var i = 0; i < ChildCount(); i++)
+            for (var i = 0; i < ChildCount(); i++)
             {
                 var child = GetChild(i);
                 var childModel = child.Generate(compilerUtil);
