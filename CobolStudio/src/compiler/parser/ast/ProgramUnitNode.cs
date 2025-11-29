@@ -16,6 +16,7 @@ namespace CobolStudio.src.parser.ast
 
         public override BaseModel Generate(CompilerUtil compilerUtil)
         {
+            PrintLn($"Generating ProgramModel: {ChildCount()}");
             return new ProgramModel();
         }
 

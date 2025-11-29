@@ -1,6 +1,7 @@
 ﻿using Antlr4.Runtime;
 using CobolStudio.src.compiler.core;
 using CobolStudio.src.models.core;
+using MyChatDB;
 using System.Collections.Generic;
 
 namespace CobolStudio.src.parser.ast
@@ -37,6 +38,11 @@ namespace CobolStudio.src.parser.ast
         public AstNode GetChild(int index)
         {
             return _children[index];
+        }
+
+        public void PrintLn(string message)
+        {
+            TranscriptWindow.GetInstance().PrintLn(message);
         }
 
         public virtual string ToIndentedString(string indent = "")
