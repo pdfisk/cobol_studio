@@ -25,7 +25,7 @@ namespace CobolStudio.src.compiler
             var ast = parser.BuildAst();
             //parser.PrintLn("AST: " + ast.GetType().ToString());
             CompilerUtil compilerUtil = new CompilerUtil();
-            //parser.PrintLn(ast.ToTree());
+            parser.PrintLn(ast.ToTree());
             return ast.Generate(compilerUtil).ToString();
         }
 

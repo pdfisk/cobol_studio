@@ -14,7 +14,7 @@ namespace CobolStudio.src.parser.ast
             _ctx = _context = context;
         }
 
-        public override BaseModel Generate(CompilerUtil compilerUtil)
+        public override BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
             return new CompilationUnitModel();
         }
