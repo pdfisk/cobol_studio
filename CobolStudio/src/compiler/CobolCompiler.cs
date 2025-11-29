@@ -23,10 +23,10 @@ namespace CobolStudio.src.compiler
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             var parser = new CobolParser(tokens);
             var ast = parser.BuildAst();
-            parser.PrintLn("AST: " + ast.GetType().ToString());
+            //parser.PrintLn("AST: " + ast.GetType().ToString());
             CompilerUtil compilerUtil = new CompilerUtil();
-            return ast.ToTree();
-            //return ast.Generate(compilerUtil).ToString();
+            //parser.PrintLn(ast.ToTree());
+            return ast.Generate(compilerUtil).ToString();
         }
 
     }
