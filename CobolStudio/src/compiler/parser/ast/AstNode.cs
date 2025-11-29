@@ -37,9 +37,6 @@ namespace CobolStudio.src.parser.ast
             {
                 var child = GetChild(i);
                 var childModel = child.Generate(compilerUtil: compilerUtil);
-                if (childModel == null) {
-                    PrintLn($"Generated null child model: {child.GetType().Name}");
-                }
                 if (childModel != null && parent != null)
                 {
                     parent.AddChild(childModel);

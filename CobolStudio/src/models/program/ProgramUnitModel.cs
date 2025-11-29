@@ -3,7 +3,7 @@ using CobolStudio.src.models.divisions;
 
 namespace CobolStudio.src.models
 {
-    internal class ProgramModel : BaseModel
+    internal class ProgramUnitModel : BaseModel
     {
         public IdentificationDivisionModel identificationDivisionModel;
         public EnvironmentDivisionModel environmentDivisionModel;
