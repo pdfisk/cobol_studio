@@ -25,7 +25,7 @@ namespace CobolStudio.src.api
             CommonTokenStream tokens = new CommonTokenStream(lexer);
             var parser = new CobolParser(tokens);
             var ast = parser.BuildAst();
-            return ast.ToTreeString();
+            return ast.ToTree();
         }
 
         void PrintLn(string message)

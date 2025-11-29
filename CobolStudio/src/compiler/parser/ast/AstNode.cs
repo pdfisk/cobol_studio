@@ -54,12 +54,12 @@ namespace CobolStudio.src.parser.ast
             return GetType().Name;
         }
 
-        public string ToTreeString()
+        public string ToTree()
         {
             return ToIndentedString();
         }
 
-        public string ToStringTree(CobolParser parser)
+        public string ToContextTree(CobolParser parser)
         {
             return _ctx.ToStringTree(parser);
         }
