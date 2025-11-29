@@ -15,9 +15,8 @@ namespace CobolStudio.src.parser.ast
             _ctx = _context = context;
         }
 
-        public override BaseModel Generate(CompilerUtil compilerUtil)
+        public override BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
-            PrintLn($"Generating {GetType().Name}: {ChildCount()}");
             var model = new ProgramModel();
             for(var i = 0; i < ChildCount(); i++)
             {

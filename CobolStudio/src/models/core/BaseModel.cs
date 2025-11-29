@@ -6,9 +6,14 @@ namespace CobolStudio.src.models.core
     {
         List<BaseModel> _children = new List<BaseModel>();
 
-        public void AddChild(BaseModel child)
+        public virtual void AddChild(BaseModel child)
         {
             _children.Add(child);
+        }
+
+        public override string ToString()
+        {
+            return $"Model: {GetType().Name} Children:  {_children.Count}";
         }
     }
 }

@@ -13,7 +13,7 @@ namespace CobolStudio.src.parser.ast
         public RuleContext _ctx;
         public AstNode _parent;
 
-        public void AddChild(AstNode child)
+        public virtual void AddChild(AstNode child)
         {
             _children.Add(child);
             child._parent = this;
@@ -36,7 +36,7 @@ namespace CobolStudio.src.parser.ast
             for (var i = 0; i < ChildCount(); i++)
             {
                 var child = GetChild(i);
-                var childModel = child.Generate(compilerUtil: null);
+                var childModel = child.Generate(compilerUtil: compilerUtil);
                 if (childModel != null && parent != null)
                 {
                     parent.AddChild(childModel);
@@ -46,6 +46,7 @@ namespace CobolStudio.src.parser.ast
 
         public virtual BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
+            PrintLn($"GenerateSelf {GetType().Name}: {ChildCount()}");
             return null;
         }
 

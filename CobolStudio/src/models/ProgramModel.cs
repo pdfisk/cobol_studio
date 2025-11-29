@@ -10,12 +10,25 @@ namespace CobolStudio.src.models
         public DataDivisionModel dataDivisionModel;
         public ProcedureDivisionModel procedureDivisionModel;
 
-        public ProgramModel()
+        public override void AddChild(BaseModel child)
         {
-            identificationDivisionModel = new IdentificationDivisionModel();
-            environmentDivisionModel = new EnvironmentDivisionModel();
-            dataDivisionModel = new DataDivisionModel();
-            procedureDivisionModel = new ProcedureDivisionModel();
+            base.AddChild(child);
+            if (child is IdentificationDivisionModel)
+            {
+                identificationDivisionModel = (IdentificationDivisionModel)child;
+            }
+            else if (child is EnvironmentDivisionModel)
+            {
+                environmentDivisionModel = (EnvironmentDivisionModel)child;
+            }
+            else if (child is DataDivisionModel)
+            {
+                dataDivisionModel = (DataDivisionModel)child;
+            }
+            else if (child is ProcedureDivisionModel)
+            {
+                procedureDivisionModel = (ProcedureDivisionModel)child;
+            }
         }
 
     }
