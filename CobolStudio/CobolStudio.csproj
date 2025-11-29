@@ -132,6 +132,8 @@
     <Compile Include="src\compiler\core\CompilerUtil.cs" />
     <Compile Include="src\constants\SharedConstants.cs" />
     <Compile Include="src\models\core\BaseModel.cs" />
+    <Compile Include="src\models\core\CobolWordModel.cs" />
+    <Compile Include="src\models\divisions\identification_division\ProgramIdNameModel.cs" />
     <Compile Include="src\models\divisions\identification_division\ProgramIdParagraphModel.cs" />
     <Compile Include="src\models\divisions\procedure_division\ProcedureDivisionModel.cs" />
     <Compile Include="src\models\divisions\data_division\DataDivisionModel.cs" />
@@ -165,7 +167,7 @@
     <Compile Include="src\compiler\parser\ast\IdentificationDivisionNode.cs" />
     <Compile Include="src\compiler\parser\ast\EnvironmentDivisionBodyNode.cs" />
     <Compile Include="src\compiler\parser\ast\ProcedureDivisionBodyNode.cs" />
-    <Compile Include="src\compiler\parser\ast\ProgramIdDivisionNode.cs" />
+    <Compile Include="src\compiler\parser\ast\ProgramIdParagraphNode.cs" />
     <Compile Include="src\compiler\parser\ast\ProcedureDivisionNode.cs" />
     <Compile Include="src\compiler\parser\ast\EndProgramStatementNode.cs" />
     <Compile Include="src\compiler\parser\ast\CompilationUnitNode.cs" />
