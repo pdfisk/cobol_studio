@@ -16,7 +16,9 @@ namespace CobolStudio.src.parser.ast
 
         public override BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
-            return new ProgramModel(this);
+            var model= new ProgramModel(this);
+            model.SetName("StartRuleProgram");
+            return model;
         }
 
 

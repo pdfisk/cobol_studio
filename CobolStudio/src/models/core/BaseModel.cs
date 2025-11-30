@@ -7,6 +7,7 @@ namespace CobolStudio.src.models.core
     {
         AstNode _astNode;
         List<BaseModel> _children = new List<BaseModel>();
+        BaseModel _parent = null;
 
 
         public BaseModel(AstNode astNode)
@@ -17,6 +18,7 @@ namespace CobolStudio.src.models.core
         internal virtual void AddChild(BaseModel child)
         {
             _children.Add(child);
+            child._parent = this;
         }
 
         public override string ToString()
