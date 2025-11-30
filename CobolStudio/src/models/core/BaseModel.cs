@@ -14,7 +14,7 @@ namespace CobolStudio.src.models.core
             _astNode = astNode;
         }
 
-        public virtual void AddChild(BaseModel child)
+        internal virtual void AddChild(BaseModel child)
         {
             _children.Add(child);
         }

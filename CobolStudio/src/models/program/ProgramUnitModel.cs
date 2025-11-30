@@ -13,7 +13,7 @@ namespace CobolStudio.src.models
 
         public ProgramUnitModel(AstNode astNode) : base(astNode) { }
 
-        public override void AddChild(BaseModel child)
+        internal override void AddChild(BaseModel child)
         {
             base.AddChild(child);
             if (child is IdentificationDivisionModel)
