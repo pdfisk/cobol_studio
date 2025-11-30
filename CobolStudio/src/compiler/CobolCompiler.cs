@@ -32,7 +32,6 @@ namespace CobolStudio.src.compiler
     }
 }
 
-//Missing GenerateSelf ParagraphsNode: 2
 //Missing GenerateSelf SentenceNode: 1
 //Missing GenerateSelf StatementNode: 1
 //Missing GenerateSelf DisplayStatementNode: 1
@@ -41,7 +40,6 @@ namespace CobolStudio.src.compiler
 //Missing GenerateSelf SentenceNode: 1
 //Missing GenerateSelf StatementNode: 1
 //Missing GenerateSelf StopStatementNode: 0
-//Missing GenerateSelf ParagraphsNode: 2
 //Missing GenerateSelf SentenceNode: 1
 //Missing GenerateSelf StatementNode: 1
 //Missing GenerateSelf DisplayStatementNode: 1
@@ -50,6 +48,7 @@ namespace CobolStudio.src.compiler
 //Missing GenerateSelf SentenceNode: 1
 //Missing GenerateSelf StatementNode: 1
 //Missing GenerateSelf StopStatementNode: 0
+
 
 
 
