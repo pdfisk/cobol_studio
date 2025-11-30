@@ -148,6 +148,8 @@
     <Compile Include="src\models\divisions\data_division\DataDivisionModel.cs" />
     <Compile Include="src\models\divisions\environment_division\EnvironmentDivisionModel.cs" />
     <Compile Include="src\models\divisions\identification_division\IdentificationDivisionModel.cs" />
+    <Compile Include="src\models\program\DisplayOperandModel.cs" />
+    <Compile Include="src\models\program\DisplayStatementModel.cs" />
     <Compile Include="src\models\program\StatementModel.cs" />
     <Compile Include="src\models\program\SentenceModel.cs" />
     <Compile Include="src\models\program\StartRuleModel.cs" />
