@@ -32,7 +32,6 @@ namespace CobolStudio.src.compiler
     }
 }
 
-//Missing GenerateSelf LinkageSectionNode: 0
 //Missing GenerateSelf ProcedureDivisionBodyNode: 1
 //Missing GenerateSelf ParagraphsNode: 2
 //Missing GenerateSelf SentenceNode: 1
