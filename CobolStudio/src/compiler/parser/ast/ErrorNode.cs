@@ -2,7 +2,7 @@
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class ErrorNode : AstNode
+    public class ErrorNode : AstNode
     {
         string message;
 

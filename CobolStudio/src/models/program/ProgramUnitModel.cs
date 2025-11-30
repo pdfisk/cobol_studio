@@ -4,7 +4,7 @@ using CobolStudio.src.parser.ast;
 
 namespace CobolStudio.src.models
 {
-    internal class ProgramUnitModel : BaseModel
+    public class ProgramUnitModel : BaseModel
     {
         public IdentificationDivisionModel identificationDivisionModel;
         public EnvironmentDivisionModel environmentDivisionModel;

@@ -5,7 +5,7 @@ using static MyChatDB.src.constants.SharedConstants;
 
 namespace MyChatDB.src.services
 {
-    internal class CompilerService
+    public class CompilerService
     {
         static CompilerService _instance;
         CompilerApi _compilerApi;

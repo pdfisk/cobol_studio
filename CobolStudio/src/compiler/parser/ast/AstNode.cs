@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class AstNode
+    public class AstNode
     {
         public List<AstNode> _children = new List<AstNode>();
         public RuleContext _ctx;

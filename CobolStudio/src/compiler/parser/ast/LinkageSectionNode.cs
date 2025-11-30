@@ -5,7 +5,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class LinkageSectionNode : AstNode
+    public class LinkageSectionNode : AstNode
     {
         LinkageSectionContext _context;
 

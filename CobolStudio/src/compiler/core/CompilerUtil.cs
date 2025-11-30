@@ -1,6 +1,6 @@
 ﻿namespace CobolStudio.src.compiler.core
 {
-    internal class CompilerUtil
+    public class CompilerUtil
     {
     }
 }

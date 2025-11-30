@@ -3,7 +3,7 @@ using CobolStudio.src.parser.ast;
 
 namespace CobolStudio.src.models.divisions
 {
-    internal class ProcedureDivisionBodyModel : BaseModel
+    public class ProcedureDivisionBodyModel : BaseModel
     {
         public ProcedureDivisionBodyModel(AstNode astNode) : base(astNode)
         {

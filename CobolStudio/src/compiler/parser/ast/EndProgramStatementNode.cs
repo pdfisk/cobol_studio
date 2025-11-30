@@ -2,7 +2,7 @@
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class EndPrgramStatementNode : AstNode
+    public class EndPrgramStatementNode : AstNode
     {
         EndProgramStatementContext _context;
 

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace CobolStudio.src.models.core
 {
-    internal class BaseModel
+    public class BaseModel
     {
         AstNode _astNode;
         List<BaseModel> _children = new List<BaseModel>();

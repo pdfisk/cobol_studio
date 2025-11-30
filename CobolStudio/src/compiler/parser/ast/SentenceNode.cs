@@ -6,7 +6,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class SentenceNode : AstNode
+    public class SentenceNode : AstNode
     {
         SentenceContext _context;
 

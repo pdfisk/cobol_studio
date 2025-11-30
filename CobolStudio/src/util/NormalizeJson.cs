@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace MyChatDB.src.util
 {
-    internal class NormalizeJson
+    public class NormalizeJson
     {
 
         public static object Normalize(object value)

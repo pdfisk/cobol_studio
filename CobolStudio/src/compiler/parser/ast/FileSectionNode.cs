@@ -5,7 +5,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class FileSectionNode : AstNode
+    public class FileSectionNode : AstNode
     {
         FileSectionContext _context;
 

@@ -5,7 +5,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class DataDivisionNode : AstNode
+    public class DataDivisionNode : AstNode
     {
         DataDivisionContext _context;
 

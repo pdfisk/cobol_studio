@@ -4,7 +4,7 @@ using MyChatDB;
 
 namespace CobolStudio.src.parser
 {
-    internal class CobolParser : Cobol85Parser
+    public class CobolParser : Cobol85Parser
     {
         ITokenStream input_stream;
 

@@ -5,7 +5,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class ProcedureDivisionBodyNode : AstNode
+    public class ProcedureDivisionBodyNode : AstNode
     {
         ProcedureDivisionBodyContext _context;
 

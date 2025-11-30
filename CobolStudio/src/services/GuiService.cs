@@ -5,7 +5,7 @@ using static MyChatDB.src.constants.SharedConstants;
 
 namespace MyChatDB.src.services
 {
-    internal class GuiService
+    public class GuiService
     {
         static GuiService _instance;
         Engine _engine;

@@ -5,7 +5,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class ProgramIdParagraphNode : AstNode
+    public class ProgramIdParagraphNode : AstNode
     {
         ProgramIdParagraphContext _context;
 

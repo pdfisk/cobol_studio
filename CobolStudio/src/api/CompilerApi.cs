@@ -8,7 +8,7 @@ using System.IO;
 
 namespace CobolStudio.src.api
 {
-    internal class CompilerApi
+    public class CompilerApi
     {
         public string CompileFile(string fileName)
         {

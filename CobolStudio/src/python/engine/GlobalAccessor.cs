@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace MyChatDB.src.iron_python.engine
 {
-    internal class GlobalAccessor
+    public class GlobalAccessor
     {
         private readonly ScriptEngine _engine;
         private readonly ScriptScope _scope;

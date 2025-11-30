@@ -5,7 +5,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class StartRuleNode : AstNode
+    public class StartRuleNode : AstNode
     {
         StartRuleContext _context;
 

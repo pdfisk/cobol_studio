@@ -3,7 +3,7 @@ using CobolStudio.src.parser.ast;
 
 namespace CobolStudio.src.models.divisions
 {
-    internal class LinkageSectionModel : BaseModel
+    public class LinkageSectionModel : BaseModel
     {
         public LinkageSectionModel(AstNode astNode) : base(astNode)
         {

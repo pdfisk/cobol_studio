@@ -5,7 +5,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class InputOutputSectionNode : AstNode
+    public class InputOutputSectionNode : AstNode
     {
         InputOutputSectionContext _context;
 

@@ -3,7 +3,7 @@ using CobolStudio.src.parser.ast;
 
 namespace CobolStudio.src.models.divisions
 {
-    internal class EnvironmentDivisionBodyModel : BaseModel
+    public class EnvironmentDivisionBodyModel : BaseModel
     {
         public EnvironmentDivisionBodyModel(AstNode astNode) : base(astNode)
         {

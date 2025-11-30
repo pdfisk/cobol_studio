@@ -6,7 +6,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class CobolWordNode : AstNode
+    public class CobolWordNode : AstNode
     {
         CobolWordContext _context;
 

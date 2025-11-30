@@ -5,7 +5,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class StopStatementNode : AstNode
+    public class StopStatementNode : AstNode
     {
         StopStatementContext _context;
 

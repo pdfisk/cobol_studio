@@ -3,7 +3,7 @@ using CobolStudio.src.parser.ast;
 
 namespace CobolStudio.src.models.program
 {
-    internal class CompilationUnitModel : BaseModel
+    public class CompilationUnitModel : BaseModel
     {
         public CompilationUnitModel(AstNode astNode) : base(astNode)
         {

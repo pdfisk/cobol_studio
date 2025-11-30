@@ -5,7 +5,7 @@ using static Cobol85Parser;
 
 namespace CobolStudio.src.parser.ast
 {
-    internal class CompilationUnitNode : AstNode
+    public class CompilationUnitNode : AstNode
     {
         CompilationUnitContext _context;
 

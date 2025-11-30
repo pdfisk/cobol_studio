@@ -7,7 +7,7 @@ using System.Reflection;
 
 namespace CobolStudio.src.compiler
 {
-    internal class CobolCompiler
+    public class CobolCompiler
     {
         public static object CompileFile(string fileName)
         {
