@@ -7,7 +7,7 @@ namespace CobolStudio.src.models
     {
         public IdentificationDivisionModel identificationDivisionModel;
         public EnvironmentDivisionModel environmentDivisionModel;
-        public DataDivisionModel dataDivisionModel;
+        public DataDivisionSectionModel dataDivisionModel;
         public ProcedureDivisionModel procedureDivisionModel;
 
         public override void AddChild(BaseModel child)
@@ -21,9 +21,9 @@ namespace CobolStudio.src.models
             {
                 environmentDivisionModel = (EnvironmentDivisionModel)child;
             }
-            else if (child is DataDivisionModel)
+            else if (child is DataDivisionSectionModel)
             {
-                dataDivisionModel = (DataDivisionModel)child;
+                dataDivisionModel = (DataDivisionSectionModel)child;
             }
             else if (child is ProcedureDivisionModel)
             {

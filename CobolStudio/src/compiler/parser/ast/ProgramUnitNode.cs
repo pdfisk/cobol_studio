@@ -30,9 +30,9 @@ namespace CobolStudio.src.parser.ast
                 {
                     model.environmentDivisionModel = (EnvironmentDivisionModel)childModel;
                 }
-                else if (childModel is DataDivisionModel)
+                else if (childModel is DataDivisionSectionModel)
                 {
-                    model.dataDivisionModel = (DataDivisionModel)childModel;
+                    model.dataDivisionModel = (DataDivisionSectionModel)childModel;
                 }
                 else if (childModel is ProcedureDivisionModel)
                 {
