@@ -21,5 +21,10 @@ namespace CobolStudio.src.models.program
             _name = name;
         }
 
+        public override string ToString()
+        {
+            return $"ProgramModel: {_name}";
+        }
+
     }
 }

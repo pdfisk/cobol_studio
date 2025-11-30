@@ -8,6 +8,7 @@ namespace CobolStudio.src.parser.ast
     public class StartRuleNode : AstNode
     {
         StartRuleContext _context;
+        ProgramModel _model;
 
         public StartRuleNode(StartRuleContext context)
         {
@@ -16,9 +17,10 @@ namespace CobolStudio.src.parser.ast
 
         public override BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
-            var model= new ProgramModel(this);
-            model.SetName("StartRuleProgram");
-            return model;
+            _model = new ProgramModel(this);
+            var literalNode = FindChildByType("LiteralNode");
+            _model.SetName(literalNode == null ? "<unknown>" : literalNode._ctx.GetText());
+            return _model;
         }
 
 

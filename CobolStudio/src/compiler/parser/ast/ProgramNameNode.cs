@@ -16,6 +16,8 @@ namespace CobolStudio.src.parser.ast
 
         public override BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
+            var literalNode = FindChildByType("LiteralNode");
+            //PrintLn($"Generating ProgramNameNode Model: {literalNode}");
             return new ProgramIdNameModel(this);
         }
 

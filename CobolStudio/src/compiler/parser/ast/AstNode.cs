@@ -3,6 +3,7 @@ using CobolStudio.src.compiler.core;
 using CobolStudio.src.models.core;
 using IronPython.Runtime.Operations;
 using MyChatDB;
+using System;
 using System.Collections.Generic;
 
 namespace CobolStudio.src.parser.ast
@@ -50,15 +51,28 @@ namespace CobolStudio.src.parser.ast
             return null;
         }
 
+        public AstNode FindChildByType(string typeName)
+        {
+            if (typeName == GetType().Name)
+                return this;
+            foreach (var child in _children)
+            {
+                var result = child.FindChildByType(typeName);
+                if (result != null)
+                    return result;
+            }
+            return null;
+        }
+
         public AstNode FirstChild()
         {
-            if (_children.Count > 0)
-                return _children[0];
-            return null;
+            return GetChild(0);
         }
 
         public AstNode GetChild(int index)
         {
+            if (index >= 0 && _children.Count > index)
+                return _children[index];
             return _children[index];
         }
 
