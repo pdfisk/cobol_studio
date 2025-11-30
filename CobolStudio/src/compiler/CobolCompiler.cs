@@ -31,16 +31,3 @@ namespace CobolStudio.src.compiler
 
     }
 }
-
-//Missing GenerateSelf DisplayStatementNode: 1
-//Missing GenerateSelf DisplayOperandNode: 1
-//Missing GenerateSelf LiteralNode: 0
-//Missing GenerateSelf StopStatementNode: 0
-//Missing GenerateSelf DisplayStatementNode: 1
-//Missing GenerateSelf DisplayOperandNode: 1
-//Missing GenerateSelf LiteralNode: 0
-//Missing GenerateSelf StopStatementNode: 0
-
-
-
-

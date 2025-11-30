@@ -2,7 +2,7 @@
 
 namespace CobolStudio.src.models.program
 {
-    internal class StartRuleModel : BaseModel
+    internal class StopStatementModel : BaseModel
     {
     }
 }
