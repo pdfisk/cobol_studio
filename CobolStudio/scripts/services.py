@@ -5,6 +5,6 @@ def inspect(obj):
     gui_service('inspect', json.dumps(obj))
 
 
-def parse_cobol(obj):
-    """Parse a cobol file and return its AST."""
-    return parser_service('parse_cobol', json.dumps(obj))
+def compile_cobol(obj):
+    """Compile a cobol file and return its model."""
+    return compiler_service('compile_cobol', json.dumps(obj))

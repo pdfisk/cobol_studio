@@ -9,7 +9,7 @@ namespace CobolStudio.src.compiler
 {
     internal class CobolCompiler
     {
-        public static string CompileFile(string fileName)
+        public static object CompileFile(string fileName)
         {
             if (!fileName.EndsWith(".cobol"))
                 fileName += ".cobol";
@@ -26,7 +26,7 @@ namespace CobolStudio.src.compiler
             var ast = parser.BuildAst();
             //parser.PrintLn(ast.ToTree());
             CompilerUtil compilerUtil = new CompilerUtil();
-            return ast.Generate(compilerUtil).ToString();
+            return ast.Generate(compilerUtil);
         }
 
     }

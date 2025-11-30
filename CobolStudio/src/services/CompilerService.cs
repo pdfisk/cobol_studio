@@ -5,38 +5,38 @@ using static MyChatDB.src.constants.SharedConstants;
 
 namespace MyChatDB.src.services
 {
-    internal class ParserService
+    internal class CompilerService
     {
-        static ParserService _instance;
+        static CompilerService _instance;
         CompilerApi _compilerApi;
 
-        public static ParserService getInstance()
+        public static CompilerService getInstance()
         {
             if (_instance == null)
             {
-                _instance = new ParserService();
+                _instance = new CompilerService();
             }
             return _instance;
         }
 
-        ParserService()
+        CompilerService()
         {
             _compilerApi = new CompilerApi();
         }
 
-        public static string Perform(string command, string jsonArg)
+        public static object Perform(string command, string jsonArg)
         {
             var value = Newtonsoft.Json.JsonConvert.DeserializeObject<object>(jsonArg);
             switch (command.ToLower())
             {
-                case PARSE_COBOL:
-                    return getInstance().ParseCobol(value.ToString());
+                case COMPILE_COBOL:
+                    return getInstance().CompileCobol(value.ToString());
                 default:
                     return @"UNKNOWN COMMAND ${command}";
             }
         }
 
-        string ParseCobol(string fileName)
+        object CompileCobol(string fileName)
         {
             return CobolCompiler.CompileFile(fileName);
         }

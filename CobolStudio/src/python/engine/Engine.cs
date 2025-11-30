@@ -128,11 +128,11 @@ namespace MyChatDB.iron_python.engine
         {
             if (_running) return;
             Func<string, string, string> gui_service = (method, args) => { return GuiService.Perform(method, args); };
-            Func<string, string, string> parser_service = (method, args) => { return ParserService.Perform(method, args); };
+            Func<string, string, object> compiler_service = (method, args) => { return CompilerService.Perform(method, args); };
             _running = true;
             _globalAccessor.SetGlobal(SharedConstants.SHARED_GLOBALS, _sharedGlobalsDictionary);
             _globalAccessor.SetGlobal(SharedConstants.GUI_SERVICE, gui_service);
-            _globalAccessor.SetGlobal(SharedConstants.PARSER_SERVICE, parser_service);
+            _globalAccessor.SetGlobal(SharedConstants.COMPILER_SERVICE, compiler_service);
             Task<(object result, string stdout, string stderr)> task = ExecuteAsync(code);
             await task;
             _running = false;
