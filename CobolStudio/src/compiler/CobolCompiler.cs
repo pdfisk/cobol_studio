@@ -3,6 +3,7 @@ using CobolStudio.src.compiler.core;
 using CobolStudio.src.parser;
 using System;
 using System.IO;
+using System.Reflection;
 
 namespace CobolStudio.src.compiler
 {
@@ -31,12 +32,7 @@ namespace CobolStudio.src.compiler
     }
 }
 
-//Missing GenerateSelf ProgramIdParagraphNode: 1
-//Missing GenerateSelf ProgramNameNode: 1
-//Missing GenerateSelf CobolWordNode: 0
-//Missing GenerateSelf EnvironmentDivisionBodyNode: 1
 //Missing GenerateSelf ConfigurationSectionNode: 0
-//Missing GenerateSelf EnvironmentDivisionBodyNode: 1
 //Missing GenerateSelf InputOutputSectionNode: 0
 //Missing GenerateSelf DataDivisionSectionNode: 1
 //Missing GenerateSelf FileSectionNode: 0
@@ -54,12 +50,7 @@ namespace CobolStudio.src.compiler
 //Missing GenerateSelf SentenceNode: 1
 //Missing GenerateSelf StatementNode: 1
 //Missing GenerateSelf StopStatementNode: 0
-//Missing GenerateSelf ProgramIdParagraphNode: 1
-//Missing GenerateSelf ProgramNameNode: 1
-//Missing GenerateSelf CobolWordNode: 0
-//Missing GenerateSelf EnvironmentDivisionBodyNode: 1
 //Missing GenerateSelf ConfigurationSectionNode: 0
-//Missing GenerateSelf EnvironmentDivisionBodyNode: 1
 //Missing GenerateSelf InputOutputSectionNode: 0
 //Missing GenerateSelf DataDivisionSectionNode: 1
 //Missing GenerateSelf FileSectionNode: 0
