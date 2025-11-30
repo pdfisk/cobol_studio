@@ -1,5 +1,6 @@
 ﻿using CobolStudio.src.models.core;
 using CobolStudio.src.models.divisions;
+using CobolStudio.src.parser.ast;
 
 namespace CobolStudio.src.models
 {
@@ -9,6 +10,8 @@ namespace CobolStudio.src.models
         public EnvironmentDivisionModel environmentDivisionModel;
         public DataDivisionSectionModel dataDivisionModel;
         public ProcedureDivisionModel procedureDivisionModel;
+
+        public ProgramUnitModel(AstNode astNode) : base(astNode) { }
 
         public override void AddChild(BaseModel child)
         {

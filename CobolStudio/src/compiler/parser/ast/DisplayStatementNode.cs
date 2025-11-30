@@ -18,7 +18,7 @@ namespace CobolStudio.src.parser.ast
 
         public override BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
-            return new DisplayStatementModel();
+            return new DisplayStatementModel(this);
         }
 
 

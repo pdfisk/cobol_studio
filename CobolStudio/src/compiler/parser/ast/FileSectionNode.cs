@@ -15,7 +15,7 @@ namespace CobolStudio.src.parser.ast
         }
         public override BaseModel GenerateSelf(CompilerUtil compilerUtil)
         {
-            return new FileSectionModel();
+            return new FileSectionModel(this);
         }
 
     }
