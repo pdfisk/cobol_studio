@@ -133,6 +133,7 @@
     <Compile Include="src\constants\SharedConstants.cs" />
     <Compile Include="src\models\core\BaseModel.cs" />
     <Compile Include="src\models\core\CobolWordModel.cs" />
+    <Compile Include="src\models\divisions\environment_division\EnvironmentDivisionBodyModel.cs" />
     <Compile Include="src\models\divisions\identification_division\ProgramIdNameModel.cs" />
     <Compile Include="src\models\divisions\identification_division\ProgramIdParagraphModel.cs" />
     <Compile Include="src\models\divisions\procedure_division\ProcedureDivisionModel.cs" />
