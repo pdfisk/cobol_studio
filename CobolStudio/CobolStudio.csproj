@@ -143,6 +143,7 @@
     <Compile Include="src\models\divisions\identification_division\ProgramIdNameModel.cs" />
     <Compile Include="src\models\divisions\identification_division\ProgramIdParagraphModel.cs" />
     <Compile Include="src\models\divisions\procedure_division\ProcedureDivisionBodyModel.cs" />
+    <Compile Include="src\models\divisions\procedure_division\ParagraphsModel.cs" />
     <Compile Include="src\models\divisions\procedure_division\ProcedureDivisionModel.cs" />
     <Compile Include="src\models\divisions\data_division\DataDivisionModel.cs" />
     <Compile Include="src\models\divisions\environment_division\EnvironmentDivisionModel.cs" />
