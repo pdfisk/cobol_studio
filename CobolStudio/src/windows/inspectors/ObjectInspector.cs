@@ -25,5 +25,11 @@ namespace MyChatDB.src.windows.inspectors
                 listBox.Items.Add(key);
             }
         }
+
+        private void listBox_SelectedIndexChanged(object sender, System.EventArgs e)
+        {
+            _dictionary.TryGetValue((string)listBox.SelectedItem, out object value);
+            textBox1.Text = value?.ToString() ?? "null";
+        }
     }
 }
