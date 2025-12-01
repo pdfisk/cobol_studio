@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using CobolStudio.src.util;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace MyChatDB.src.windows.inspectors
@@ -29,7 +30,7 @@ namespace MyChatDB.src.windows.inspectors
         private void listBox_SelectedIndexChanged(object sender, System.EventArgs e)
         {
             _dictionary.TryGetValue((string)listBox.SelectedItem, out object value);
-            textBox1.Text = value?.ToString() ?? "null";
+            textBox1.Text = StringUtil.AsString(value);
         }
     }
 }

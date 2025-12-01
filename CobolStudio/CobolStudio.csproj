@@ -197,6 +197,7 @@
     <Compile Include="src\services\GuiService.cs" />
     <Compile Include="src\services\CompilerService.cs" />
     <Compile Include="src\util\NormalizeJson.cs" />
+    <Compile Include="src\util\StringUtil.cs" />
     <Compile Include="src\windows\chat\ChatConsoleWindow.cs">
       <SubType>Form</SubType>
     </Compile>
