@@ -21,7 +21,7 @@ namespace CobolStudio.src.models.core
             child._parent = this;
         }
 
-        public string AsJson()
+        public string as_json()
         {
             var serializableObject = AsSerializableObject();
             return Newtonsoft.Json.JsonConvert.SerializeObject(serializableObject, Newtonsoft.Json.Formatting.Indented);
