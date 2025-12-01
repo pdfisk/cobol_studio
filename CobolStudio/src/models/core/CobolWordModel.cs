@@ -1,12 +1,22 @@
 ﻿using CobolStudio.src.models.core;
 using CobolStudio.src.parser.ast;
+using System.Collections.Generic;
 
 namespace CobolStudio.src.models.divisions
 {
     public class CobolWordModel : BaseModel
     {
-        public CobolWordModel(AstNode astNode) : base(astNode)
+        string _word;
+
+        public CobolWordModel(AstNode astNode, string word) : base(astNode)
         {
+            _word = word;
         }
+
+        internal override object AsSerializableObject()
+        {
+            return _word;
+        }
+
     }
 }

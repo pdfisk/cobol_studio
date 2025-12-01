@@ -27,7 +27,7 @@ namespace CobolStudio.src.models.core
             return Newtonsoft.Json.JsonConvert.SerializeObject(serializableObject, Newtonsoft.Json.Formatting.Indented);
         }
 
-        internal object AsSerializableObject()
+        internal virtual object AsSerializableObject()
         {
             var dict = new Dictionary<string, object>();
             dict["type"] = GetType().Name;
