@@ -21,6 +21,11 @@ namespace CobolStudio.src.models.core
             child._parent = this;
         }
 
+        internal int ChildCount()
+        {
+            return _children.Count;
+        }
+
         public override string ToString()
         {
             return $"Model: {GetType().Name} Children:  {_children.Count}";

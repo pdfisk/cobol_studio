@@ -11,11 +11,6 @@ namespace CobolStudio.src.models.program
         {
         }
 
-        public string GetName()
-        {
-            return _name;
-        }
-
         internal void SetName(string name)
         {
             _name = name;
@@ -23,7 +18,7 @@ namespace CobolStudio.src.models.program
 
         public override string ToString()
         {
-            return $"ProgramModel: {_name}";
+            return $"ProgramModel: {ChildCount()}";
         }
 
     }
