@@ -85,6 +85,18 @@ namespace CobolStudio.src.models.core
             return null;
         }
 
+        internal BaseModel FindChildByTypes(params Type[] types)
+        {
+            BaseModel result = this;
+            for (int i = 0; i < types.Length; i++)
+            {
+                result = result.FindChildByType(types[i]);
+                if (result == null)
+                    break;
+            }
+            return result;
+        }
+
         void WriteStringTree(StringWriter sw, int indent)
         {
             for (int i = 0; i < indent; i++)
