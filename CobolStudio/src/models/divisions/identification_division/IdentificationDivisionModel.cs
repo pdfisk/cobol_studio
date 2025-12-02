@@ -13,7 +13,6 @@ namespace CobolStudio.src.models.divisions
 
         public object get_program_name()
         {
-            //return FindChildByType(typeof(ProgramIdNameModel)).FindChildByType(typeof(CobolWordModel)).ToString();
             return FindChildByTypes(typeof(ProgramIdNameModel), typeof(CobolWordModel)).ToString();
         }
 
