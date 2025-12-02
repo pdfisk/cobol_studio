@@ -1,5 +1,4 @@
-﻿using CobolStudio.src.models.divisions;
-using CobolStudio.src.parser.ast;
+﻿using CobolStudio.src.parser.ast;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -95,6 +94,20 @@ namespace CobolStudio.src.models.core
                     break;
             }
             return result;
+        }
+
+        internal BaseModel[] FindChildrenByType(Type aType)
+        {
+            var results = new List<BaseModel>();
+            if (GetType() == aType)
+                results.Add(this);
+            foreach (var child in _children)
+            {
+                var result = child.FindChildByType(aType);
+                if (result != null)
+                   results.Add(result);
+            }
+            return results.ToArray();
         }
 
         void WriteStringTree(StringWriter sw, int indent)

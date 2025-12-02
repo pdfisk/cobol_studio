@@ -1015,6 +1015,9 @@
     <Content Include="lib\_weakrefset.py" />
     <Content Include="lib\__future__.py" />
     <Content Include="lib\__phello__.foo.py" />
+    <Content Include="scripts\analyse.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="scripts\build.py">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
