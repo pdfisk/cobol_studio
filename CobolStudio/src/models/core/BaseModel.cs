@@ -56,25 +56,20 @@ namespace CobolStudio.src.models.core
             return count;
         }
 
-        public string to_tree_string()
+        public string to_string_tree()
         {
             var sw = new StringWriter();
-            WriteTreeString(sw, 0);
+            WriteStringTree(sw, 0);
             return sw.ToString();
         }
 
-        //public override string ToString()
-        //{
-        //    return $"Model: {GetType().Name} Children:  {_children.Count}";
-        //}
-
-        void WriteTreeString(StringWriter sw, int indent)
+        void WriteStringTree(StringWriter sw, int indent)
         {
             for (int i = 0; i < indent; i++)
                 sw.Write("  ");
             sw.WriteLine(GetType().Name);
             foreach (var child in _children)
-                child.WriteTreeString(sw, indent + 1);
+                child.WriteStringTree(sw, indent + 1);
         }
     }
 }

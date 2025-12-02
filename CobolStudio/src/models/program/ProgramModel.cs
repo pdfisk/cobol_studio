@@ -9,10 +9,10 @@ namespace CobolStudio.src.models.program
         {
         }
 
-        public override string ToString()
-        {
-            return $"ProgramModel: {CountWithAllChildren()}";
-        }
+        //public override string ToString()
+        //{
+        //    return $"ProgramModel: {CountWithAllChildren()}";
+        //}
 
     }
 }
