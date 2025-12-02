@@ -1,5 +1,6 @@
 ﻿using CobolStudio.src.parser.ast;
 using System.Collections.Generic;
+using System.IO;
 
 namespace CobolStudio.src.models.core
 {
@@ -55,9 +56,25 @@ namespace CobolStudio.src.models.core
             return count;
         }
 
-        public override string ToString()
+        public string to_tree_string()
         {
-            return $"Model: {GetType().Name} Children:  {_children.Count}";
+            var sw = new StringWriter();
+            WriteTreeString(sw, 0);
+            return sw.ToString();
+        }
+
+        //public override string ToString()
+        //{
+        //    return $"Model: {GetType().Name} Children:  {_children.Count}";
+        //}
+
+        void WriteTreeString(StringWriter sw, int indent)
+        {
+            for (int i = 0; i < indent; i++)
+                sw.Write("  ");
+            sw.WriteLine(GetType().Name);
+            foreach (var child in _children)
+                child.WriteTreeString(sw, indent + 1);
         }
     }
 }

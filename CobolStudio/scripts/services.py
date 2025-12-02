@@ -7,7 +7,6 @@ def inspect(obj):
     gui_service("inspect", json.dumps(obj))
 
 
-def compile_cobol(obj):
+def compile_cobol(file_name):
     """Compile a cobol file and return its model."""
-    model = compiler_service("compile_cobol", json.dumps(obj))
-    return json.loads(model.as_json())
+    return compiler_service("compile_cobol", json.dumps(file_name))
