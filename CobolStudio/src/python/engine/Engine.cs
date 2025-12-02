@@ -34,6 +34,7 @@ namespace MyChatDB.iron_python.engine
                 Instance = new Engine();
                 Instance._resultHandler = TranscriptWindow.GetInstance(Instance);
                 Instance.LoadScript("services");
+                Instance.LoadScript("build");
             }
             return Instance;
         }

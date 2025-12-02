@@ -22,26 +22,6 @@ namespace CobolStudio.src.models.core
             return Newtonsoft.Json.JsonConvert.SerializeObject(serializableObject, Newtonsoft.Json.Formatting.Indented);
         }
 
-        public object get_data_division()
-        {
-            return FindChildByType(typeof(DataDivisionModel));
-        }
-
-        public object get_environment_division()
-        {
-            return FindChildByType(typeof(EnvironmentDivisionModel));
-        }
-
-        public object get_identification_division()
-        {
-           return FindChildByType(typeof(IdentificationDivisionModel));
-        }
-
-        public object get_procedure_division()
-        {
-            return FindChildByType(typeof(ProcedureDivisionModel));
-        }
-
         public string to_string_tree()
         {
             var sw = new StringWriter();
@@ -92,12 +72,12 @@ namespace CobolStudio.src.models.core
             return count;
         }
 
-        BaseModel FindChildByType(Type aType)
+        internal BaseModel FindChildByType(Type aType)
         {
             if (GetType() == aType)
                 return this;
             foreach (var child in _children)
-                {
+            {
                 var result = child.FindChildByType(aType);
                 if (result != null)
                     return result;
