@@ -17,5 +17,10 @@ namespace CobolStudio.src.models.divisions
             return _word;
         }
 
+        public override string ToString()
+        {
+            return _word;
+        }
+
     }
 }

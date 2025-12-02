@@ -6,10 +6,6 @@ namespace CobolStudio.src.models.program
 {
     public class ProgramModel : BaseModel
     {
-        public ProgramModel(AstNode astNode) : base(astNode)
-        {
-        }
-
         // ============================
         // expose for Python interop
         // ============================
@@ -35,6 +31,10 @@ namespace CobolStudio.src.models.program
         }
 
         // ============================
+
+        public ProgramModel(AstNode astNode) : base(astNode)
+        {
+        }
 
     }
 }
