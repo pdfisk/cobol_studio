@@ -11,5 +11,5 @@ def analyse(file_name):
     paragraph = paragraphs[0]
     sentences = paragraph.get_sentences()
     for sentence in sentences:
-        print(f"Sentence: {sentence.describe()}")
+        print(sentence.describe())
     return sentences
