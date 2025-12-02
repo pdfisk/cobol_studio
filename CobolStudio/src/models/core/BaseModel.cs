@@ -1,4 +1,6 @@
-﻿using CobolStudio.src.parser.ast;
+﻿using CobolStudio.src.models.divisions;
+using CobolStudio.src.parser.ast;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -9,6 +11,45 @@ namespace CobolStudio.src.models.core
         AstNode _astNode;
         List<BaseModel> _children = new List<BaseModel>();
         BaseModel _parent = null;
+
+        // ============================
+        // expose for Python interop
+        // ============================
+
+        public string as_json()
+        {
+            var serializableObject = AsSerializableObject();
+            return Newtonsoft.Json.JsonConvert.SerializeObject(serializableObject, Newtonsoft.Json.Formatting.Indented);
+        }
+
+        public object get_data_division()
+        {
+            return FindChildByType(typeof(DataDivisionModel));
+        }
+
+        public object get_environment_division()
+        {
+            return FindChildByType(typeof(EnvironmentDivisionModel));
+        }
+
+        public object get_identification_division()
+        {
+           return FindChildByType(typeof(IdentificationDivisionModel));
+        }
+
+        public object get_procedure_division()
+        {
+            return FindChildByType(typeof(ProcedureDivisionModel));
+        }
+
+        public string to_string_tree()
+        {
+            var sw = new StringWriter();
+            WriteStringTree(sw, 0);
+            return sw.ToString();
+        }
+
+        // ============================
 
 
         public BaseModel(AstNode astNode)
@@ -22,11 +63,6 @@ namespace CobolStudio.src.models.core
             child._parent = this;
         }
 
-        public string as_json()
-        {
-            var serializableObject = AsSerializableObject();
-            return Newtonsoft.Json.JsonConvert.SerializeObject(serializableObject, Newtonsoft.Json.Formatting.Indented);
-        }
 
         internal virtual object AsSerializableObject()
         {
@@ -56,11 +92,17 @@ namespace CobolStudio.src.models.core
             return count;
         }
 
-        public string to_string_tree()
+        BaseModel FindChildByType(Type aType)
         {
-            var sw = new StringWriter();
-            WriteStringTree(sw, 0);
-            return sw.ToString();
+            if (GetType() == aType)
+                return this;
+            foreach (var child in _children)
+                {
+                var result = child.FindChildByType(aType);
+                if (result != null)
+                    return result;
+            }
+            return null;
         }
 
         void WriteStringTree(StringWriter sw, int indent)
