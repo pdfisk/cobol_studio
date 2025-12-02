@@ -21,6 +21,11 @@ namespace CobolStudio.src.models.core
             return Newtonsoft.Json.JsonConvert.SerializeObject(serializableObject, Newtonsoft.Json.Formatting.Indented);
         }
 
+        public string describe()
+        {
+            return GetType().Name;
+        }
+
         public string to_string_tree()
         {
             var sw = new StringWriter();

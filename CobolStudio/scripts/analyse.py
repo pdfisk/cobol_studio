@@ -10,4 +10,6 @@ def analyse(file_name):
     paragraphs = procedure_model.get_paragraphs()
     paragraph = paragraphs[0]
     sentences = paragraph.get_sentences()
+    for sentence in sentences:
+        print(f"Sentence: {sentence.describe()}")
     return sentences
